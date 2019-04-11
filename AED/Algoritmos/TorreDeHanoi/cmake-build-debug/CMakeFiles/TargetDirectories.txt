@@ -1,0 +1,3 @@
+/home/fernando/Documentos/DevFaculdade/AED/TorreDeHanoi/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/fernando/Documentos/DevFaculdade/AED/TorreDeHanoi/cmake-build-debug/CMakeFiles/TorreDeHanoi.dir
+/home/fernando/Documentos/DevFaculdade/AED/TorreDeHanoi/cmake-build-debug/CMakeFiles/edit_cache.dir

@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/procuraNRecursivo.dir/main.cpp.o  -o procuraNRecursivo 

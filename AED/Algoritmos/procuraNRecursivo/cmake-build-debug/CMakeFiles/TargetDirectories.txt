@@ -1,0 +1,3 @@
+/home/fernando/Documentos/DevFaculdade/AED/procuraNRecursivo/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/fernando/Documentos/DevFaculdade/AED/procuraNRecursivo/cmake-build-debug/CMakeFiles/procuraNRecursivo.dir
+/home/fernando/Documentos/DevFaculdade/AED/procuraNRecursivo/cmake-build-debug/CMakeFiles/edit_cache.dir

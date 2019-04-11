@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/listaEncadeada.dir/listaEncadeada.c.o  -o listaEncadeada 
