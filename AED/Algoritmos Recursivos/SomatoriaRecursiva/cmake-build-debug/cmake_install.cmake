@@ -1,4 +1,4 @@
-# Install script for directory: /home/fernando/Documentos/DevFaculdade/AED/somarNelementosRecursivo
+# Install script for directory: /home/fernando/Documentos/DevFaculdade/AED/SomatoriaRecursiva
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

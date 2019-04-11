@@ -10,7 +10,7 @@ char *palindromo(char *string, int count, int tam) {
     if(count <= (tam/2)) {
 
         if(string[count] == string[tam-1])
-            palindromo(string, count+1, tam-1);
+            palindromo(string, count + 1, tam-1);
         else
             return false;
 
