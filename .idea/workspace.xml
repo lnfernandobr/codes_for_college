@@ -10,7 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e72ade50-218c-42bd-9762-87852023732e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AED/T1-AED/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/AED/T1-AED/readme.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -71,13 +71,6 @@
               <item name="AED" type="462c0819:PsiDirectoryNode" />
               <item name="T1-AED" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="DevFaculdade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DevFaculdade" type="462c0819:PsiDirectoryNode" />
-              <item name="AED" type="462c0819:PsiDirectoryNode" />
-              <item name="T1-AED" type="462c0819:PsiDirectoryNode" />
-              <item name="gfxlib" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -112,23 +105,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1554988483902</updated>
-      <workItem from="1554988490802" duration="718000" />
+      <workItem from="1554988490802" duration="1571000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="718000" />
+    <option name="totallyTimeSpent" value="1571000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1677" y="-1" width="1372" height="748" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.25227273" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.25227273" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" order="0" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.1881029" />
+      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.36173633" />
       <window_info anchor="bottom" id="Messages" order="2" weight="0.32866043" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="bottom" id="CMake" order="4" />
