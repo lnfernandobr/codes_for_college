@@ -5,6 +5,6 @@
       -libsdl-ttf2.0-0 e libsdl-ttf2.0-dev
       -libsdl-gfx1.2-4 e libsdl-gfx1.2-dev
 
-2) Entre no diretorio T1-AED, depois entre em gfxlib, navegue até o diretorio gfx, digite ***make clean@***, depois ***make***, volte ao
+2) Entre no diretorio T1-AED, depois entre em gfxlib, navegue até o diretorio gfx, digite ***make clean***, depois ***make***, volte ao
 diretorio anterior e repita, ***make clean***, ***make***, execute o programa ./T1.c
 
