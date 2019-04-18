@@ -10,20 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e72ade50-218c-42bd-9762-87852023732e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CG/circle/circle.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Redes/Sockets/cliente.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Redes/scan.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/DevFaculdade.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DevFaculdade.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/canvas/methods.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CG/canvas/canvas" beforeDir="false" afterPath="$PROJECT_DIR$/CG/canvas/canvas" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CG/canvas/canvas.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/CG/canvas/canvas.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CG/circuloInterativo/circuloInterativo" beforeDir="false" afterPath="$PROJECT_DIR$/CG/circuloInterativo/circuloInterativo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CG/circuloInterativo/circuloInterativo.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/CG/circuloInterativo/circuloInterativo.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CG/mouseMotion/mouseMotion" beforeDir="false" afterPath="$PROJECT_DIR$/CG/mouseMotion/mouseMotion" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Redes/Livro/Redes de Computadores e a Internet   Uma abordagem Top  Down   6ª Edição (2014)   Oficial.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Redes/Sockets/servidor" beforeDir="false" afterPath="$PROJECT_DIR$/Redes/Sockets/servidor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Redes/Sockets/servidor.c" beforeDir="false" afterPath="$PROJECT_DIR$/Redes/Sockets/servidor.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/CG/canvas/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,8 +27,16 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CG/canvas/canvas.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+            <state relative-caret-position="172">
+              <caret line="389" lean-forward="true" selection-start-line="389" selection-end-line="389" />
+              <folding>
+                <element signature="e#413#435#0" expanded="true" />
+                <element signature="e#1512#1824#0" />
+                <element signature="e#2148#2330#0" />
+                <element signature="e#2453#2737#0" />
+                <element signature="e#11156#11894#0" />
+                <element signature="e#14432#14895#1" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -46,10 +44,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CG/circuloInterativo/circuloInterativo.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
+            <state relative-caret-position="130">
+              <caret line="29" column="2" selection-start-line="29" selection-start-column="2" selection-end-line="30" selection-end-column="22" />
               <folding>
                 <element signature="e#75#99#0" expanded="true" />
+                <element signature="e#1243#1799#0" />
                 <element signature="e#2177#2592#0" />
               </folding>
             </state>
@@ -60,36 +59,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>tempX1</find>
-      <find>tempX</find>
-      <find>inse</find>
-      <find>clear</find>
-      <find>grid_menu</find>
-      <find>grid</find>
-      <find>tcp =</find>
-      <find>connect</find>
-      <find>porta</find>
-      <find>memset</find>
-      <find>cliente</find>
-      <find>herr</find>
-      <find>isD</find>
-      <find>strn</find>
-      <find>strncpy</find>
-      <find>inicio de</find>
-      <find>inicio do es</find>
-      <find>drawS</find>
-      <find>main</find>
-      <find>mouseCOntr</find>
-      <find>glutMainLoop</find>
-      <find>glutDisplayFunc</find>
-      <find>drawScene</find>
-      <find>mousePAss</find>
-      <find>mousecontrol</find>
-      <find>mouseCOntrol</find>
-      <find>mouseControl</find>
-      <find>mouseCOnt</find>
-      <find>mouseCOntro</find>
+      <find>raio</find>
+      <find>drawCircles</find>
+      <find>drawCIrcle</find>
+      <find>drawDIn</find>
       <find>drawCircle</find>
+      <find>drawfi</find>
+      <find>mouseC</find>
+      <find>circlecurre</find>
+      <find>DRAWF</find>
+      <find>i</find>
+      <find>mouseCOntr</find>
+      <find>DRAWFI</find>
+      <find>center</find>
+      <find>drawLIne</find>
+      <find>Line::</find>
+      <find>drawF</find>
+      <find>::drawL</find>
+      <find>Line</find>
+      <find>Line()</find>
+      <find>drawSce</find>
+      <find>drawFu</find>
+      <find>drawFIg</find>
+      <find>draw</find>
+      <find>drawDynamicLine</find>
+      <find>line::</find>
+      <find>drawFi</find>
+      <find>nline</find>
+      <find>drawLine</find>
+      <find>500</find>
+      <find>hei</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -107,6 +106,7 @@
         <option value="$PROJECT_DIR$/Redes/Sockets/cliente.c" />
         <option value="$PROJECT_DIR$/Redes/scan.c" />
         <option value="$PROJECT_DIR$/CG/circuloInterativo/circuloInterativo.cpp" />
+        <option value="$PROJECT_DIR$/CG/canvas/methods.h" />
         <option value="$PROJECT_DIR$/CG/canvas/canvas.cpp" />
       </list>
     </option>
@@ -207,12 +207,12 @@
       <workItem from="1555511783462" duration="655000" />
       <workItem from="1555523473530" duration="2832000" />
       <workItem from="1555526410555" duration="2679000" />
-      <workItem from="1555604034983" duration="2170000" />
+      <workItem from="1555604034983" duration="12392000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35993000" />
+    <option name="totallyTimeSpent" value="46215000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-1" width="1368" height="745" extended-state="6" />
@@ -222,7 +222,7 @@
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2326284" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" weight="0.20512821" />
-      <window_info active="true" anchor="bottom" x="-228" y="108" width="1364" height="381" id="Terminal" order="1" visible="true" weight="0.3525641" />
+      <window_info active="true" anchor="bottom" x="-228" y="108" width="1364" height="381" id="Terminal" order="1" visible="true" weight="0.24839744" />
       <window_info anchor="bottom" id="Messages" order="2" weight="0.3279483" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="bottom" id="CMake" order="4" weight="0.32852563" />
@@ -331,19 +331,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CG/circuloInterativo/circuloInterativo.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
+        <state relative-caret-position="130">
+          <caret line="29" column="2" selection-start-line="29" selection-start-column="2" selection-end-line="30" selection-end-column="22" />
           <folding>
             <element signature="e#75#99#0" expanded="true" />
+            <element signature="e#1243#1799#0" />
             <element signature="e#2177#2592#0" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/CG/canvas/methods.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/CG/canvas/canvas.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+        <state relative-caret-position="172">
+          <caret line="389" lean-forward="true" selection-start-line="389" selection-end-line="389" />
+          <folding>
+            <element signature="e#413#435#0" expanded="true" />
+            <element signature="e#1512#1824#0" />
+            <element signature="e#2148#2330#0" />
+            <element signature="e#2453#2737#0" />
+            <element signature="e#11156#11894#0" />
+            <element signature="e#14432#14895#1" />
+          </folding>
         </state>
       </provider>
     </entry>
