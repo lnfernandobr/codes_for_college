@@ -14,8 +14,8 @@
 // Variaveis globais
 int visitas = 0;
 
-int main(int argc, char** argv) 
-{
+
+int main(int argc, char** argv) {
     struct hostent *ptrh;   // Ponteiro para entrada da tabela do host 
     struct protoent *ptrp;  // Ponteiro para entrada da tabela do protocolo
     struct sockaddr_in sad; // Estrutura que armazena o endereço do servidor
@@ -46,7 +46,7 @@ int main(int argc, char** argv)
     }
         
     // Mapeamento do protociçp TCP para o número de porta
-    if( (int)(ptrp = getprotobyname("tcp")) == 0) {
+    if( (int *)(ptrp = getprotobyname("tcp")) == 0) {
         fprintf(stderr, "Falha ao mapear \"tcp\" para o numero de protocolo\n");
         exit(1);
     }
@@ -86,9 +86,4 @@ int main(int argc, char** argv)
         close(sd2);
     }
 
-
-
-
-
-    return 0;
 }

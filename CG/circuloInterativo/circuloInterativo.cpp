@@ -47,19 +47,19 @@ void drawCircle(float R, float X, float Y){
 float distance (Pnt P1, Pnt P2) {
     float dist;
 
-    dist = sqrt((P1.x - P2.x) * (P1.x - P2.x) + (P1.y - P2.y) * (P1.y - P2.y)); 
+    dist = sqrt((P1.x - P2.x) * (P1.x - P2.x) + (P1.y - P2.y) * (P1.y - P2.y));
     return(dist);
 }
 
 void drawScene(void) {
-    
+
     float R;
     glClear(GL_COLOR_BUFFER_BIT);
     glColor3f(0.0,0.0,0.0);
 
     drawPoint(center); 
 
-    drawCircle (distance(center, currentPoint), center.x, center.y);
+    drawCircle ( distance(center, currentPoint), center.x, center.y);
 
     glFlush();
 }
@@ -70,8 +70,12 @@ void mouseControl(int button, int state, int x, int y) {
    // Store the clicked point in the center variable when left button is pressed the first time.
     if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN) {
         if (!flagcenter){
-            center.x = currentPoint.x = x;
-            center.y = currentPoint.y = height - y;
+            center.x = x;
+            currentPoint.x = x;
+
+            center.y = height - y
+            currentPoint.y = height - y;
+
             flagcenter = 1;
         } else {
             flagcenter = 0; 
@@ -102,8 +106,7 @@ void setup(void)  {
 }
 
 // OpenGL window reshape routine.
-void resize(int w, int h)
-{
+void resize(int w, int h) {
    glViewport (0, 0, (GLsizei)w, (GLsizei)h);
    glMatrixMode(GL_PROJECTION);
    glLoadIdentity();

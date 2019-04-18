@@ -10,290 +10,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e72ade50-218c-42bd-9762-87852023732e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/SomatoriaRecursiva/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/SomatoriaRecursiva/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/SomatoriaRecursiva/cmake-build-debug/CMakeFiles/3.13.2/CMakeCCompiler.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/SomatoriaRecursiva/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/SomatoriaRecursiva/cmake-build-debug/CMakeFiles/3.13.2/CMakeSystem.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/SomatoriaRecursiva/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/SomatoriaRecursiva/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/a.out" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/SomatoriaRecursiva/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/SomatoriaRecursiva/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/SomatoriaRecursiva/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/SomatoriaRecursiva/cmake-build-debug/CMakeFiles/feature_tests.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/SomatoriaRecursiva/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/SomatoriaRecursiva/cmake-build-debug/CMakeFiles/somarNelementosRecursivo.dir/flags.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/SomatoriaRecursiva/cmake-build-debug/CMakeFiles/somarNelementosRecursivo.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/Fatorial Recursivo/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/Fatorial Recursivo/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/Fatorial Recursivo/.idea/Fatorial Recursivo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/Fatorial Recursivo/.idea/Fatorial Recursivo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/Fatorial Recursivo/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/Fatorial Recursivo/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/Fatorial Recursivo/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/Fatorial Recursivo/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/Fatorial Recursivo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/Fatorial Recursivo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/Fatorial Recursivo/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/Fatorial Recursivo/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/Fatorial Recursivo/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/Fatorial Recursivo/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/3.13.2/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CMakeCCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/3.13.2/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CMakeSystem.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/a.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/Fatorial_Recursivo.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/Fatorial_Recursivo.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/Fatorial_Recursivo.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/Fatorial_Recursivo.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/Fatorial_Recursivo.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/Fatorial_Recursivo.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/Fatorial_Recursivo.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/Fatorial_Recursivo.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/Fatorial_Recursivo.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/Fatorial_Recursivo.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/Fatorial_Recursivo.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/Fatorial_Recursivo.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/Fatorial_Recursivo.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/verificarPalindromoRecursivo.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/Fatorial_Recursivo.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/Fatorial_Recursivo.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/Fatorial_Recursivo.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/Fatorial_Recursivo.dir/main.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/Fatorial_Recursivo.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/verificarPalindromoRecursivo.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/feature_tests.c" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/feature_tests.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/Fatorial Recursivo/cmake-build-debug/Fatorial_Recursivo" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/Fatorial Recursivo/cmake-build-debug/Fatorial_Recursivo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/Fatorial Recursivo/cmake-build-debug/Fatorial_Recursivo.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/Fatorial Recursivo/cmake-build-debug/Fatorial_Recursivo.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/Fatorial Recursivo/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/Fatorial Recursivo/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/Fatorial Recursivo/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/Fatorial Recursivo/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/Fatorial Recursivo/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/Fatorial Recursivo/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/TorreDeHanoi/.idea/TorreDeHanoi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/TorreDeHanoi/.idea/TorreDeHanoi.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/TorreDeHanoi/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarNRecursivo/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/TorreDeHanoi/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarNRecursivo/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/TorreDeHanoi/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/TorreDeHanoi/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/TorreDeHanoi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/TorreDeHanoi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/TorreDeHanoi/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/TorreDeHanoi/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/TorreDeHanoi/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/TorreDeHanoi/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/TorreDeHanoi/cmake-build-debug/CMakeFiles/3.13.2/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarNRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CMakeCCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/TorreDeHanoi/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarNRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/TorreDeHanoi/cmake-build-debug/CMakeFiles/3.13.2/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarNRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CMakeSystem.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/TorreDeHanoi/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarNRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/TorreDeHanoi/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarNRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/a.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/TorreDeHanoi/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/TorreDeHanoi/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/TorreDeHanoi/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/TorreDeHanoi/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/TorreDeHanoi/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/TorreDeHanoi/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/TorreDeHanoi/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/TorreDeHanoi/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/TorreDeHanoi/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/TorreDeHanoi/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/TorreDeHanoi/cmake-build-debug/CMakeFiles/TorreDeHanoi.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/TorreDeHanoi/cmake-build-debug/CMakeFiles/TorreDeHanoi.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/TorreDeHanoi/cmake-build-debug/CMakeFiles/TorreDeHanoi.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/TorreDeHanoi/cmake-build-debug/CMakeFiles/TorreDeHanoi.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/TorreDeHanoi/cmake-build-debug/CMakeFiles/TorreDeHanoi.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/TorreDeHanoi/cmake-build-debug/CMakeFiles/TorreDeHanoi.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/TorreDeHanoi/cmake-build-debug/CMakeFiles/TorreDeHanoi.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/TorreDeHanoi/cmake-build-debug/CMakeFiles/TorreDeHanoi.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/TorreDeHanoi/cmake-build-debug/CMakeFiles/TorreDeHanoi.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/TorreDeHanoi/cmake-build-debug/CMakeFiles/TorreDeHanoi.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/TorreDeHanoi/cmake-build-debug/CMakeFiles/TorreDeHanoi.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/TorreDeHanoi/cmake-build-debug/CMakeFiles/TorreDeHanoi.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/TorreDeHanoi/cmake-build-debug/CMakeFiles/TorreDeHanoi.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarNRecursivo/cmake-build-debug/CMakeFiles/verificarNRecursivo.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/TorreDeHanoi/cmake-build-debug/CMakeFiles/TorreDeHanoi.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/TorreDeHanoi/cmake-build-debug/CMakeFiles/TorreDeHanoi.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/TorreDeHanoi/cmake-build-debug/CMakeFiles/TorreDeHanoi.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/TorreDeHanoi/cmake-build-debug/CMakeFiles/TorreDeHanoi.dir/main.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/TorreDeHanoi/cmake-build-debug/CMakeFiles/TorreDeHanoi.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarNRecursivo/cmake-build-debug/CMakeFiles/verificarNRecursivo.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/TorreDeHanoi/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarNRecursivo/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/TorreDeHanoi/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/TorreDeHanoi/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/TorreDeHanoi/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarNRecursivo/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/TorreDeHanoi/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarNRecursivo/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/TorreDeHanoi/cmake-build-debug/CMakeFiles/feature_tests.c" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarNRecursivo/cmake-build-debug/CMakeFiles/feature_tests.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/TorreDeHanoi/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarNRecursivo/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/TorreDeHanoi/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/TorreDeHanoi/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/TorreDeHanoi/cmake-build-debug/TorreDeHanoi" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/TorreDeHanoi/cmake-build-debug/TorreDeHanoi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/TorreDeHanoi/cmake-build-debug/TorreDeHanoi.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/TorreDeHanoi/cmake-build-debug/TorreDeHanoi.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/TorreDeHanoi/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/TorreDeHanoi/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/TorreDeHanoi/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/TorreDeHanoi/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/inverterStringRecursivo/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/inverterStringRecursivo/.idea/inverterStringRecursivo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/.idea/inverterStringRecursivo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/inverterStringRecursivo/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/inverterStringRecursivo/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/inverterStringRecursivo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/inverterStringRecursivo/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/inverterStringRecursivo/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CMakeCCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CMakeSystem.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/a.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/feature_tests.c" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/feature_tests.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/inverterStringRecursivo.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/inverterStringRecursivo.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/inverterStringRecursivo.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/inverterStringRecursivo.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/inverterStringRecursivo.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/inverterStringRecursivo.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/inverterStringRecursivo.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/inverterStringRecursivo.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/inverterStringRecursivo.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/inverterStringRecursivo.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/inverterStringRecursivo.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/inverterStringRecursivo.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/inverterStringRecursivo.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/inverterStringRecursivo.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/inverterStringRecursivo.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/inverterStringRecursivo.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/inverterStringRecursivo.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/inverterStringRecursivo.dir/main.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/inverterStringRecursivo.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/inverterStringRecursivo.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/inverterStringRecursivo/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/inverterStringRecursivo/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/inverterStringRecursivo/cmake-build-debug/inverterStringRecursivo" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/cmake-build-debug/inverterStringRecursivo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/inverterStringRecursivo/cmake-build-debug/inverterStringRecursivo.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/cmake-build-debug/inverterStringRecursivo.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/inverterStringRecursivo/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/procuraNRecursivo/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/procuraNRecursivo/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/procuraNRecursivo/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/BuscaRecursivo/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/procuraNRecursivo/.idea/procuraNRecursivo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/BuscaRecursivo/.idea/procuraNRecursivo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/procuraNRecursivo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/BuscaRecursivo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/procuraNRecursivo/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/BuscaRecursivo/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/procuraNRecursivo/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/BuscaRecursivo/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/procuraNRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CMakeCCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/procuraNRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CMakeCXXCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/BuscaRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CMakeCXXCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/procuraNRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/procuraNRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/BuscaRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/procuraNRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CMakeSystem.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/procuraNRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/procuraNRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/a.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/procuraNRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/BuscaRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/procuraNRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdCXX/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/BuscaRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdCXX/a.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/procuraNRecursivo/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/BuscaRecursivo/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/procuraNRecursivo/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/BuscaRecursivo/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/procuraNRecursivo/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/BuscaRecursivo/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/procuraNRecursivo/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/BuscaRecursivo/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/procuraNRecursivo/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/BuscaRecursivo/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/procuraNRecursivo/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/procuraNRecursivo/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/BuscaRecursivo/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/procuraNRecursivo/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/procuraNRecursivo/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/BuscaRecursivo/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/procuraNRecursivo/cmake-build-debug/CMakeFiles/feature_tests.c" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/feature_tests.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/procuraNRecursivo/cmake-build-debug/CMakeFiles/feature_tests.cxx" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/BuscaRecursivo/cmake-build-debug/CMakeFiles/feature_tests.cxx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/procuraNRecursivo/cmake-build-debug/CMakeFiles/procuraNRecursivo.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/BuscaRecursivo/cmake-build-debug/CMakeFiles/procuraNRecursivo.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/procuraNRecursivo/cmake-build-debug/CMakeFiles/procuraNRecursivo.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/BuscaRecursivo/cmake-build-debug/CMakeFiles/procuraNRecursivo.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/procuraNRecursivo/cmake-build-debug/CMakeFiles/procuraNRecursivo.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/BuscaRecursivo/cmake-build-debug/CMakeFiles/procuraNRecursivo.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/procuraNRecursivo/cmake-build-debug/CMakeFiles/procuraNRecursivo.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/BuscaRecursivo/cmake-build-debug/CMakeFiles/procuraNRecursivo.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/procuraNRecursivo/cmake-build-debug/CMakeFiles/procuraNRecursivo.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/BuscaRecursivo/cmake-build-debug/CMakeFiles/procuraNRecursivo.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/procuraNRecursivo/cmake-build-debug/CMakeFiles/procuraNRecursivo.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/BuscaRecursivo/cmake-build-debug/CMakeFiles/procuraNRecursivo.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/procuraNRecursivo/cmake-build-debug/CMakeFiles/procuraNRecursivo.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/inverterStringRecursivo.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/procuraNRecursivo/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/procuraNRecursivo/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/BuscaRecursivo/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/procuraNRecursivo/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/BuscaRecursivo/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/procuraNRecursivo/cmake-build-debug/procuraNRecursivo.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/BuscaRecursivo/cmake-build-debug/procuraNRecursivo.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/procuraNRecursivo/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/BuscaRecursivo/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/somarNelementosRecursivo/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/TorreDeHanoi/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/somarNelementosRecursivo/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/TorreDeHanoi/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/somarNelementosRecursivo/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/SomatoriaRecursiva/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/somarNelementosRecursivo/.idea/somarNelementosRecursivo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/SomatoriaRecursiva/.idea/somarNelementosRecursivo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/somarNelementosRecursivo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/SomatoriaRecursiva/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/somarNelementosRecursivo/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/SomatoriaRecursiva/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/somarNelementosRecursivo/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/SomatoriaRecursiva/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/somarNelementosRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/TorreDeHanoi/cmake-build-debug/CMakeFiles/3.13.2/CMakeCCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/somarNelementosRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/TorreDeHanoi/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/somarNelementosRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/TorreDeHanoi/cmake-build-debug/CMakeFiles/3.13.2/CMakeSystem.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/somarNelementosRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/TorreDeHanoi/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/somarNelementosRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/TorreDeHanoi/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/a.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/somarNelementosRecursivo/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/SomatoriaRecursiva/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/somarNelementosRecursivo/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/SomatoriaRecursiva/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/somarNelementosRecursivo/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/SomatoriaRecursiva/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/somarNelementosRecursivo/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/SomatoriaRecursiva/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/somarNelementosRecursivo/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/SomatoriaRecursiva/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/somarNelementosRecursivo/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/TorreDeHanoi/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/somarNelementosRecursivo/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/SomatoriaRecursiva/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/somarNelementosRecursivo/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/TorreDeHanoi/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/somarNelementosRecursivo/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/somarNelementosRecursivo/cmake-build-debug/CMakeFiles/feature_tests.c" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/TorreDeHanoi/cmake-build-debug/CMakeFiles/feature_tests.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/somarNelementosRecursivo/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/TorreDeHanoi/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/somarNelementosRecursivo/cmake-build-debug/CMakeFiles/somarNelementosRecursivo.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/SomatoriaRecursiva/cmake-build-debug/CMakeFiles/somarNelementosRecursivo.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/somarNelementosRecursivo/cmake-build-debug/CMakeFiles/somarNelementosRecursivo.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/SomatoriaRecursiva/cmake-build-debug/CMakeFiles/somarNelementosRecursivo.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/somarNelementosRecursivo/cmake-build-debug/CMakeFiles/somarNelementosRecursivo.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/SomatoriaRecursiva/cmake-build-debug/CMakeFiles/somarNelementosRecursivo.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/somarNelementosRecursivo/cmake-build-debug/CMakeFiles/somarNelementosRecursivo.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/SomatoriaRecursiva/cmake-build-debug/CMakeFiles/somarNelementosRecursivo.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/somarNelementosRecursivo/cmake-build-debug/CMakeFiles/somarNelementosRecursivo.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/SomatoriaRecursiva/cmake-build-debug/CMakeFiles/somarNelementosRecursivo.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/somarNelementosRecursivo/cmake-build-debug/CMakeFiles/somarNelementosRecursivo.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/SomatoriaRecursiva/cmake-build-debug/CMakeFiles/somarNelementosRecursivo.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/somarNelementosRecursivo/cmake-build-debug/CMakeFiles/somarNelementosRecursivo.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/inverterStringRecursivo/cmake-build-debug/CMakeFiles/inverterStringRecursivo.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/somarNelementosRecursivo/cmake-build-debug/CMakeFiles/somarNelementosRecursivo.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/SomatoriaRecursiva/cmake-build-debug/CMakeFiles/somarNelementosRecursivo.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/somarNelementosRecursivo/cmake-build-debug/CMakeFiles/somarNelementosRecursivo.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/SomatoriaRecursiva/cmake-build-debug/CMakeFiles/somarNelementosRecursivo.dir/main.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/somarNelementosRecursivo/cmake-build-debug/CMakeFiles/somarNelementosRecursivo.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/TorreDeHanoi/cmake-build-debug/CMakeFiles/TorreDeHanoi.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/somarNelementosRecursivo/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/SomatoriaRecursiva/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/somarNelementosRecursivo/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/SomatoriaRecursiva/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/somarNelementosRecursivo/cmake-build-debug/somarNelementosRecursivo" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/SomatoriaRecursiva/cmake-build-debug/somarNelementosRecursivo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/somarNelementosRecursivo/cmake-build-debug/somarNelementosRecursivo.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/SomatoriaRecursiva/cmake-build-debug/somarNelementosRecursivo.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/somarNelementosRecursivo/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/SomatoriaRecursiva/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarNRecursivo/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/Fatorial Recursivo/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarNRecursivo/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/Fatorial Recursivo/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarNRecursivo/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarNRecursivo/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarNRecursivo/.idea/verificarNRecursivo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarNRecursivo/.idea/verificarNRecursivo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarNRecursivo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarNRecursivo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarNRecursivo/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarNRecursivo/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarNRecursivo/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarNRecursivo/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarNRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/3.13.2/CMakeCCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarNRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarNRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/3.13.2/CMakeSystem.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarNRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarNRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/a.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarNRecursivo/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarNRecursivo/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarNRecursivo/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarNRecursivo/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarNRecursivo/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarNRecursivo/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarNRecursivo/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarNRecursivo/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarNRecursivo/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarNRecursivo/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarNRecursivo/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarNRecursivo/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarNRecursivo/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarNRecursivo/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarNRecursivo/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/TorreDeHanoi/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarNRecursivo/cmake-build-debug/CMakeFiles/feature_tests.c" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/feature_tests.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarNRecursivo/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarNRecursivo/cmake-build-debug/CMakeFiles/verificarNRecursivo.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarNRecursivo/cmake-build-debug/CMakeFiles/verificarNRecursivo.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarNRecursivo/cmake-build-debug/CMakeFiles/verificarNRecursivo.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarNRecursivo/cmake-build-debug/CMakeFiles/verificarNRecursivo.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarNRecursivo/cmake-build-debug/CMakeFiles/verificarNRecursivo.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarNRecursivo/cmake-build-debug/CMakeFiles/verificarNRecursivo.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarNRecursivo/cmake-build-debug/CMakeFiles/verificarNRecursivo.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarNRecursivo/cmake-build-debug/CMakeFiles/verificarNRecursivo.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarNRecursivo/cmake-build-debug/CMakeFiles/verificarNRecursivo.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarNRecursivo/cmake-build-debug/CMakeFiles/verificarNRecursivo.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarNRecursivo/cmake-build-debug/CMakeFiles/verificarNRecursivo.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarNRecursivo/cmake-build-debug/CMakeFiles/verificarNRecursivo.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarNRecursivo/cmake-build-debug/CMakeFiles/verificarNRecursivo.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/TorreDeHanoi/cmake-build-debug/CMakeFiles/TorreDeHanoi.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarNRecursivo/cmake-build-debug/CMakeFiles/verificarNRecursivo.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarNRecursivo/cmake-build-debug/CMakeFiles/verificarNRecursivo.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarNRecursivo/cmake-build-debug/CMakeFiles/verificarNRecursivo.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarNRecursivo/cmake-build-debug/CMakeFiles/verificarNRecursivo.dir/main.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarNRecursivo/cmake-build-debug/CMakeFiles/verificarNRecursivo.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/Fatorial_Recursivo.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarNRecursivo/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarNRecursivo/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarNRecursivo/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarNRecursivo/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarNRecursivo/cmake-build-debug/verificarNRecursivo" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarNRecursivo/cmake-build-debug/verificarNRecursivo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarNRecursivo/cmake-build-debug/verificarNRecursivo.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarNRecursivo/cmake-build-debug/verificarNRecursivo.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarNRecursivo/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarNRecursivo/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarPalindromoRecursivo/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/BuscaRecursivo/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarPalindromoRecursivo/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/BuscaRecursivo/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarPalindromoRecursivo/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarPalindromoRecursivo/.idea/verificarPalindromoRecursivo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/.idea/verificarPalindromoRecursivo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarPalindromoRecursivo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarPalindromoRecursivo/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarPalindromoRecursivo/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/BuscaRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CMakeCCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/BuscaRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/BuscaRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CMakeSystem.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/BuscaRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/BuscaRecursivo/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/a.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/BuscaRecursivo/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/BuscaRecursivo/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/feature_tests.c" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/BuscaRecursivo/cmake-build-debug/CMakeFiles/feature_tests.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/BuscaRecursivo/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/verificarPalindromoRecursivo.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/verificarPalindromoRecursivo.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/verificarPalindromoRecursivo.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/verificarPalindromoRecursivo.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/verificarPalindromoRecursivo.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/verificarPalindromoRecursivo.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/verificarPalindromoRecursivo.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/verificarPalindromoRecursivo.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/verificarPalindromoRecursivo.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/verificarPalindromoRecursivo.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/verificarPalindromoRecursivo.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/verificarPalindromoRecursivo.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/verificarPalindromoRecursivo.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/Fatorial Recursivo/cmake-build-debug/CMakeFiles/Fatorial_Recursivo.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/verificarPalindromoRecursivo.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/verificarPalindromoRecursivo.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/verificarPalindromoRecursivo.dir/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/verificarPalindromoRecursivo.dir/main.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarPalindromoRecursivo/cmake-build-debug/CMakeFiles/verificarPalindromoRecursivo.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/BuscaRecursivo/cmake-build-debug/CMakeFiles/procuraNRecursivo.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarPalindromoRecursivo/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarPalindromoRecursivo/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarPalindromoRecursivo/cmake-build-debug/verificarPalindromoRecursivo" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/cmake-build-debug/verificarPalindromoRecursivo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarPalindromoRecursivo/cmake-build-debug/verificarPalindromoRecursivo.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/cmake-build-debug/verificarPalindromoRecursivo.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/Algoritmos/verificarPalindromoRecursivo/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AED/gfxlib-04.03.2014/.idea/workspace.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/circle/circle.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Redes/Sockets/cliente.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Redes/scan.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/DevFaculdade.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DevFaculdade.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/canvas/canvas" beforeDir="false" afterPath="$PROJECT_DIR$/CG/canvas/canvas" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/canvas/canvas.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/CG/canvas/canvas.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/circuloInterativo/circuloInterativo" beforeDir="false" afterPath="$PROJECT_DIR$/CG/circuloInterativo/circuloInterativo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/circuloInterativo/circuloInterativo.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/CG/circuloInterativo/circuloInterativo.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/mouseMotion/mouseMotion" beforeDir="false" afterPath="$PROJECT_DIR$/CG/mouseMotion/mouseMotion" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Redes/Livro/Redes de Computadores e a Internet   Uma abordagem Top  Down   6ª Edição (2014)   Oficial.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Redes/Sockets/servidor" beforeDir="false" afterPath="$PROJECT_DIR$/Redes/Sockets/servidor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Redes/Sockets/servidor.c" beforeDir="false" afterPath="$PROJECT_DIR$/Redes/Sockets/servidor.c" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/CG/canvas/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -301,29 +33,64 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AED/T1-AED/readme.md">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CG/canvas/canvas.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="45">
+              <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/main.c">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CG/circuloInterativo/circuloInterativo.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+            <state relative-caret-position="178">
+              <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
               <folding>
-                <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#75#99#0" expanded="true" />
+                <element signature="e#2177#2592#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>tempX1</find>
+      <find>tempX</find>
+      <find>inse</find>
+      <find>clear</find>
+      <find>grid_menu</find>
+      <find>grid</find>
+      <find>tcp =</find>
+      <find>connect</find>
+      <find>porta</find>
+      <find>memset</find>
+      <find>cliente</find>
+      <find>herr</find>
+      <find>isD</find>
+      <find>strn</find>
+      <find>strncpy</find>
+      <find>inicio de</find>
+      <find>inicio do es</find>
+      <find>drawS</find>
+      <find>main</find>
+      <find>mouseCOntr</find>
+      <find>glutMainLoop</find>
+      <find>glutDisplayFunc</find>
+      <find>drawScene</find>
+      <find>mousePAss</find>
+      <find>mousecontrol</find>
+      <find>mouseCOntrol</find>
+      <find>mouseControl</find>
+      <find>mouseCOnt</find>
+      <find>mouseCOntro</find>
+      <find>drawCircle</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -333,14 +100,23 @@
       <list>
         <option value="$PROJECT_DIR$/AED/T1-AED/readme.md" />
         <option value="$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/main.c" />
+        <option value="$PROJECT_DIR$/CG/canvas/compile_database.json" />
+        <option value="$PROJECT_DIR$/CG/canvas/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/CG/circle/circle.cpp" />
+        <option value="$PROJECT_DIR$/Redes/Sockets/servidor.c" />
+        <option value="$PROJECT_DIR$/Redes/Sockets/cliente.c" />
+        <option value="$PROJECT_DIR$/Redes/scan.c" />
+        <option value="$PROJECT_DIR$/CG/circuloInterativo/circuloInterativo.cpp" />
+        <option value="$PROJECT_DIR$/CG/canvas/canvas.cpp" />
       </list>
     </option>
   </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1574" />
-    <option name="y" value="29" />
-    <option name="width" value="1366" />
-    <option name="height" value="748" />
+    <option name="x" value="-1" />
+    <option name="y" value="-1" />
+    <option name="width" value="1368" />
+    <option name="height" value="745" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -352,26 +128,25 @@
         <subPane>
           <expand>
             <path>
-              <item name="DevFaculdade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DevFaculdade" type="462c0819:PsiDirectoryNode" />
+              <item name="codes_for_college" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codes_for_college" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="DevFaculdade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DevFaculdade" type="462c0819:PsiDirectoryNode" />
-              <item name="AED" type="462c0819:PsiDirectoryNode" />
+              <item name="codes_for_college" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codes_for_college" type="462c0819:PsiDirectoryNode" />
+              <item name="CG" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="DevFaculdade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DevFaculdade" type="462c0819:PsiDirectoryNode" />
-              <item name="AED" type="462c0819:PsiDirectoryNode" />
-              <item name="Algoritmos Recursivos" type="462c0819:PsiDirectoryNode" />
+              <item name="codes_for_college" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codes_for_college" type="462c0819:PsiDirectoryNode" />
+              <item name="CG" type="462c0819:PsiDirectoryNode" />
+              <item name="canvas" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="DevFaculdade" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DevFaculdade" type="462c0819:PsiDirectoryNode" />
-              <item name="AED" type="462c0819:PsiDirectoryNode" />
-              <item name="Algoritmos Recursivos" type="462c0819:PsiDirectoryNode" />
-              <item name="verificarPalindromoRecursivo" type="462c0819:PsiDirectoryNode" />
+              <item name="codes_for_college" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codes_for_college" type="462c0819:PsiDirectoryNode" />
+              <item name="CG" type="462c0819:PsiDirectoryNode" />
+              <item name="circuloInterativo" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -382,8 +157,20 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/CG/canvas" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="g++ -o canvas  canvas.cpp -lglut -lGL -lGLU -lm" />
+    </option>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -397,6 +184,13 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="canvas" type="CMakeRunConfiguration" factoryName="Application" WORKING_DIR="file://$PROJECT_DIR$/CG/canvas" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="canvas" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="canvas">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -408,61 +202,148 @@
       <option name="presentableId" value="Default" />
       <updated>1554988483902</updated>
       <workItem from="1554988490802" duration="1852000" />
+      <workItem from="1555156920899" duration="23134000" />
+      <workItem from="1555458444830" duration="2671000" />
+      <workItem from="1555511783462" duration="655000" />
+      <workItem from="1555523473530" duration="2832000" />
+      <workItem from="1555526410555" duration="2679000" />
+      <workItem from="1555604034983" duration="2170000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1852000" />
+    <option name="totallyTimeSpent" value="35993000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1677" y="-1" width="1372" height="748" extended-state="6" />
+    <frame x="-1" y="-1" width="1368" height="745" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.25227273" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2326284" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" order="0" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.36173633" />
-      <window_info anchor="bottom" id="Messages" order="2" weight="0.32866043" />
+      <window_info anchor="bottom" id="Version Control" order="0" weight="0.20512821" />
+      <window_info active="true" anchor="bottom" x="-228" y="108" width="1364" height="381" id="Terminal" order="1" visible="true" weight="0.3525641" />
+      <window_info anchor="bottom" id="Messages" order="2" weight="0.3279483" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="CMake" order="4" />
+      <window_info anchor="bottom" id="CMake" order="4" weight="0.32852563" />
       <window_info anchor="bottom" id="Message" order="5" />
-      <window_info anchor="bottom" id="Find" order="6" weight="0.329582" />
-      <window_info anchor="bottom" id="Run" order="7" weight="0.33333334" />
-      <window_info active="true" anchor="bottom" id="Debug" order="8" visible="true" weight="0.39719626" />
+      <window_info anchor="bottom" id="Find" order="6" weight="0.32956383" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.33279485" />
+      <window_info anchor="bottom" id="Debug" order="8" weight="0.39719626" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="11" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assembly/functions.asm">
+    <entry file="file://$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1579" />
+        <state relative-caret-position="165">
+          <caret line="11" column="42" lean-forward="true" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Redes/Protocolo de comunicação em  Socket  com C/server.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="113" selection-start-line="113" selection-end-line="113" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AED/T1-AED/readme.md">
-      <provider selected="true" editor-type-id="text-editor">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/main.c">
+    <entry file="file://$PROJECT_DIR$/Redes/Sockets/bind.c">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assembly/functions.asm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+        <state relative-caret-position="-1080" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CG/canvas/CMakeLists.txt" />
+    <entry file="file://$PROJECT_DIR$/CG/canvas/compile_database.json" />
+    <entry file="file://$PROJECT_DIR$/CG/canvas/IMG_6307.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CG/canvas/IMG_6308.JPG">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CG/circle/circle.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Redes/Sockets/bind_a.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="34" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Redes/Sockets/servidor.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="11" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Redes/scan.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="74" column="33" selection-start-line="74" selection-start-column="33" selection-end-line="74" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Redes/Sockets/cliente.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="19" column="18" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CG/mouseMotion/mouseMotion.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="70" lean-forward="true" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CG/circuloInterativo/circuloInterativo.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#75#99#0" expanded="true" />
+            <element signature="e#2177#2592#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CG/canvas/canvas.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
         </state>
       </provider>
     </entry>
