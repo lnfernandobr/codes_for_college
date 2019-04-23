@@ -27,6 +27,9 @@ using namespace std;
 #define HEXAGON 6
 #define PI 3.14159265358979324
 #define NUMBERPRIMITIVES 6
+int drawingSize = 9;
+
+float colorVector[4] = { 0.0 };
 
 typedef struct {
     float x;
@@ -42,6 +45,7 @@ using namespace std;
 
 
 // Globals.
+static int TYPE = GL_LINE;
 static GLsizei width, height; // OpenGL window size.
 static float pointSize = 3.0; // Size of point
 static int primitive = INACTIVE; // Current drawing primitive.
@@ -120,9 +124,10 @@ private:
 
 // Function to draw a line.
 void Line::drawLine() {
+    glColor3f(colorVector[0], colorVector[1], colorVector[2]);
     glBegin(GL_LINES);
-    glVertex3f(x1, y1, 0.0);
-    glVertex3f(x2, y2, 0.0);
+        glVertex3f(x1, y1, 0.0);
+        glVertex3f(x2, y2, 0.0);
     glEnd();
 }
 // Vector of lines.
@@ -153,11 +158,14 @@ public:
 private:
     int x1, y1, x2, y2; // x and y co-ordinates of diagonally opposite vertices.
 };
+
 // Function to draw a rectangle.
 void Rectangle::drawRectangle() {
-    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+    glColor3f(colorVector[0], colorVector[1], colorVector[2]);
+    glPolygonMode(GL_FRONT_AND_BACK, TYPE);
     glRectf(x1, y1, x2, y2);
 }
+
 // Vector of rectangles.
 vector<Rectangle> rectangles;
 // Iterator to traverse a Rectangle array.
@@ -191,6 +199,7 @@ public:
 };
 // Function to draw lines continua.
 void PolyLine::drawPolyLine() {
+    glColor3f(colorVector[0], colorVector[1], colorVector[2]);
     glBegin(GL_LINES);
     glVertex3f(x1, y1, 0.0);
     glVertex3f(x2, y2, 0.0);
@@ -235,15 +244,19 @@ private:
 // Function to draw lines continua.
 void Circle::drawCircle() {
     float t = 0.0; // Angle parameter.
-
     float raio;
-
-
     raio = x1-x2;
 
-    glBegin(GL_LINE_LOOP);
+
+    glPolygonMode(GL_FRONT_AND_BACK, TYPE);
+
+    if(TYPE == GL_FILL)
+        glBegin(GL_POLYGON);
+    else
+        glBegin(GL_LINE_LOOP);
+
     for(int i = 0; i < 50; ++i) {
-        glColor3ub(0.0, 0.0, 0.0);
+        glColor3f(colorVector[0], colorVector[1], colorVector[2]);
         glVertex3f( x1 + raio * cos(t),   y1 + raio * sin(t), 0.0);
         t += 2 * PI / 50;
     }
@@ -255,7 +268,6 @@ void Circle::drawCircle() {
 vector<Circle> circles;
 // Iterator to traverse a Line array.
 vector<Circle>::iterator circleIterator;
-
 // Function to draw all lines in the lines array.
 void drawCircles(void) {
     // Loop through the lines array drawing each line.
@@ -266,8 +278,6 @@ void drawCircles(void) {
         circleIterator++;
     }
 }
-
-
 
 
 // class polyline.
@@ -294,14 +304,17 @@ void Hexagon::drawHexagon() {
 
     float raio;
 
-
     raio = x1-x2;
-    cout << "K1222:" << endl;
+    glPolygonMode(GL_FRONT_AND_BACK, TYPE);
 
-    glBegin(GL_LINE_LOOP);
+    if(TYPE == GL_FILL)
+        glBegin(GL_POLYGON);
+    else
+        glBegin(GL_LINE_LOOP);
+
+
     for(int i = 0; i < 5; ++i) {
-
-        glColor3ub(0.0, 0.0, 0.0);
+        glColor3f(colorVector[0], colorVector[1], colorVector[2]);
         glVertex3f( x1 + raio * cos(t),   y1 + raio* sin(t), 0.0);
         t += 2 * PI / 5;
     }
@@ -511,66 +524,160 @@ void drawGrid(void) {
     glLineStipple(1, 0x5555);
     glColor3f(0.75, 0.75, 0.75);
 
-    glBegin(GL_LINES);
-    for (i = 2;i <= 9; i++) {
-        glVertex3f(i * 0.1 * width, 0.0, 0.0);
-        glVertex3f(i * 0.1 * width, height, 0.0);
+
+
+    if(drawingSize == 3) {
+        glBegin(GL_LINES);
+        for (i = 2; i <= 3; i++) {
+            if(i == 2) {
+                glVertex3f( ((i * 0.2 * width) ) , 0.0, 0.0);
+                glVertex3f( ((i * 0.2 * width)), height, 0.0);
+            }
+            if(i == 3) {
+                glVertex3f( ((i * 0.2 * width) ) + 50 , 0.0, 0.0);
+                glVertex3f( ((i * 0.2 * width)) + 50, height, 0.0);
+            }
+
+        }
+
+        for (i = 1; i <= 4; i++) {
+            glVertex3f(0.1 * width, i * 0.2 * height, 0.0);
+            glVertex3f(width, i * 0.2 * height, 0.0);
+        }
+        glEnd();
     }
 
-    for (i = 1; i <= 9; i++) {
-        glVertex3f(0.1 * width, i * 0.1 * height, 0.0);
-        glVertex3f(width, i * 0.1 * height, 0.0);
+    if(drawingSize == 9) {
+        glBegin(GL_LINES);
+        for (i = 2; i <= 9; i++) {
+                glVertex3f( ((i * 0.1 * width) ) , 0.0, 0.0);
+                glVertex3f( ((i * 0.1 * width)), height, 0.0);
+        }
+
+        for (i = 1; i <= 9; i++) {
+            glVertex3f(0.1 * width, i * 0.1 * height, 0.0);
+            glVertex3f(width, i * 0.1 * height, 0.0);
+        }
+        glEnd();
     }
-    glEnd();
+
+    float sum = 0.0;
+
+    if(drawingSize == 6) {
+        glBegin(GL_LINES);
+        glVertex3f( 125, 0.0, 0.0);
+        glVertex3f( 125, height, 0.0);
+
+        glVertex3f( 200, 0.0, 0.0);
+        glVertex3f( 200, height, 0.0);
+
+        glVertex3f( 275, 0.0, 0.0);
+        glVertex3f( 275, height, 0.0);
+
+
+        glVertex3f( 350, 0.0, 0.0);
+        glVertex3f( 350, height, 0.0);
+
+        glVertex3f( 425, 0.0, 0.0);
+        glVertex3f( 425, height, 0.0);
+
+        glVertex3f( 500, 0.0, 0.0);
+        glVertex3f( 500, height, 0.0);
+
+        for (i = 1; i <= 6; i++) {
+            glVertex3f((0.1 * width), i * 0.2 * height, 0.0);
+            glVertex3f(width, i * 0.2 * height, 0.0);
+        }
+        glEnd();
+    }
+
+
+
 
     glDisable(GL_LINE_STIPPLE);
 }
 
-
-//distance(center, currentPoint)
-void drawDynamicCircle(){
-
-    float
-        t = 0,
-        xCenter = center.x,
-        yCenter = center.y,
-        xCurrent = currentPoint.x,
-        R = xCenter - xCurrent;
-
-    glBegin(GL_LINE_LOOP);
-    for(int i = 0; i <= 100; ++i) {
-        t = 2 * PI * i / 100;
-        glVertex3f(xCenter + R * cos(t), yCenter+ R * sin(t), 0.0);
-    }
-    glEnd();
-
+void writeBitmapString(void *font, char *string) {
+    char *c;
+    for(c = string; *c != '\0'; c++)
+        glutBitmapCharacter(font, *c);
 }
 
-void drawDynamicLine() {
-    glBegin(GL_LINES);
-        glVertex3f(center.x, center.y, 0.0);
-        glVertex3f(currentPoint.x, currentPoint.y, 0.0);
-    glEnd();
-};
-
-
 void drawFigures(int primitive) {
+    float
+        x1 = center.x,
+        y1 = center.y,
+        x2 = currentPoint.x,
+        y2 = currentPoint.y;
+
+    PolyLine *dynamicPolyLine = new PolyLine(x1, y1, x2, y2);
+    Circle *dynamicCircle = new Circle(x1, y1, x2, y2);
+    Line *dynamicLine= new Line(x1, y1, x2, y2);
+    Rectangle *dynamicRectangle = new Rectangle(x1, y1, x2, y2);
+    Hexagon *dynamicHexagon = new Hexagon(x1, y1, x2, y2);
+
     switch (primitive) {
         case  CIRCLE:
-            drawDynamicCircle();
+            dynamicCircle->drawCircle();
             break;
 
         case LINE:
-//            nline->drawLine();
-            drawDynamicLine();
+            dynamicLine->drawLine();
+            break;
+
+        case POLY_LINE:
+            dynamicPolyLine->drawPolyLine();
+            break;
+
+        case RECTANGLE:
+            dynamicRectangle->drawRectangle();
+            break;
+
+        case HEXAGON:
+            dynamicHexagon->drawHexagon();
             break;
 
         default:
             break;
 
     }
-
 }
+
+
+void drawText(char *text) {
+    glColor3f(0.0, 0.0, 15.0);
+    glRasterPos3f(80.0, 55.0, 0.0);
+    writeBitmapString(GLUT_BITMAP_HELVETICA_18, text);
+}
+
+void drawFonts(void) {
+    switch (primitive) {
+        case CIRCLE:
+            drawText((char*)"CIRCLE");
+            break;
+
+        case POLY_LINE:
+            drawText((char*)"POLYLINE");
+            break;
+
+        case LINE:
+            drawText((char*)"LINE");
+            break;
+
+        case RECTANGLE:
+            drawText((char*)"RECTANGLE");
+            break;
+
+        case POINT:
+            drawText((char*)"POINT");
+            break;
+
+        case HEXAGON:
+            drawText((char*)"HEXAGON");
+            break;
+    }
+}
+
 
 // Drawing routine.
 void drawScene(void) {
@@ -593,24 +700,20 @@ void drawScene(void) {
         drawFigures(primitive);
     }
 
-
-
     drawRectangles();
     drawPolyLines();
-//   drawCircles();
     drawCircles();
     drawHexagons();
 
 
     if (((primitive == LINE) || (primitive == RECTANGLE) || (primitive == CIRCLE)  || (primitive == HEXAGON) )  && (pointCount == 1)) {
-
-        cout << "aqui man:" << endl;
         drawTempPoint();
     }
 
     if (isGrid) {
         drawGrid();
     }
+    drawFonts();
 
     glutSwapBuffers();
 }
@@ -631,6 +734,13 @@ void pickPrimitive(int y) {
 // The mouse callback routine.
 vector<PolyLine>::iterator polylinesIteratorTemp;
 
+void resetAndSetCoordinates(float x, float y) {
+    currentPoint.x = x;
+    currentPoint.y = y;
+    center.x = x;
+    center.y = y;
+    pointCount = 1;
+}
 
 void mouseControl(int button, int state, int x, int y) {
 
@@ -647,101 +757,65 @@ void mouseControl(int button, int state, int x, int y) {
             pointCount = 0;
         }
 
-            // Click in canvas.
-        else
-        {
-            if (primitive == POINT) points.push_back( Point(x,y) );
+        // Click in canvas.
+        else {
+
+            if (primitive == POINT) {
+                points.push_back(Point(x,y));
+            }
+
             else if (primitive == LINE) {
-
                 if (pointCount == 0) {
-
-                    currentPoint.x = x;
-                    currentPoint.y = y;
-                    center.x = x;
-                    center.y = y;
-                    pointCount = 1;
+                    resetAndSetCoordinates(x, y);
                 } else {
                     lines.push_back( Line(center.x, center.y, x, y) );
-                    center.x = x;
-                    center.y = y;
-                    currentPoint.x = x;
-                    currentPoint.y = y;
-
                     pointCount = 0;
-
                 }
 
             }
 
-            else if (primitive == RECTANGLE)
-            {
-                if (pointCount == 0)
-                {
-                    center.x = x;
-                    center.y = y;
-                    pointCount = 1;
-                }
-                else
-                {
-                    rectangles.push_back( Rectangle(tempX, tempY, x, y) );
+            else if (primitive == RECTANGLE) {
+                if (pointCount == 0) {
+                    resetAndSetCoordinates(x, y);
+                } else {
+                    rectangles.push_back( Rectangle(center.x, center.y, x, y) );
                     pointCount = 0;
                 }
             }
-            else if(primitive == POLY_LINE)
-            {
-                cout << "HERE:" << endl;
 
-                if (pointCount  == 0)
-                {
-                    tempX = x;
-                    tempY = y;
-                    pointCount++;
-                }
-                else
-                {
-                    polylines.push_back( PolyLine(tempX, tempY, x, y) );
-                    tempX = x;
-                    tempY = y;
-                    pointCount++;
-                }
 
+            else if(primitive == POLY_LINE) {
+                if (pointCount == 0) {
+                    resetAndSetCoordinates(x, y);
+                } else {
+                    polylines.push_back( PolyLine(center.x, center.y, x, y));
+                    resetAndSetCoordinates(x, y);
+                }
             }
-            else if(primitive == CIRCLE)
-            {
 
-
+            else if(primitive == CIRCLE) {
                 if (pointCount == 0){
-                    center.x = x;
-                    center.y = y;
-                    pointCount = 1;
+                    resetAndSetCoordinates(x, y);
                 } else {
                     circles.push_back( Circle(center.x, center.y, x, y) );
                     pointCount = 0;
-                    center.x = 0;
-                    center.y = 0;
                 }
-
             }
-            else if(primitive == HEXAGON)
-            {
-                cout << "yafwefwqfewfwqe" << y << endl;
 
+            else if(primitive == HEXAGON) {
+                if (pointCount  == 0) {
+                    resetAndSetCoordinates(x, y);
 
-                if (pointCount  == 0)
-                {
-                    tempX = x;
-                    tempY = y;
-                    pointCount++;
-                }
-                else
-                {
-                    hexagons.push_back( Hexagon(tempX, tempY, x, y) );
+                } else {
+                    hexagons.push_back( Hexagon(center.x, center.y, x, y) );
                     pointCount = 0;
                 }
-
             }
 
         }
+
+
+
     }
     glutPostRedisplay();
 }
@@ -750,9 +824,9 @@ void mouseControl(int button, int state, int x, int y) {
 void setup(void) {
     glClearColor(1.0, 1.0, 1.0, 0.0);
 }
+
 // OpenGL window reshape routine.
 void resize(int w, int h) {
-
     glViewport(0, 0, (GLsizei)w, (GLsizei)h);
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
@@ -768,12 +842,18 @@ void resize(int w, int h) {
     glLoadIdentity();
 }
 // Keyboard input processing routine.
+
 void keyInput(unsigned char key, int x, int y) {
+
     switch (key) {
         case 27:
             exit(0);
             break;
 
+        case GLUT_MIDDLE_BUTTON:
+            primitive = INACTIVE;
+            pointCount = 0;
+            break;
         default:
             break;
     }
@@ -815,9 +895,91 @@ void grid_menu(int id) {
 
     glutPostRedisplay();
 }
+
+void add_colors(int id) {
+    cout << "id = :" << id << endl;
+    if(id == 1) {
+        colorVector[0] = 255.0;
+        colorVector[1] = 0.00;
+        colorVector[2] = 0.00;
+    }
+
+    if(id == 2) {
+        colorVector[0] = 0.0;
+        colorVector[1] = 0.0;
+        colorVector[2] = 204.0;
+    }
+
+    if(id == 3) {
+        colorVector[0] = 255.0;
+        colorVector[1] = 0.0;
+        colorVector[2] = 255.0;
+    }
+
+    if(id == 4) {
+        colorVector[0] = 0.0;
+        colorVector[1] = 51.0;
+        colorVector[2] = 0.0;
+    }
+
+    if(id == 5) {
+        colorVector[0] = 0.0;
+        colorVector[1] = 0.0;
+        colorVector[2] = 0.0;
+    }
+
+    glutPostRedisplay();
+};
+
+void mode_figures(int id) {
+    if(id == 1)
+        TYPE = GL_LINE;
+
+    if(id == 2)
+        TYPE = GL_FILL;
+
+    glutPostRedisplay();
+}
+
+
+void sizeGrid(int id) {
+    if(id == 1) {
+        drawingSize = 3;
+    }
+
+    if(id == 2) {
+        drawingSize = 9;
+    }
+
+    if(id == 3) {
+        drawingSize = 6;
+    }
+
+    glutPostRedisplay();
+}
+
 // Function to create menu.
 void makeMenu(void) {
-    int sub_menu;
+    int sub_menu, options_add_colors, options_mode, options_size_grid;
+
+
+    options_size_grid = glutCreateMenu(sizeGrid);
+    glutAddMenuEntry("Size 1", 1);
+    glutAddMenuEntry("Size 2", 2);
+    glutAddMenuEntry("Size 2", 3);
+
+
+    options_mode = glutCreateMenu(mode_figures);
+    glutAddMenuEntry("Filled", 1);
+    glutAddMenuEntry("outLine", 2);
+
+    options_add_colors = glutCreateMenu(add_colors);
+    glutAddMenuEntry("Red",   1);
+    glutAddMenuEntry("Blue",  2);
+    glutAddMenuEntry("Pink",  3);
+    glutAddMenuEntry("Green", 4);
+    glutAddMenuEntry("Black", 5);
+
 
     sub_menu = glutCreateMenu(grid_menu);
     glutAddMenuEntry("On", 3);
@@ -825,6 +987,9 @@ void makeMenu(void) {
 
     glutCreateMenu(rightMenu);
     glutAddSubMenu("Grid", sub_menu);
+    glutAddSubMenu("Colors", options_add_colors);
+    glutAddSubMenu("Mode", options_mode);
+    glutAddSubMenu("Size Grid", options_size_grid);
     glutAddMenuEntry("Clear", 1);
     glutAddMenuEntry("Quit", 2);
     glutAttachMenu(GLUT_RIGHT_BUTTON);

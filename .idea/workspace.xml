@@ -10,10 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e72ade50-218c-42bd-9762-87852023732e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CG/canvas/methods.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CG/fonts/fonts.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CG/canvas/canvas" beforeDir="false" afterPath="$PROJECT_DIR$/CG/canvas/canvas" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CG/canvas/canvas.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/CG/canvas/canvas.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/circleWithList/circleWithList" beforeDir="false" afterPath="$PROJECT_DIR$/CG/circleWithList/circleWithList" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/menus/menus.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/CG/menus/menus.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/movieSphere/movieSphere" beforeDir="false" afterPath="$PROJECT_DIR$/CG/movieSphere/movieSphere" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/multipleLists/multipleLists" beforeDir="false" afterPath="$PROJECT_DIR$/CG/multipleLists/multipleLists" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/CG/canvas/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,29 +31,34 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CG/canvas/canvas.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="389" lean-forward="true" selection-start-line="389" selection-end-line="389" />
+            <state relative-caret-position="160">
+              <caret line="648" column="4" lean-forward="true" selection-start-line="648" selection-start-column="4" selection-end-line="648" selection-end-column="34" />
               <folding>
                 <element signature="e#413#435#0" expanded="true" />
-                <element signature="e#1512#1824#0" />
-                <element signature="e#2148#2330#0" />
-                <element signature="e#2453#2737#0" />
-                <element signature="e#11156#11894#0" />
-                <element signature="e#14432#14895#1" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CG/circuloInterativo/circuloInterativo.cpp">
+        <entry file="file://$PROJECT_DIR$/CG/menus/menus.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="29" column="2" selection-start-line="29" selection-start-column="2" selection-end-line="30" selection-end-column="22" />
+            <state relative-caret-position="1275">
+              <caret line="85" column="5" selection-start-line="85" selection-start-column="5" selection-end-line="85" selection-end-column="5" />
               <folding>
-                <element signature="e#75#99#0" expanded="true" />
-                <element signature="e#1243#1799#0" />
-                <element signature="e#2177#2592#0" />
+                <element signature="e#494#518#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CG/fonts/fonts.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="32" selection-end-column="12" />
+              <folding>
+                <element signature="e#341#365#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -59,36 +68,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>raio</find>
-      <find>drawCircles</find>
+      <find>d</find>
+      <find>::drawCircle</find>
+      <find>drawScene</find>
+      <find>drawcir</find>
+      <find>x1 = center</find>
+      <find>drawCirc</find>
+      <find>::drawCirc</find>
+      <find>::DRawCircle</find>
+      <find>circles.pus</find>
+      <find>fill</find>
+      <find>outline</find>
       <find>drawCIrcle</find>
-      <find>drawDIn</find>
-      <find>drawCircle</find>
-      <find>drawfi</find>
-      <find>mouseC</find>
-      <find>circlecurre</find>
-      <find>DRAWF</find>
-      <find>i</find>
-      <find>mouseCOntr</find>
-      <find>DRAWFI</find>
-      <find>center</find>
-      <find>drawLIne</find>
-      <find>Line::</find>
-      <find>drawF</find>
-      <find>::drawL</find>
-      <find>Line</find>
-      <find>Line()</find>
-      <find>drawSce</find>
-      <find>drawFu</find>
-      <find>drawFIg</find>
-      <find>draw</find>
-      <find>drawDynamicLine</find>
-      <find>line::</find>
-      <find>drawFi</find>
-      <find>nline</find>
-      <find>drawLine</find>
-      <find>500</find>
-      <find>hei</find>
+      <find>if(id -</find>
+      <find>RECTANG</find>
+      <find>::DRAWRECTANG</find>
+      <find>TYPE</find>
+      <find>::DRAWREC</find>
+      <find>type</find>
+      <find>::drawCI</find>
+      <find>vector</find>
+      <find>::drawCIr</find>
+      <find>id == 5</find>
+      <find>color</find>
+      <find>::drawLIne</find>
+      <find>grid</find>
+      <find>drawingSize</find>
+      <find>drawGRi</find>
+      <find>DRawgrid</find>
+      <find>menu</find>
+      <find>drawGRid</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -107,6 +116,8 @@
         <option value="$PROJECT_DIR$/Redes/scan.c" />
         <option value="$PROJECT_DIR$/CG/circuloInterativo/circuloInterativo.cpp" />
         <option value="$PROJECT_DIR$/CG/canvas/methods.h" />
+        <option value="$PROJECT_DIR$/CG/fonts/fonts.cpp" />
+        <option value="$PROJECT_DIR$/CG/menus/menus.cpp" />
         <option value="$PROJECT_DIR$/CG/canvas/canvas.cpp" />
       </list>
     </option>
@@ -141,12 +152,6 @@
               <item name="codes_for_college" type="462c0819:PsiDirectoryNode" />
               <item name="CG" type="462c0819:PsiDirectoryNode" />
               <item name="canvas" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codes_for_college" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codes_for_college" type="462c0819:PsiDirectoryNode" />
-              <item name="CG" type="462c0819:PsiDirectoryNode" />
-              <item name="circuloInterativo" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -207,25 +212,27 @@
       <workItem from="1555511783462" duration="655000" />
       <workItem from="1555523473530" duration="2832000" />
       <workItem from="1555526410555" duration="2679000" />
-      <workItem from="1555604034983" duration="12392000" />
+      <workItem from="1555604034983" duration="15639000" />
+      <workItem from="1555668668144" duration="17900000" />
+      <workItem from="1556014082724" duration="994000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46215000" />
+    <option name="totallyTimeSpent" value="68356000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-1" width="1368" height="745" extended-state="6" />
+    <frame x="-1" y="-1" width="1368" height="772" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2326284" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.23867069" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" weight="0.20512821" />
-      <window_info active="true" anchor="bottom" x="-228" y="108" width="1364" height="381" id="Terminal" order="1" visible="true" weight="0.24839744" />
+      <window_info anchor="bottom" x="-228" y="108" width="1364" height="381" id="Terminal" order="1" weight="0.19969279" />
       <window_info anchor="bottom" id="Messages" order="2" weight="0.3279483" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="CMake" order="4" weight="0.32852563" />
+      <window_info active="true" anchor="bottom" id="CMake" order="4" visible="true" weight="0.32718894" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.32956383" />
       <window_info anchor="bottom" id="Run" order="7" weight="0.33279485" />
@@ -281,12 +288,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CG/canvas/CMakeLists.txt" />
     <entry file="file://$PROJECT_DIR$/CG/canvas/compile_database.json" />
-    <entry file="file://$PROJECT_DIR$/CG/canvas/IMG_6307.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CG/canvas/IMG_6308.JPG">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/CG/circle/circle.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="59">
@@ -329,9 +330,12 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/CG/canvas/methods.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/CG/circuloInterativo/circuloInterativo.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
+        <state relative-caret-position="435">
           <caret line="29" column="2" selection-start-line="29" selection-start-column="2" selection-end-line="30" selection-end-column="22" />
           <folding>
             <element signature="e#75#99#0" expanded="true" />
@@ -341,20 +345,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CG/canvas/methods.h">
+    <entry file="file://$PROJECT_DIR$/CG/canvas/IMG_6307.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CG/canvas/IMG_6308.JPG">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CG/movieSphere/movieSphere.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="70" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CG/circleWithList/circleWithList.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="76" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CG/helixList/helixList.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="116" column="6" selection-start-line="116" selection-start-column="6" selection-end-line="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CG/multipleLists/multipleLists.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CG/ex/eex.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1202" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CG/exercicio1/exercicio1.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1607" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CG/ex/square.cpp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/CG/canvas/canvas.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="389" lean-forward="true" selection-start-line="389" selection-end-line="389" />
+        <state relative-caret-position="160">
+          <caret line="648" column="4" lean-forward="true" selection-start-line="648" selection-start-column="4" selection-end-line="648" selection-end-column="34" />
           <folding>
             <element signature="e#413#435#0" expanded="true" />
-            <element signature="e#1512#1824#0" />
-            <element signature="e#2148#2330#0" />
-            <element signature="e#2453#2737#0" />
-            <element signature="e#11156#11894#0" />
-            <element signature="e#14432#14895#1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CG/menus/menus.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="85" column="5" selection-start-line="85" selection-start-column="5" selection-end-line="85" selection-end-column="5" />
+          <folding>
+            <element signature="e#494#518#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CG/fonts/fonts.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="32" selection-end-column="12" />
+          <folding>
+            <element signature="e#341#365#0" expanded="true" />
           </folding>
         </state>
       </provider>

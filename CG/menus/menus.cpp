@@ -30,7 +30,7 @@ void drawScene(void) {
    glClear (GL_COLOR_BUFFER_BIT);
 
    glColor3fv(square_color);
-   
+
    glBegin(GL_POLYGON);
       glVertex3f(20.0, 20.0, 0.0);
       glVertex3f(80.0, 20.0, 0.0);
@@ -42,9 +42,9 @@ void drawScene(void) {
 }
 
 // Initialization routine.
-void setup(void) 
+void setup(void)
 {
-   glClearColor(1.0, 1.0, 1.0, 0.0);  
+   glClearColor(1.0, 1.0, 1.0, 0.0);
 }
 
 // OpenGL window reshape routine.
@@ -74,7 +74,7 @@ void keyInput(unsigned char key, int x, int y) {
 void printInteraction(void)
 {
    cout << "Interaction:" << endl;
-   cout << "Press the right mouse button to see options." << endl;  
+   cout << "Press the right mouse button to see options." << endl;
 }
 
 // The top menu callback function.
@@ -88,11 +88,11 @@ void color_menu(int id) {
     if (id == 2) {void makeMenu(void) {
    // The sub-menu is created first (because it should be visible when the top
    // menu is created): its callback function is registered and menu entries added.
-   
+
    int sub_menu, mode_menu;
 
    sub_menu = glutCreateMenu(color_menu);
-   
+
    glutAddMenuEntry("Red", 2);
    glutAddMenuEntry("Blue", 3);
 
@@ -104,11 +104,11 @@ void color_menu(int id) {
         square_colvoid makeMenu(void) {
    // The sub-menu is created first (because it should be visible when the top
    // menu is created): its callback function is registered and menu entries added.
-   
+
    int sub_menu, mode_menu;
 
    sub_menu = glutCreateMenu(color_menu);
-   
+
    glutAddMenuEntry("Red", 2);
    glutAddMenuEntry("Blue", 3);
 
@@ -116,17 +116,17 @@ void color_menu(int id) {
     glutAddMenuEntry("Filed", 4);
     glutAddMenuEntry("OutLine", 5);
 
-   // The top menu is created: its callback function is registered and menu entries,0.0; square_color[2] = 0.0; 
+   // The top menu is created: its callback function is registered and menu entries,0.0; square_color[2] = 0.0;
     }
 
     if (id == 3) {void makeMenu(void) {
    // The sub-menu is created first (because it should be visible when the top
    // menu is created): its callback function is registered and menu entries added.
-   
+
    int sub_menu, mode_menu;
 
    sub_menu = glutCreateMenu(color_menu);
-   
+
    glutAddMenuEntry("Red", 2);
    glutAddMenuEntry("Blue", 3);
 
@@ -138,11 +138,11 @@ void color_menu(int id) {
         square_colvoid makeMenu(void) {
    // The sub-menu is created first (because it should be visible when the top
    // menu is created): its callback function is registered and menu entries added.
-   
+
    int sub_menu, mode_menu;
 
    sub_menu = glutCreateMenu(color_menu);
-   
+
    glutAddMenuEntry("Red", 2);
    glutAddMenuEntry("Blue", 3);
 
@@ -150,17 +150,17 @@ void color_menu(int id) {
     glutAddMenuEntry("Filed", 4);
     glutAddMenuEntry("OutLine", 5);
 
-   // The top menu is created: its callback function is registered and menu entries,0.0; square_color[2] = 1.0; 
+   // The top menu is created: its callback function is registered and menu entries,0.0; square_color[2] = 1.0;
     }
 
    glutPostRedisplvoid makeMenu(void) {
    // The sub-menu is created first (because it should be visible when the top
    // menu is created): its callback function is registered and menu entries added.
-   
+
    int sub_menu, mode_menu;
 
    sub_menu = glutCreateMenu(color_menu);
-   
+
    glutAddMenuEntry("Red", 2);
    glutAddMenuEntry("Blue", 3);
 
@@ -174,11 +174,11 @@ void color_menu(int id) {
 void mode(int id) void makeMenu(void) {
    // The sub-menu is created first (because it should be visible when the top
    // menu is created): its callback function is registered and menu entries added.
-   
+
    int sub_menu, mode_menu;
 
    sub_menu = glutCreateMenu(color_menu);
-   
+
    glutAddMenuEntry("Red", 2);
    glutAddMenuEntry("Blue", 3);
 
@@ -191,11 +191,11 @@ void mode(int id) void makeMenu(void) {
     if (id == 4) {void makeMenu(void) {
    // The sub-menu is created first (because it should be visible when the top
    // menu is created): its callback function is registered and menu entries added.
-   
+
    int sub_menu, mode_menu;
 
    sub_menu = glutCreateMenu(color_menu);
-   
+
    glutAddMenuEntry("Red", 2);
    glutAddMenuEntry("Blue", 3);
 
@@ -217,11 +217,11 @@ void mode(int id) void makeMenu(void) {
 void makeMenu(void) {
    // The sub-menu is created first (because it should be visible when the top
    // menu is created): its callback function is registered and menu entries added.
-   
+
    int sub_menu, mode_menu;
 
    sub_menu = glutCreateMenu(color_menu);
-   
+
    glutAddMenuEntry("Red", 2);
    glutAddMenuEntry("Blue", 3);
 
@@ -244,19 +244,19 @@ void makeMenu(void) {
 int main(int argc, char **argv) {
    printInteraction();
    glutInit(&argc, argv);
-   glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB); 
+   glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
    glutInitWindowSize(500, 500);
-   glutInitWindowPosition(100, 100); 
+   glutInitWindowPosition(100, 100);
    glutCreateWindow("menus.cpp");
-   setup(); 
-   glutDisplayFunc(drawScene); 
+   setup();
+   glutDisplayFunc(drawScene);
    glutReshapeFunc(resize);
    glutKeyboardFunc(keyInput);
-   
+
    // Make menu.
    makeMenu();
 
    glutMainLoop();
 
-   return 0; 
+   return 0;
 }
