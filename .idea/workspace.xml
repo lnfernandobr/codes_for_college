@@ -80,8 +80,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CG/Trabalho1/trabalho1.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="981" column="24" lean-forward="true" selection-start-line="981" selection-start-column="24" selection-end-line="981" selection-end-column="24" />
+            <state relative-caret-position="150">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
               <folding>
                 <element signature="e#409#431#0" expanded="true" />
                 <element signature="e#1786#2070#1" />
@@ -225,6 +225,12 @@
               <item name="codes_for_college" type="462c0819:PsiDirectoryNode" />
               <item name="CG" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="codes_for_college" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codes_for_college" type="462c0819:PsiDirectoryNode" />
+              <item name="CG" type="462c0819:PsiDirectoryNode" />
+              <item name="Trabalho1" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -287,22 +293,22 @@
       <workItem from="1555604034983" duration="15639000" />
       <workItem from="1555668668144" duration="17900000" />
       <workItem from="1556014082724" duration="994000" />
-      <workItem from="1556108247918" duration="9706000" />
+      <workItem from="1556108247918" duration="9848000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78062000" />
+    <option name="totallyTimeSpent" value="78204000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-1" width="1368" height="745" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.24244712" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24244712" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" weight="0.20512821" />
-      <window_info active="true" anchor="bottom" x="-228" y="108" width="1364" height="381" id="Terminal" order="1" visible="true" weight="0.29326922" />
+      <window_info anchor="bottom" x="-228" y="108" width="1364" height="381" id="Terminal" order="1" visible="true" weight="0.29326922" />
       <window_info anchor="bottom" id="Messages" order="2" weight="0.3279483" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="bottom" id="CMake" order="4" weight="0.32692307" />
@@ -322,17 +328,6 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/CG/Trabalho1/trabalho1.cpp</url>
-          <line>947</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/main.c">
@@ -556,8 +551,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CG/Trabalho1/trabalho1.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="981" column="24" lean-forward="true" selection-start-line="981" selection-start-column="24" selection-end-line="981" selection-end-column="24" />
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
           <folding>
             <element signature="e#409#431#0" expanded="true" />
             <element signature="e#1786#2070#1" />

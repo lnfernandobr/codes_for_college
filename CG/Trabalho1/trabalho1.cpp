@@ -4,7 +4,7 @@
  * Comando para compilação: g++ -o trabalho1  trabalho1.cpp -lglut -lGL -lGLU -lm
  *
  *
- * Prova 1 de Computação grafica 3º Ano - Ciência da computação UEMS
+ * Tabalho 1 de Computação grafica 3º Ano - Ciência da computação UEMS
  * Nome: Fernando Lima
 */
 
