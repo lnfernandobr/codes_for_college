@@ -72,33 +72,33 @@ static int stippleID = 0;
 
 // Point class.
 class Point {
-    public:
-        Point(int xVal, int yVal) {
-            x = xVal;
-            y = yVal;
-        }
+public:
+    Point(int xVal, int yVal) {
+        x = xVal;
+        y = yVal;
+    }
 
     void drawPoint(void); // Function to draw a point.
 
-    private:
-        int x, y; // x and y co-ordinates of point.
-        static float size; // Size of point.
+private:
+    int x, y; // x and y co-ordinates of point.
+    static float size; // Size of point.
 };
 
 // Line class.
 class Line {
-    public:
-        Line(int x1Val, int y1Val, int x2Val, int y2Val) {
-            x1 = x1Val;
-            y1 = y1Val;
-            x2 = x2Val;
-            y2 = y2Val;
-        }
+public:
+    Line(int x1Val, int y1Val, int x2Val, int y2Val) {
+        x1 = x1Val;
+        y1 = y1Val;
+        x2 = x2Val;
+        y2 = y2Val;
+    }
 
     void drawLine();
 
-    private:
-        int x1, y1, x2, y2; // x and y co-ordinates of endpoints.
+private:
+    int x1, y1, x2, y2; // x and y co-ordinates of endpoints.
 };
 
 class Rectangle {
@@ -111,59 +111,59 @@ public:
     }
     void drawRectangle();
 
-    private:
-        int x1, y1, x2, y2; // x and y co-ordinates of diagonally opposite vertices.
+private:
+    int x1, y1, x2, y2; // x and y co-ordinates of diagonally opposite vertices.
 };
 
 // class polyline.
 class PolyLine {
-    public:
-        PolyLine(int x1Val, int y1Val, int x2Val, int y2Val) {
-            x1 = x1Val;
-            y1 = y1Val;
-            x2 = x2Val;
-            y2 = y2Val;
-        }
+public:
+    PolyLine(int x1Val, int y1Val, int x2Val, int y2Val) {
+        x1 = x1Val;
+        y1 = y1Val;
+        x2 = x2Val;
+        y2 = y2Val;
+    }
 
     void drawPolyLine();
 
 
-    public:
-        int x1, y1, x2, y2; // x and y co-ordinates of endpoints.
+public:
+    int x1, y1, x2, y2; // x and y co-ordinates of endpoints.
 };
 
 // class polyline.
 class Circle {
-    public:
-        Circle(int x1Val, int y1Val, int x2Val, int y2Val) {
-            x1 = x1Val;
-            y1= y1Val;
-            x2= x2Val;
-            y2= y2Val;
+public:
+    Circle(int x1Val, int y1Val, int x2Val, int y2Val) {
+        x1 = x1Val;
+        y1= y1Val;
+        x2= x2Val;
+        y2= y2Val;
 
-        }
+    }
 
-        void drawCircle();
+    void drawCircle();
 
-    private:
-        int x1, y1, x2, y2; // x and y co-ordinates of endpoints.
+private:
+    int x1, y1, x2, y2; // x and y co-ordinates of endpoints.
 };
 
 // class polyline.
 class Hexagon {
-    public:
-        Hexagon(int x1Val, int y1Val, int x2Val, int y2Val) {
-            x1 = x1Val;
-            y1= y1Val;
-            x2= x2Val;
-            y2= y2Val;
+public:
+    Hexagon(int x1Val, int y1Val, int x2Val, int y2Val) {
+        x1 = x1Val;
+        y1= y1Val;
+        x2= x2Val;
+        y2= y2Val;
 
-        }
+    }
 
     void drawHexagon();
 
-    private:
-        int x1, y1, x2, y2; // x and y co-ordinates of endpoints.
+private:
+    int x1, y1, x2, y2; // x and y co-ordinates of endpoints.
 };
 
 
@@ -225,8 +225,8 @@ void Line::drawLine() {
     glColor3f(colorVector[0], colorVector[1], colorVector[2]); // Aplica as cores RGB, todas contidas nas posições do vetor
 
     glBegin(GL_LINES);
-        glVertex3f(x1, y1, 0.0);
-        glVertex3f(x2, y2, 0.0);
+    glVertex3f(x1, y1, 0.0);
+    glVertex3f(x2, y2, 0.0);
     glEnd();
 }
 
@@ -245,8 +245,8 @@ void PolyLine::drawPolyLine() {
     glColor3f(colorVector[0], colorVector[1], colorVector[2]);
 
     glBegin(GL_LINES);
-        glVertex3f(x1, y1, 0.0);
-        glVertex3f(x2, y2, 0.0);
+    glVertex3f(x1, y1, 0.0);
+    glVertex3f(x2, y2, 0.0);
     glEnd();
 }
 
@@ -268,7 +268,7 @@ void Circle::drawCircle() {
        de um circle e as coordenadas x, y respectivamente
      */
 
-    glBegin(GL_LINE_LOOP);
+    TYPE == GL_FILL?  glBegin(GL_POLYGON) : glBegin(GL_LINE_LOOP);
     for(int i = 0; i < 100; ++i) {
         glColor3f(colorVector[0], colorVector[1], colorVector[2]);
         glVertex3f( x1 + R * cos(t),   y1 + R * sin(t), 0.0);
@@ -295,11 +295,11 @@ void Hexagon::drawHexagon() {
      */
 
     glBegin(GL_POLYGON);
-        for(int i = 0; i < nVerticesHexagon; ++i) {
-            glColor3f(colorVector[0], colorVector[1], colorVector[2]);
-            glVertex3f( x1 + R * cos(t),   y1 + R * sin(t), 0.0);
-            t += 2 * PI / nVerticesHexagon;
-        }
+    for(int i = 0; i < nVerticesHexagon; ++i) {
+        glColor3f(colorVector[0], colorVector[1], colorVector[2]);
+        glVertex3f( x1 + R * cos(t),   y1 + R * sin(t), 0.0);
+        t += 2 * PI / nVerticesHexagon;
+    }
     glEnd();
 }
 
@@ -416,7 +416,7 @@ void drawPointSelectionBox(void) {
     glColor3f(0.0, 0.0, 0.0);
 
     glBegin(GL_POINTS);
-        glVertex3f(0.05 * width, 0.95 * height, 0.0);
+    glVertex3f(0.05 * width, 0.95 * height, 0.0);
     glEnd();
 }
 
@@ -438,8 +438,8 @@ void drawLineSelectionBox(void) {
     // Draw line icon.
     glColor3f(0.0, 0.0, 0.0);
     glBegin(GL_LINES);
-        glVertex3f(0.025 * width, 0.825 * height, 0.0);
-        glVertex3f(0.075 * width, 0.875 * height, 0.0);
+    glVertex3f(0.025 * width, 0.825 * height, 0.0);
+    glVertex3f(0.075 * width, 0.875 * height, 0.0);
     glEnd();
 }
 
@@ -460,8 +460,8 @@ void drawRectangleSelectionBox(void) {
 
     // Draw rectangle icon.
     glColor3f(0.0, 0.0, 0.0);
-        glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-        glRectf(0.025 * width, 0.735 * height, 0.075 * width, 0.765 * height);
+    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+    glRectf(0.025 * width, 0.735 * height, 0.075 * width, 0.765 * height);
     glEnd();
 }
 
@@ -481,15 +481,15 @@ void drawPolyLineSelectionBox(void) {
 
     // Desenha polyLine
     glColor3f(0.0, 0.0, 0.0);
-        glBegin(GL_LINES);
-        glVertex3f(0.025 * width, 0.625 * height, 0.0);
-        glVertex3f(0.045 * width, 0.675 * height, 0.0);
+    glBegin(GL_LINES);
+    glVertex3f(0.025 * width, 0.625 * height, 0.0);
+    glVertex3f(0.045 * width, 0.675 * height, 0.0);
 
-        glVertex3f(0.045 * width, 0.675 * height, 0.0);
-        glVertex3f(0.065 * width, 0.630 * height, 0.0);
+    glVertex3f(0.045 * width, 0.675 * height, 0.0);
+    glVertex3f(0.065 * width, 0.630 * height, 0.0);
 
-        glVertex3f(0.065 * width, 0.630 * height, 0.0);
-        glVertex3f(0.085 * width, 0.665 * height, 0.0);
+    glVertex3f(0.065 * width, 0.630 * height, 0.0);
+    glVertex3f(0.085 * width, 0.665 * height, 0.0);
     glEnd();
 }
 
@@ -512,11 +512,11 @@ void drawCircleSelectionBox(void) {
 
     /// Vai desenhar o icon no quadrado especifico dele, a logica é a mesma da função drawCircle
     glBegin(GL_LINE_LOOP);
-        for(int i = 0; i < nVertices; ++i) {
-            glColor3ub(0.0, 0.0, 0.0);
-            glVertex3f( (0.050 * width) + 15 * cos(t), (0.550 * height) + 15 * sin(t), 0.0);
-            t += 2 * PI / nVertices;
-        }
+    for(int i = 0; i < nVertices; ++i) {
+        glColor3ub(0.0, 0.0, 0.0);
+        glVertex3f( (0.050 * width) + 15 * cos(t), (0.550 * height) + 15 * sin(t), 0.0);
+        t += 2 * PI / nVertices;
+    }
     glEnd();
 
 }
@@ -537,11 +537,11 @@ void drawHexagonSelectionBox(void) {
 
     /// Vai desenhar o icon no quadrado especifico dele, a logica é a mesma da função drawHexagon
     glBegin(GL_LINE_LOOP);
-        for(int i = 0; i < nVerticesHexagon; ++i) {
-            glColor3ub(0.0, 0.0, 0.0);
-            glVertex3f( (0.040 * width) + 15 * cos(t), (0.450 * height) + 15 * sin(t), 0.0);
-            t += 2 * PI / nVerticesHexagon;
-        }
+    for(int i = 0; i < nVerticesHexagon; ++i) {
+        glColor3ub(0.0, 0.0, 0.0);
+        glVertex3f( (0.040 * width) + 15 * cos(t), (0.450 * height) + 15 * sin(t), 0.0);
+        t += 2 * PI / nVerticesHexagon;
+    }
     glEnd();
 }
 
@@ -562,8 +562,8 @@ void drawTempPoint(void) {
     glColor3f(1.0, 0.0, 0.0);
 
     glPointSize(10);
-        glBegin(GL_POINTS);
-        glVertex3f(center.x, center.y, 0.0);
+    glBegin(GL_POINTS);
+    glVertex3f(center.x, center.y, 0.0);
     glEnd();
 }
 
@@ -594,8 +594,8 @@ void drawGrid(void) {
     if(drawingSize == 9) {
         glBegin(GL_LINES);
         for (int i = 2; i <= 9; i++) {
-                glVertex3f( ((i * 0.1 * width) ) , 0.0, 0.0);
-                glVertex3f( ((i * 0.1 * width)), height, 0.0);
+            glVertex3f( ((i * 0.1 * width) ) , 0.0, 0.0);
+            glVertex3f( ((i * 0.1 * width)), height, 0.0);
         }
 
         for (int i = 1; i <= 9; i++) {
@@ -634,10 +634,10 @@ void writeBitmapString(void *font, char *string) {
 /// Função desenha as figuras geometricas dinamicamente
 void drawFigures(int primitive) {
     float
-        x1 = center.x,
-        y1 = center.y,
-        x2 = currentPoint.x,
-        y2 = currentPoint.y;
+            x1 = center.x,
+            y1 = center.y,
+            x2 = currentPoint.x,
+            y2 = currentPoint.y;
 
     PolyLine *dynamicPolyLine = new PolyLine(x1, y1, x2, y2);
     Circle *dynamicCircle = new Circle(x1, y1, x2, y2);
@@ -713,14 +713,6 @@ void drawScene(void) {
     glClear(GL_COLOR_BUFFER_BIT);
     glColor3f(0.0, 0.0, 0.0);
 
-    drawPointSelectionBox();
-    drawLineSelectionBox();
-    drawRectangleSelectionBox();
-    drawPolyLineSelectionBox();
-    drawCircleSelectionBox();
-    drawHexagonSelectionBox();
-
-    drawInactiveArea();
 
 
     if(pointCount != 0) {
@@ -735,8 +727,7 @@ void drawScene(void) {
     drawCircles();
 
 
-    if (
-        ( (primitive == LINE) || (primitive == RECTANGLE) || (primitive == CIRCLE)  || (primitive == HEXAGON) )
+    if (( (primitive == LINE) || (primitive == RECTANGLE) || (primitive == CIRCLE)  || (primitive == HEXAGON) )
         && (pointCount == 1)
     ) drawTempPoint();
 
@@ -744,6 +735,15 @@ void drawScene(void) {
     if (isGrid) {
         drawGrid();
     }
+
+    drawPointSelectionBox();
+    drawLineSelectionBox();
+    drawRectangleSelectionBox();
+    drawPolyLineSelectionBox();
+    drawCircleSelectionBox();
+    drawHexagonSelectionBox();
+
+    drawInactiveArea();
 
     drawFonts();
     glutSwapBuffers();
@@ -778,13 +778,13 @@ void mouseControl(int button, int state, int x, int y) {
         // Click outside canvas - do nothing.
         if (x < 0 || x > width || y < 0 || y > height) ;
 
-        // Click in left selection area.
+            // Click in left selection area.
         else if ( x < 0.1*width ) {
             pickPrimitive(y);
             pointCount = 0;
         }
 
-        // Click in canvas.
+            // Click in canvas.
         else {
 
             if (primitive == POINT) {
