@@ -946,35 +946,37 @@ void keyStrippers(int key) {
 
 // Controla as cores das figuras
 void add_colors(int id) {
-    cout << "id = :" << id << endl;
-    if(id == 1) {
-        colorVector[0] = 255.0;
-        colorVector[1] = 0.00;
-        colorVector[2] = 0.00;
-    }
 
-    if(id == 2) {
-        colorVector[0] = 0.0;
-        colorVector[1] = 0.0;
-        colorVector[2] = 204.0;
-    }
+    switch (id) {
+        case 1:
+            colorVector[0] = 255.0;
+            colorVector[1] = 0.00;
+            colorVector[2] = 0.00;
+            break;
 
-    if(id == 3) {
-        colorVector[0] = 255.0;
-        colorVector[1] = 0.0;
-        colorVector[2] = 255.0;
-    }
+        case 2:
+            colorVector[0] = 0.0;
+            colorVector[1] = 0.0;
+            colorVector[2] = 204.0;
+            break;
 
-    if(id == 4) {
-        colorVector[0] = 0.0;
-        colorVector[1] = 51.0;
-        colorVector[2] = 0.0;
-    }
+        case 3:
+            colorVector[0] = 255.0;
+            colorVector[1] = 0.0;
+            colorVector[2] = 255.0;
+            break;
 
-    if(id == 5) {
-        colorVector[0] = 0.0;
-        colorVector[1] = 0.0;
-        colorVector[2] = 0.0;
+        case 4:
+            colorVector[0] = 0.0;
+            colorVector[1] = 51.0;
+            colorVector[2] = 0.0;
+            break;
+
+        case 5:
+            colorVector[0] = 0.0;
+            colorVector[1] = 0.0;
+            colorVector[2] = 0.0;
+            break;
     }
 
     glutPostRedisplay();
