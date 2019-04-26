@@ -13,6 +13,11 @@
 
 /// Inclusão de libs
 
+#include <sstream>
+#include <string.h>
+
+
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
@@ -29,14 +34,14 @@
 
 /// Inclusão de defineds
 #define INACTIVE 0
-#define POINT 1
-#define LINE 2
-#define RECTANGLE 3
-#define POLY_LINE 4
-#define CIRCLE 5
-#define HEXAGON 6
+
+#define CONCEITO_VECTOR 1
+#define ANGULO_VECTOR 2
+#define SUM_VECTOR 3
+#define SCALAR_PRODUCT 4
+#define VECTOR_PRODUCT 5
 #define PI 3.14159265358979324
-#define NUMBER_PRIMITIVES 6
+#define NUMBER_PRIMITIVES 5
 
 
 /// Variaveis globais
@@ -50,6 +55,15 @@ typedef struct {
     float y;
 }Pnt;
 
+int quadrant = 1, posQuadrant  = 0;
+float wi = 0.0, hei = 0.0;
+
+typedef struct  {
+    float x1 = 500, x2, y1 = 250, y2;
+}PntTemp;
+
+PntTemp vectorOne, vectorTwo;
+
 Pnt currentPoint; // Estrutura que iram conter as coordenadas em tempo real do ponto
 Pnt center; // Estrutura que ira armazenar as coordenadas do primeiro ponto clicado na tela
 
@@ -57,7 +71,9 @@ Pnt center; // Estrutura que ira armazenar as coordenadas do primeiro ponto clic
 int drawingSize = 9; // Tamanho original do grid, 9 quadrados espacados igualmente na tela
 float colorVector[4] = { 0.0 }; // Vetor para quadar a cor atual do desenho, cada posiçao do vetor contem o valor RGB respectivo
 int nVertices = 100; // Numero de vertices do circulo
-int nVerticesHexagon = 5; // NUmero de vertices do hexagono
+int isConceitoVector = 1;
+int Constant = 0;
+int scalar = 0;
 
 static int TYPE = GL_LINE; // Variavel para controle do filled e outline
 static GLsizei width, height; // OpenGL window size.
@@ -70,36 +86,22 @@ static int stippleID = 0;
 
 /// Definindo as Classes
 
-// Point class.
-class Point {
-public:
-    Point(int xVal, int yVal) {
-        x = xVal;
-        y = yVal;
-    }
-
-    void drawPoint(void); // Function to draw a point.
-
-private:
-    int x, y; // x and y co-ordinates of point.
-    static float size; // Size of point.
-};
-
 // Line class.
-class Line {
+class ConceitoVector {
 public:
-    Line(int x1Val, int y1Val, int x2Val, int y2Val) {
+    ConceitoVector(int x1Val, int y1Val, int x2Val, int y2Val) {
         x1 = x1Val;
         y1 = y1Val;
         x2 = x2Val;
         y2 = y2Val;
     }
 
-    void drawLine();
+    void drawConceitoVector();
 
 private:
     int x1, y1, x2, y2; // x and y co-ordinates of endpoints.
 };
+
 
 class Rectangle {
 public:
@@ -115,22 +117,21 @@ private:
     int x1, y1, x2, y2; // x and y co-ordinates of diagonally opposite vertices.
 };
 
-// class polyline.
-class PolyLine {
-public:
-    PolyLine(int x1Val, int y1Val, int x2Val, int y2Val) {
-        x1 = x1Val;
-        y1 = y1Val;
-        x2 = x2Val;
-        y2 = y2Val;
-    }
+class AnguloVector {
+    public:
+        AnguloVector(int x1Val, int y1Val, int x2Val, int y2Val) {
+            x1 = x1Val;
+            y1 = y1Val;
+            x2 = x2Val;
+            y2 = y2Val;
+        }
 
-    void drawPolyLine();
+        void drawAnguloVector();
 
 
-public:
-    int x1, y1, x2, y2; // x and y co-ordinates of endpoints.
-};
+    public:
+        int x1, y1, x2, y2; // x and y co-ordinates of endpoints.
+    };
 
 // class polyline.
 class Circle {
@@ -149,51 +150,32 @@ private:
     int x1, y1, x2, y2; // x and y co-ordinates of endpoints.
 };
 
-// class polyline.
-class Hexagon {
-public:
-    Hexagon(int x1Val, int y1Val, int x2Val, int y2Val) {
-        x1 = x1Val;
-        y1= y1Val;
-        x2= x2Val;
-        y2= y2Val;
+char * itoa (int value, char *result, int base)
+{
+    // check that the base if valid
+    if (base < 2 || base > 36) { *result = '\0'; return result; }
 
+    char* ptr = result, *ptr1 = result, tmp_char;
+    int tmp_value;
+
+    do {
+        tmp_value = value;
+        value /= base;
+        *ptr++ = "zyxwvutsrqponmlkjihgfedcba9876543210123456789abcdefghijklmnopqrstuvwxyz" [35 + (tmp_value - value * base)];
+    } while ( value );
+
+    // Apply negative sign
+    if (tmp_value < 0) *ptr++ = '-';
+    *ptr-- = '\0';
+    while (ptr1 < ptr) {
+        tmp_char = *ptr;
+        *ptr--= *ptr1;
+        *ptr1++ = tmp_char;
     }
-
-    void drawHexagon();
-
-private:
-    int x1, y1, x2, y2; // x and y co-ordinates of endpoints.
-};
-
-
-void applyStipple(void) {
-    // Defina o padrão de stipple
-    glRasterPos3f(30.0, 40.0, 0.0);
-
-    stippleID == 0 ? glDisable(GL_LINE_STIPPLE) : glEnable(GL_LINE_STIPPLE);
-    // Caso stippleId seja igual a zero, a line stipple sera desativada, caso contrario é ativado;
-
-    // A Variavel stippleID é global e alterada no menu, dependendo do seu valor, ela entrara em cases diferentes e
-    // mudara o stipple da linha, o case 4 é para desativar o a line stipple
-    switch (stippleID) {
-        case 1:
-            glLineStipple(1, 0x0101);
-            break;
-
-        case 2:
-            glLineStipple(5, 0x5555);
-            break;
-
-        case 3:
-            glLineStipple(1, 0x00FF);
-            break;
-
-        case 4:
-            glDisable(GL_LINE_STIPPLE);
-            break;
-    }
+    return result;
 }
+
+
 void mousePassiveMotion(int x, int y) {
     // Essa funçao server para atualizar em tempo
     // real as coordenadas x e y da estrutura Ptn,
@@ -208,20 +190,9 @@ void mousePassiveMotion(int x, int y) {
 }
 
 
-
 /// Funções de classes
-// Função da classe que Desenha o ponto
-void Point::drawPoint() {
-    applyStipple();
-    glPointSize(size);
-    glBegin(GL_POINTS);
-    glVertex3f(x, y, 0.0);
-    glEnd();
-}
-
 // Função da classe que Desenha a linha
-void Line::drawLine() {
-    applyStipple();
+void ConceitoVector:: drawConceitoVector() {
     glColor3f(colorVector[0], colorVector[1], colorVector[2]); // Aplica as cores RGB, todas contidas nas posições do vetor
 
     glBegin(GL_LINES);
@@ -232,7 +203,6 @@ void Line::drawLine() {
 
 // Function to draw a rectangle.
 void Rectangle::drawRectangle() {
-    applyStipple();
     glColor3f(colorVector[0], colorVector[1], colorVector[2]);
 
     glPolygonMode(GL_FRONT_AND_BACK, TYPE);
@@ -240,111 +210,182 @@ void Rectangle::drawRectangle() {
 }
 
 // Function to draw lines continua.
-void PolyLine::drawPolyLine() {
-    applyStipple();
+void AnguloVector::drawAnguloVector() {
     glColor3f(colorVector[0], colorVector[1], colorVector[2]);
 
     glBegin(GL_LINES);
-    glVertex3f(x1, y1, 0.0);
-    glVertex3f(x2, y2, 0.0);
+        glVertex3f(x1, y1, 0.0);
+        glVertex3f(x2, y2, 0.0);
     glEnd();
 }
 
 // Function to draw circle.
 void Circle::drawCircle() {
 
-    applyStipple();
-
-    float t = 0.0; // Angle parameter.
-    float R = x1-x2;
-    /// Ira calcular o RAIO do circle, subtrai de x1 o x2, assim encontrando o raio do circle
-
-    glPolygonMode(GL_FRONT_AND_BACK, TYPE);
-
-
-    /* Aqui o circle será desenhado de fato, nVerticesHexagon é o numero de vertices que o circle tera,
-       esta definido globalmente com valor padrão de 5 vertices, a formula:
-       (x1 + R * cos(t)) e (y1 + R * sin(t)), é uma formulas matematicas para a criação
-       de um circle e as coordenadas x, y respectivamente
-     */
-
-    TYPE == GL_FILL?  glBegin(GL_POLYGON) : glBegin(GL_LINE_LOOP);
-    for(int i = 0; i < 100; ++i) {
-        glColor3f(colorVector[0], colorVector[1], colorVector[2]);
-        glVertex3f( x1 + R * cos(t),   y1 + R * sin(t), 0.0);
-        t += 2 * PI / 100;
-    }
+    glColor3f(0.0, 0.0, 0.0);
+    glBegin(GL_LINES);
+    glVertex3f(x1, y1 , 0.0);
+    glVertex3f(x2 , y2, 0.0);
     glEnd();
-}
-
-// Function to draw hexagon
-void Hexagon::drawHexagon() {
-    applyStipple();
-
-    float t = 0.0; // Angle parameter.
-    float R = x1-x2;
-    /// Ira calcular o RAIO do hexagono, subtrai de x1 o x2, assim encontrando o raio do hexagono
-
-    glPolygonMode(GL_FRONT_AND_BACK, TYPE);
 
 
-    /* Aqui o hexagono será desenhado de fato, nVerticesHexagon é o numero de vertices que o hexagono tera,
-       esta definido globalmente com valor padrão de 5 vertices, a formula:
-       (x1 + R * cos(t)) e (y1 + R * sin(t)), é uma formulas matematicas para a criação
-       de um hexagono e as coordenadas x, y respectivamente
-     */
-
-    glBegin(GL_POLYGON);
-    for(int i = 0; i < nVerticesHexagon; ++i) {
-        glColor3f(colorVector[0], colorVector[1], colorVector[2]);
-        glVertex3f( x1 + R * cos(t),   y1 + R * sin(t), 0.0);
-        t += 2 * PI / nVerticesHexagon;
+    if(x2 > 500 && y2 > 250) {
+        glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+        glBegin(GL_TRIANGLE_STRIP);
+            glVertex3f(x2 - 20 , y2 + 20, 0.0);
+            glVertex3f(x2  + 20, y2 - 20, 0.0);
+            glVertex3f( x2+15, y2 + 15, 0.0);
+        glEnd();
     }
-    glEnd();
-}
 
-/// Interators, vectors,
-float Point::size = pointSize; // Set point size.
+
+
+    if(x2 < 500 && y2 > 250) {
+        glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+        glBegin(GL_TRIANGLE_STRIP);
+            glVertex3f(x2 - 20 , y2 + 20, 0.0);
+            glVertex3f(x2  - 20, y2 - 20, 0.0);
+            glVertex3f( x2+15, y2 + 15, 0.0);
+        glEnd();
+    }
+
+    if(x2 < 500 && y2 > 250) {
+        glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+        glBegin(GL_TRIANGLE_STRIP);
+        glVertex3f(x2 - 20 , y2 + 20, 0.0);
+        glVertex3f(x2  - 20, y2 - 20, 0.0);
+        glVertex3f( x2+15, y2 + 15, 0.0);
+        glEnd();
+    }
+
+    if(x2 < 500 && y2 < 250) {
+        glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+        glBegin(GL_TRIANGLE_STRIP);
+            glVertex3f(x2 - 20, y2 + 20, 0.0);
+            glVertex3f(x2 - 20, y2 - 20, 0.0);
+            glVertex3f( x2+15, y2 - 20, 0.0);
+        glEnd();
+    }
+
+    if(x2 > 500 && y2 < 250) {
+        glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+        glBegin(GL_TRIANGLE_STRIP);
+        glVertex3f(x2 + 20, y2 + 20, 0.0);
+        glVertex3f(x2 - 20, y2 - 20, 0.0);
+        glVertex3f( x2+15, y2 - 20, 0.0);
+        glEnd();
+    }
+}
 
 
 /// Iterators
-vector<Point>::iterator pointsIterator; // Iterator to traverse a Point array.
-vector<Line>::iterator linesIterator; // Iterator to traverse a Line array.
+
+vector<ConceitoVector>::iterator conceitoVectorIterator; // Iterator to traverse a Line array.
 vector<Rectangle>::iterator rectanglesIterator; // Iterator to traverse a Rectangle array.
-vector<PolyLine>::iterator polylinesIterator; // Iterator to traverse a Line array.
-vector<Hexagon>::iterator hexagonsIterator; // Iterator to traverse a Line array.
+vector<AnguloVector>::iterator anguloVectorIterator; // Iterator to traverse a Line array.
 vector<Circle>::iterator circleIterator; // Iterator to traverse a Line array.
 
 
 /// Vectors
-vector<Point> points; // Vector of points.
-vector<Line> lines; // Vector of lines.
+
+vector<ConceitoVector> conceitoVectors; // Vector of lines.
 vector<Rectangle> rectangles; // Vector of rectangles.
-vector<PolyLine> polylines; // Vector of lines.
+vector<AnguloVector> anguloVectors; // Vector of lines.
 vector<Circle> circles;// Vector of lines.
-vector<Hexagon> hexagons; // Vector of lines.
 
 
 /// Funções para chamada da função da classe, função que intera no vetor
 
-// Function to draw all points in the points array.
-void drawPoints(void) {
-    // Loop through the points array drawing each point.
-    pointsIterator = points.begin();
-    while(pointsIterator != points.end()) {
-        pointsIterator->drawPoint();
-        pointsIterator++;
+
+void clearAll(void) {
+    conceitoVectors.clear();
+    rectangles.clear();
+    anguloVectors.clear();
+    circles.clear();
+    primitive = INACTIVE;
+    pointCount = 0;
+}
+
+void drawArrow(float x1, float y1, float x2, float y2) {
+    glColor3f(0.0, 0.0, 0.0);
+    glBegin(GL_LINES);
+    glVertex3f(x1, y1 , 0.0);
+    glVertex3f(x2 , y2, 0.0);
+    glEnd();
+
+    if(x2 > 500 && y2 > 250) {
+        glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+        glBegin(GL_TRIANGLE_STRIP);
+        glVertex3f(x2 - 20 , y2 + 20, 0.0);
+        glVertex3f(x2  + 20, y2 - 20, 0.0);
+        glVertex3f( x2+15, y2 + 15, 0.0);
+        glEnd();
     }
+
+    if(x2 >= 500 && y2 ==  250) {
+        glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+        glBegin(GL_TRIANGLE_STRIP);
+        glVertex3f(x2, y2 +20, 0.0);
+        glVertex3f(x2, y2 - 20, 0.0);
+        glVertex3f(x2 + 20, y2 , 0.0);
+        glEnd();
+    }
+
+    if(x2 < 500 && y2 ==  250) {
+        glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+        glBegin(GL_TRIANGLE_STRIP);
+        glVertex3f(x2  , y2 , 0.0);
+        glVertex3f(x2  + 20, y2 - 20, 0.0);
+        glVertex3f(x2+20, y2 + 20, 0.0);
+        glEnd();
+    }
+
+    if(x2 < 500 && y2 > 250) {
+        glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+        glBegin(GL_TRIANGLE_STRIP);
+        glVertex3f(x2 - 20 , y2 + 20, 0.0);
+        glVertex3f(x2  - 20, y2 - 20, 0.0);
+        glVertex3f( x2+15, y2 + 15, 0.0);
+        glEnd();
+    }
+
+    if(x2 < 500 && y2 > 250) {
+        glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+        glBegin(GL_TRIANGLE_STRIP);
+        glVertex3f(x2 - 20 , y2 + 20, 0.0);
+        glVertex3f(x2  - 20, y2 - 20, 0.0);
+        glVertex3f( x2+15, y2 + 15, 0.0);
+        glEnd();
+    }
+
+    if(x2 < 500 && y2 < 250) {
+        glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+        glBegin(GL_TRIANGLE_STRIP);
+        glVertex3f(x2 - 20, y2 + 20, 0.0);
+        glVertex3f(x2 - 20, y2 - 20, 0.0);
+        glVertex3f( x2+15, y2 - 20, 0.0);
+        glEnd();
+    }
+
+    if(x2 > 500 && y2 < 250) {
+        glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+        glBegin(GL_TRIANGLE_STRIP);
+        glVertex3f(x2 + 20, y2 + 20, 0.0);
+        glVertex3f(x2 - 20, y2 - 20, 0.0);
+        glVertex3f( x2+15, y2 - 20, 0.0);
+        glEnd();
+    }
+
 }
 
 // Function to draw all lines in the lines array.
-void drawLines(void) {
+void drawConceitoVectors(void) {
     // Loop through the lines array drawing each line.
-    linesIterator = lines.begin();
+    conceitoVectorIterator = conceitoVectors.begin();
 
-    while(linesIterator != lines.end()) {
-        linesIterator->drawLine();
-        linesIterator++;
+    while(conceitoVectorIterator != conceitoVectors.end()) {
+        conceitoVectorIterator->drawConceitoVector();
+        conceitoVectorIterator++;
     }
 }
 
@@ -359,13 +400,13 @@ void drawRectangles(void) {
 }
 
 // Função para desehar todas as poli linhas no vetor
-void drawPolyLines(void) {
+void drawAnguloVectors(void) {
     // Loop through the lines array drawing each line.
-    polylinesIterator = polylines.begin();
+    anguloVectorIterator = anguloVectors.begin();
 
-    while(polylinesIterator != polylines.end()) {
-        polylinesIterator->drawPolyLine();
-        polylinesIterator++;
+    while(anguloVectorIterator != anguloVectors.end()) {
+        anguloVectorIterator->drawAnguloVector();
+        anguloVectorIterator++;
     }
 }
 
@@ -380,182 +421,186 @@ void drawCircles(void) {
     }
 }
 
-
-// Função para desehar todos os hexagonos no vetor
-void drawHexagons(void) {
-    // Loop through the lines array drawing each line.
-    hexagonsIterator = hexagons.begin();
-
-    while(hexagonsIterator  != hexagons.end()) {
-        hexagonsIterator->drawHexagon();
-        hexagonsIterator++;
-    }
+void writeBitmapString(void *font, char *string) {
+    char *c;
+    for(c = string; *c != '\0'; c++)
+        glutBitmapCharacter(font, *c);
 }
 
-
-
 // Function to draw point selection box in left selection area.
-void drawPointSelectionBox(void) {
+void drawConceitoVectorsSelectionBox(void) {
     glDisable(GL_LINE_STIPPLE);
     /// Independente se a linha stipple foi ativada, o menu não é para ser ativado também
     /// Então desativamos
 
     /// Se primitiva for igual ponto, a cor do quadrado do ponto é alterada, o Highlight
-    primitive == POINT ? glColor3f(1.0, 1.0, 1.0) : glColor3f(0.8, 0.8, 0.8);
+
+    primitive == CONCEITO_VECTOR ? glColor3f(0.8, 0.8, 0.8) : glColor3f(0.08, 0.2, 0.2);
 
     glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-    glRectf(0.0, 0.9 * height, 0.1 * width, height);
+    glRectf(0.0, 0.8 * height, 0.25 * width, height);
 
     // Draw black boundary.
-    glColor3f(0.0, 0.0, 0.0);
+    glColor3f(255.0, 255.0, 255.0);
     glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-    glRectf(0.0, 0.9*height, 0.1*width, height);
+    glRectf(0.0, 0.8*height, 0.25 *width, height);
 
     // Draw point icon.
-    glPointSize(pointSize);
+    glPointSize(10);
     glColor3f(0.0, 0.0, 0.0);
 
-    glBegin(GL_POINTS);
-    glVertex3f(0.05 * width, 0.95 * height, 0.0);
+    /// Desenha o icone (Seta) no box
+    glColor3f(255.0, 255.0, 255.0);
+    glBegin(GL_LINES);
+        /// Desenha a linha do vetor
+        glVertex3f(0.050 * width, 0.860 * height, 0.0);
+        glVertex3f(0.20 * width, 0.930 * height, 0.0);
+
+        /// Desenha a base da seta
+        glVertex3f(0.21 * width, 0.900 * height, 0.0);
+        glVertex3f(0.19 * width, 0.960 * height, 0.0);
+
+        /// Desenha o lado superior da seta
+        glVertex3f(0.19 * width, 0.960 * height, 0.0);
+        glVertex3f(0.22 * width, 0.940 * height, 0.0);
+
+        /// Desenha o lado inferior da seta
+        glVertex3f(0.21 * width, 0.900 * height, 0.0);
+        glVertex3f(0.22 * width, 0.940 * height, 0.0);
     glEnd();
+
+    glColor3f(255.0, 255.0, 255.0);
+    glRasterPos3f(25.00, 410.0, 0.0);
+    writeBitmapString(GLUT_BITMAP_9_BY_15, "Conceito Vetor" );
+
 }
 
 // Function to draw line selection box in left selection area.
-void drawLineSelectionBox(void) {
+void drawAnguloVectorsSelectionBox(void) {
     glDisable(GL_LINE_STIPPLE);
 
-    primitive == LINE ? glColor3f(1.0, 1.0, 1.0) : glColor3f(0.8, 0.8, 0.8);
-
+    primitive == ANGULO_VECTOR ?   glColor3f(0.8, 0.8, 0.8) : glColor3f(0.08, 0.2, 0.2);
 
     glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-    glRectf(0.0, 0.8 * height, 0.1 * width, 0.9 * height);
+    glRectf(0.0, 0.6 * height, 0.25 * width, 0.8 * height);
 
     // Draw black boundary.
-    glColor3f(0.0, 0.0, 0.0);
+    glColor3f(255.0, 255.0, 255.0);
     glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-    glRectf(0.0, 0.8 * height, 0.1 * width, 0.9 * height);
+    glRectf(0.0, 0.6 * height, 0.25 * width, 0.8 * height);
 
-    // Draw line icon.
-    glColor3f(0.0, 0.0, 0.0);
-    glBegin(GL_LINES);
-    glVertex3f(0.025 * width, 0.825 * height, 0.0);
-    glVertex3f(0.075 * width, 0.875 * height, 0.0);
+    float t = 0.0;
+
+    /// Desenha o icone (angulo) no box
+    glBegin(GL_LINE_LOOP);
+    for(int i = 0; i < nVertices; ++i) {
+        glColor3ub(255.0, 255.0, 255.0);
+        glVertex3f( (0.115 * width) + 35 * cos(t), (0.680 * height) + 35 * sin(t), 0.0);
+        t += PI / nVertices;
+    }
     glEnd();
+
+    glColor3f(255.0, 255.0, 255.0);
+    glRasterPos3f(25.00, 310.0, 0.0);
+    writeBitmapString(GLUT_BITMAP_9_BY_15, "Angulo de Vetores" );
+
 }
 
 // Function to draw rectangle selection box in left selection area.
-void drawRectangleSelectionBox(void) {
+void drawSumVectorsSelectionBox(void) {
     glDisable(GL_LINE_STIPPLE);
 
-    primitive == RECTANGLE ? glColor3f(1.0, 1.0, 1.0) : glColor3f(0.8, 0.8, 0.8);
+    primitive == SUM_VECTOR ? glColor3f(0.8, 0.8, 0.8) : glColor3f(0.08, 0.2, 0.2);
 
     glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-    glRectf(0.0, 0.7 * height, 0.1 * width, 0.8 * height);
+    glRectf(0.0, 0.4 * height, 0.25 * width, 0.6 * height);
 
     // Draw black boundary.
-    glColor3f(0.0, 0.0, 0.0);
+    glColor3f(255.0, 255.0, 255.0);
     glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-    glRectf(0.0, 0.7 * height, 0.1 * width, 0.8 * height);
+    glRectf(0.0, 0.4 * height, 0.25 * width, 0.6 * height);
 
+    glBegin(GL_LINES);
+    /// Desenha a linha do vetor
+        glVertex3f(0.050 * width, 0.550  * height, 0.0);
+        glVertex3f(0.20 * width, 0.550 * height, 0.0);
 
-    // Draw rectangle icon.
-    glColor3f(0.0, 0.0, 0.0);
-    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-    glRectf(0.025 * width, 0.735 * height, 0.075 * width, 0.765 * height);
+        glVertex3f(0.20 * width, 0.500 * height, 0.0);
+        glVertex3f(0.050 * width, 0.500 * height, 0.0);
+
     glEnd();
+
+
+    glColor3f(255.0, 255.0, 255.0);
+    glRasterPos3f(25.00, 210.0, 0.0);
+    writeBitmapString(GLUT_BITMAP_9_BY_15, "Produto Escalar" );
+
 }
 
 // Function to draw polyLine selection box in left selection area.
-void drawPolyLineSelectionBox(void) {
+void drawScalarProductSelectionBox(void) {
     glDisable(GL_LINE_STIPPLE);
 
-    primitive == POLY_LINE ? glColor3f(1.0, 1.0, 1.0) : glColor3f(0.8, 0.8, 0.8);
+    primitive == SCALAR_PRODUCT ? glColor3f(0.8, 0.8, 0.8) : glColor3f(0.08, 0.2, 0.2);
 
     glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-    glRectf(0.0, 0.6 * height, 0.1 * width, 0.7*height);
+    glRectf(0.0, 0.2 * height, 0.25 * width, 0.4*height);
 
     // Draw black boundary.
-    glColor3f(0.0,  0.0, 0.0);
+    glColor3f(255.0, 255.0, 255.0);
     glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-    glRectf(0.0, 0.6 * height, 0.1 * width, 0.7 * height);
+    glRectf(0.0, 0.2 * height, 0.25 * width, 0.4 * height);
 
-    // Desenha polyLine
-    glColor3f(0.0, 0.0, 0.0);
     glBegin(GL_LINES);
-    glVertex3f(0.025 * width, 0.625 * height, 0.0);
-    glVertex3f(0.045 * width, 0.675 * height, 0.0);
-
-    glVertex3f(0.045 * width, 0.675 * height, 0.0);
-    glVertex3f(0.065 * width, 0.630 * height, 0.0);
-
-    glVertex3f(0.065 * width, 0.630 * height, 0.0);
-    glVertex3f(0.085 * width, 0.665 * height, 0.0);
+        glVertex3f(0.050 * width, 0.300 * height, 0.0);
+        glVertex3f(0.10 * width, 0.300* height, 0.0);
     glEnd();
+
+    glColor3f(255.0, 255.0, 255.0);
+    glRasterPos3f(0.11 * width, 0.280 * height, 0.0);
+    writeBitmapString(GLUT_BITMAP_TIMES_ROMAN_24, "*");
+
+    glColor3f(255.0, 255.0, 255.0);
+    glRasterPos3f(0.14  * width, 0.290 * height, 0.0);
+    writeBitmapString(GLUT_BITMAP_TIMES_ROMAN_24, "C");
+
+    glColor3f(255.0, 255.0, 255.0);
+    glRasterPos3f(25.00, 110.0, 0.0);
+    writeBitmapString(GLUT_BITMAP_9_BY_15, "Multip por Escalar");
 }
 
 // Function to draw circle selection box in left selection area.
-void drawCircleSelectionBox(void) {
+void drawVectorProductSelectionBox(void) {
     glDisable(GL_LINE_STIPPLE);
 
     float t = 0.0;
 
-    primitive == CIRCLE ? glColor3f(1.0, 1.0, 1.0) : glColor3f(0.8, 0.8, 0.8);
+    primitive == VECTOR_PRODUCT ? glColor3f(0.8, 0.8, 0.8) : glColor3f(0.08, 0.2, 0.2);
 
     glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-    glRectf(0.0, 0.5 * height, 0.1 * width, 0.6*height);
+    glRectf(0.0, 0, 0.25 * width, 0.2 * height);
 
     // Draw black boundary.
-    glColor3f(0.0,  0.0, 0.0);
+    glColor3f(255.0, 255.0, 255.0);
     glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-    glRectf(0.0, 0.5 * height, 0.1 * width, 0.6 * height);
+    glRectf(0.0, 0, 0.25 * width, 0.2 * height);
 
+    glBegin(GL_LINES);
+        glVertex3f(0.050 * width, 0.100 * height, 0.0);
+        glVertex3f(0.10 * width, 0.160* height, 0.0);
 
-    /// Vai desenhar o icon no quadrado especifico dele, a logica é a mesma da função drawCircle
-    glBegin(GL_LINE_LOOP);
-    for(int i = 0; i < nVertices; ++i) {
-        glColor3ub(0.0, 0.0, 0.0);
-        glVertex3f( (0.050 * width) + 15 * cos(t), (0.550 * height) + 15 * sin(t), 0.0);
-        t += 2 * PI / nVertices;
-    }
+        glVertex3f(0.050 * width, 0.100 * height, 0.0);
+        glVertex3f(0.10 * width, 0.100 * height, 0.0);
     glEnd();
 
-}
+    glColor3f(255.0, 255.0, 255.0);
+    glRasterPos3f(25.00, 10.0, 0.0);
+    writeBitmapString(GLUT_BITMAP_9_BY_15, "Soma De Vetores" );
 
-// Function to draw hexagon selection box in left selection area.
-void drawHexagonSelectionBox(void) {
-
-    float t = 0.0;
-    primitive == HEXAGON ? glColor3f(1.0, 1.0, 1.0) : glColor3f(0.8, 0.8, 0.8);
-
-    glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-    glRectf(0.0, 0.4 * height, 0.1 * width, 0.5*height);
-
-    // Draw black boundary.
-    glColor3f(0.0,  0.0, 0.0);
-    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-    glRectf(0.0, 0.4 * height, 0.1 * width, 0.5 * height);
-
-    /// Vai desenhar o icon no quadrado especifico dele, a logica é a mesma da função drawHexagon
-    glBegin(GL_LINE_LOOP);
-    for(int i = 0; i < nVerticesHexagon; ++i) {
-        glColor3ub(0.0, 0.0, 0.0);
-        glVertex3f( (0.040 * width) + 15 * cos(t), (0.450 * height) + 15 * sin(t), 0.0);
-        t += 2 * PI / nVerticesHexagon;
-    }
-    glEnd();
 }
 
 // Function to draw unused part of left selection area.
-void drawInactiveArea(void) {
-
-    glColor3f(0.6, 0.6, 0.6);
-    glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-    glRectf(0.0, 0.0, 0.1 * width, (1 - NUMBER_PRIMITIVES*0.1) * height);
-
-    glColor3f(0.0, 0.0, 0.0);
-    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-    glRectf(0.0, 0.0, 0.1 * width, (1 - NUMBER_PRIMITIVES*0.1) * height);
-}
+void drawInactiveArea(void) { }
 
 // Function to draw temporary point.
 void drawTempPoint(void) {
@@ -567,109 +612,33 @@ void drawTempPoint(void) {
     glEnd();
 }
 
+
 // Function to draw a grid.
 void drawGrid(void) {
-    float sum = 0.0;
+    float sum = 200.0;
     glEnable(GL_LINE_STIPPLE);
     glLineStipple(1, 0x5555); /// Stipple default do grid
-
     glColor3f(0.75, 0.75, 0.75); /// Cor default do grid
 
-    if(drawingSize == 3) {
-        sum = 200.0;
-        glBegin(GL_LINES);
-        for (int i = 2; i <= 3; i++) {
-            glVertex3f(sum, 0.0, 0.0);
-            glVertex3f(sum, height, 0.0);
-            sum += 150.0;
-        }
 
-        for (int i = 1; i <= 4; i++) {
-            glVertex3f(0.1 * width, i * 0.2 * height, 0.0);
-            glVertex3f(width, i * 0.2 * height, 0.0);
-        }
-        glEnd();
-    }
-
-    if(drawingSize == 9) {
-        glBegin(GL_LINES);
-        for (int i = 2; i <= 9; i++) {
-            glVertex3f( ((i * 0.1 * width) ) , 0.0, 0.0);
-            glVertex3f( ((i * 0.1 * width)), height, 0.0);
-        }
-
-        for (int i = 1; i <= 9; i++) {
-            glVertex3f(0.1 * width, i * 0.1 * height, 0.0);
-            glVertex3f(width, i * 0.1 * height, 0.0);
-        }
-        glEnd();
-    }
-
-    if(drawingSize == 6) {
-        sum = 125.0;
-        for(int i = 0; i < 6; ++i) {
-            glBegin(GL_LINES);
+    glBegin(GL_LINES);
+        for (int i = 0; i < 6; ++i) {
             glVertex3f( sum, 0.0, 0.0);
             glVertex3f( sum, height, 0.0);
-            sum += 75.0;
+            sum += 100.0;
         }
 
-        for (int i = 1; i <= 6; i++) {
-            glVertex3f((0.1 * width), i * 0.2 * height, 0.0);
-            glVertex3f(width, i * 0.2 * height, 0.0);
+        sum = 0;
+        for (int i = 0; i < 6; i++) {
+            glVertex3f(0.0, sum, 0.0);
+            glVertex3f(width, sum, 0.0);
+            sum += 83.333333;
         }
-        glEnd();
-    }
-
-
+    glEnd();
     glDisable(GL_LINE_STIPPLE);
 }
 
-void writeBitmapString(void *font, char *string) {
-    char *c;
-    for(c = string; *c != '\0'; c++)
-        glutBitmapCharacter(font, *c);
-}
 
-/// Função desenha as figuras geometricas dinamicamente
-void drawFigures(int primitive) {
-    float
-            x1 = center.x,
-            y1 = center.y,
-            x2 = currentPoint.x,
-            y2 = currentPoint.y;
-
-    PolyLine *dynamicPolyLine = new PolyLine(x1, y1, x2, y2);
-    Circle *dynamicCircle = new Circle(x1, y1, x2, y2);
-    Line *dynamicLine= new Line(x1, y1, x2, y2);
-    Rectangle *dynamicRectangle = new Rectangle(x1, y1, x2, y2);
-    Hexagon *dynamicHexagon = new Hexagon(x1, y1, x2, y2);
-
-    switch (primitive) {
-        case  CIRCLE:
-            dynamicCircle->drawCircle();
-            break;
-
-        case LINE:
-            dynamicLine->drawLine();
-            break;
-
-        case POLY_LINE:
-            dynamicPolyLine->drawPolyLine();
-            break;
-
-        case RECTANGLE:
-            dynamicRectangle->drawRectangle();
-            break;
-
-        case HEXAGON:
-            dynamicHexagon->drawHexagon();
-            break;
-
-        default:
-            break;
-    }
-}
 
 /// Escreve na tela o texto de qual figura está selecioada, o parametro texto é passado
 void drawText(char *text) {
@@ -678,33 +647,215 @@ void drawText(char *text) {
     writeBitmapString(GLUT_BITMAP_HELVETICA_18, text);
 }
 
-/// Função que chama a função para desenhar o texto de acordo com qual primitiva está clidada no presente momento
-void drawFonts(void) {
-    switch (primitive) {
-        case CIRCLE:
-            drawText((char*)"CIRCLE");
+
+
+void drawTextScala() {
+    char msg[30];
+    itoa(abs(scalar),msg, 10);
+
+    glColor3f(0.0, 0.0, 15.0);
+    glRasterPos3f(210.0, 80.0, 0.0);
+    writeBitmapString(GLUT_BITMAP_HELVETICA_18, "Modulo do produto Escalar: ");
+
+    glColor3f(0.0, 0.0, 15.0);
+    glRasterPos3f(440.0, 80.0, 0.0);
+    writeBitmapString(GLUT_BITMAP_HELVETICA_18, msg);
+
+}
+
+/// Função para desenhar plano cartesiano
+void drawCartesianPlane(void) {
+    glColor3f(0.0,51.0, 0.0); // Aplica as cores RGB, todas contidas nas posições do vetor
+    glBegin(GL_LINES);
+        /// Linha da vertical
+        glVertex3f(500, 0, 0.0);
+        glVertex3f(500, 500, 0.0);
+
+        /// Linha da horizontal
+        glVertex3f(0.0, 250.0, 0.0);
+        glVertex3f(width, 250.0, 0.0);
+    glEnd();
+
+}
+
+void AdrawConceitoVector() {
+
+    drawArrow(300,83.3333,700,420.6667);
+    glColor3f(0.0, 0.0, 0.0);
+    glRasterPos3f(430.0, 260.0, 0.0);
+    writeBitmapString(GLUT_BITMAP_HELVETICA_18, "V ->");
+
+    glColor3f(0.0, 0.0, 0.0);
+    glRasterPos3f(230.0, 60.0, 0.0);
+    writeBitmapString(GLUT_BITMAP_HELVETICA_18, "DIRECAO");
+
+    glColor3f(0.0, 0.0, 0.0);
+    glRasterPos3f(580.0, 450.0, 0.0);
+    writeBitmapString(GLUT_BITMAP_HELVETICA_18, "SENTIDO");
+
+    glColor3f(0.0, 0.0, 0.0);
+    glRasterPos3f(520.0, 150.0, 0.0);
+    writeBitmapString(GLUT_BITMAP_HELVETICA_18, "| X | -> MODULO DO VETOR");
+}
+
+
+void drawArrowQuadrant() {
+    switch(posQuadrant) {
+        case 0:
+            drawArrow(500, 250, 600, 250);
+            break;
+        case 45:
+            drawArrow(500,  250, 600, 333.3333);
             break;
 
-        case POLY_LINE:
-            drawText((char*)"POLYLINE");
+        case 90:
+            drawArrow(500, 250, 500, 333.3333);
             break;
 
-        case LINE:
-            drawText((char*)"LINE");
+        case 135:
+            drawArrow(500, 250, 400, 333.3333);
             break;
 
-        case RECTANGLE:
-            drawText((char*)"RECTANGLE");
+        case 180:
+            drawArrow(500, 250, 400, 250.0);
             break;
 
-        case POINT:
-            drawText((char*)"POINT");
+        case 225:
+            drawArrow(500, 250, 400, 166.6667);
             break;
 
-        case HEXAGON:
-            drawText((char*)"HEXAGON");
+        case 270:
+            drawArrow(500, 250, 500, 166.6667);
+            break;
+
+        case 315:
+            drawArrow(500, 250, 600, 166.6667);
+            break;
+
+        case 360:
+            drawArrow(500, 250, 600, 250);
+            break;
+
+    }
+
+}
+
+
+void print(float x1, float y1, float x2, float y2, char *text, float *colors) {
+
+    glRasterPos3f(30.0, 40.0, 0.0);
+    glDisable(GL_LINE_STIPPLE);
+
+    glColor3f(colors[0], colors[1], colors[2]);
+    glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+    glRectf(x1, y1, x2, y2);
+
+    glColor3f(0.0, 0.0, 15.0);
+    glRasterPos3f(x1 + 5, y1 + 10, 0.0);
+    writeBitmapString(GLUT_BITMAP_HELVETICA_12, text);
+}
+
+void drawOptions(void) {
+    float colors[3];
+
+    switch(posQuadrant) {
+        case 0:
+            colors[0] = 244.0, colors[1] = 0.0, colors[2] = 0.24;
+            print(510, 83.3333,540, 120.3333, "0", colors);
+
+            break;
+        case 45:
+            colors[0] = 12.0, colors[1] = 123.0, colors[2] = 0.24;
+            print(550, 83.3333,580, 120.3333, "45", colors);
+            break;
+
+        case 90:
+            colors[0] = 1.2, colors[1] = 0.0, colors[2] = 0.0;
+            print(590, 83.3333,620, 120.3333, "90", colors);
+            break;
+
+        case 135:
+            colors[0] = 12.2, colors[1] = 34.123, colors[2] = 0.01;
+            print(630, 83.3333,660, 120.3333, "135", colors);
+            break;
+
+        case 180:
+            colors[0] = 0.2, colors[1] = 34.10, colors[2] = 1.20;
+            print(670, 83.3333,700, 120.3333, "180", colors);
+            break;
+
+        case 225:
+            colors[0] = 0.0, colors[1] = 0.1, colors[2] = 0.24;
+            print(340, 83.3333, 370, 120.3333, "225", colors);
+            break;
+
+        case 270:
+            colors[0] = 1.1, colors[1] = 0.31, colors[2] = 0.24;
+            print(380, 83.3333, 410, 120.3333, "270", colors);
+
+            break;
+
+        case 315:
+            colors[0] = 0.1, colors[1] = 0.0, colors[2] = 0.2;
+            print(420, 83.3333, 450, 120.3333, "315", colors);
+            break;
+
+        case 360:
+            colors[0] = 1.1, colors[1] = 1.0, colors[2] = 0.2;
+            print(460, 83.3333, 490, 120.3333, "360", colors);
             break;
     }
+
+}
+
+
+void drawCalc(void) {
+
+    if(vectorOne.x2 < 500) vectorOne.x2 = -vectorOne.x2;
+    if(vectorOne.y2 < 250) vectorOne.y2 = -vectorOne.y2;
+
+    if(vectorTwo.x2 < 500) vectorTwo.x2 = -vectorTwo.x2;
+    if(vectorTwo.y2 < 250) vectorTwo.y2 = -vectorTwo.y2;
+
+    float
+        x1 = (abs(vectorOne.x2) - 500),
+        x2 = (abs(vectorTwo.x2) - 500),
+        y1 = (abs(vectorOne.y2) - 250),
+        y2 = (abs(vectorTwo.y2) - 250);
+
+    circles.push_back( Circle(500, 250, 500 + (x1 + x2), 250 + (y1 + y2) ) );
+}
+
+void drawInfoScalar(int pos) {
+
+    if(pos  == 0) {
+        glColor3f(0.0, 0.0, 15.0);
+        glRasterPos3f(220.0, 80.0, 0.0);
+        writeBitmapString(GLUT_BITMAP_HELVETICA_18, "Sentido do vetor -> NUlo" );
+    } else if(pos < 10) {
+        glColor3f(0.0, 0.0, 15.0);
+        glRasterPos3f(220.0, 80.0, 0.0);
+        writeBitmapString(GLUT_BITMAP_HELVETICA_18, "Sentido do vetor -> NEGATIVO" );
+    }
+
+    if(pos >= 10) {
+        glColor3f(0.0, 0.0, 15.0);
+        glRasterPos3f(220.0, 80.0, 0.0);
+        writeBitmapString(GLUT_BITMAP_HELVETICA_18, "Sentido do vetor -> POSITIVO" );
+    }
+
+    glColor3f(0.0, 0.0, 15.0);
+    glRasterPos3f(220.0, 30.0, 0.0);
+    writeBitmapString(GLUT_BITMAP_HELVETICA_18, "Modulo do Vetor: " );
+
+    char msg[30];
+    itoa(abs(pos),msg, 10);
+
+    glColor3f(0.0, 0.0, 15.0);
+    glRasterPos3f(390.0, 30.0, 0.0);
+    writeBitmapString(GLUT_BITMAP_HELVETICA_18, msg);
+
+
 }
 
 // Drawing routine.
@@ -714,52 +865,61 @@ void drawScene(void) {
     glColor3f(0.0, 0.0, 0.0);
 
 
-
-    if(pointCount != 0) {
-        drawFigures(primitive);
-    }
-
     drawRectangles();
-    drawPolyLines();
-    drawHexagons();
-    drawPoints();
-    drawLines();
+    drawAnguloVectors();
     drawCircles();
+    drawConceitoVectors();
 
 
-    if (( (primitive == LINE) || (primitive == RECTANGLE) || (primitive == CIRCLE)  || (primitive == HEXAGON) )
+    if (( (primitive == CONCEITO_VECTOR) || (primitive == SUM_VECTOR) || (primitive == SCALAR_PRODUCT) )
         && (pointCount == 1)
-            ) drawTempPoint();
+    ) drawTempPoint();
 
+    drawCartesianPlane();
 
     if (isGrid) {
         drawGrid();
     }
 
-    drawPointSelectionBox();
-    drawLineSelectionBox();
-    drawRectangleSelectionBox();
-    drawPolyLineSelectionBox();
-    drawCircleSelectionBox();
-    drawHexagonSelectionBox();
+    if(primitive == CONCEITO_VECTOR) {
+        AdrawConceitoVector();
+    }
 
+    if(primitive == SUM_VECTOR) {
+        drawTextScala();
+    }
+
+    if(primitive == ANGULO_VECTOR) {
+        circles.clear();
+        drawArrowQuadrant();
+        drawOptions();
+    }
+
+    if(primitive == SCALAR_PRODUCT) {
+        circles.clear();
+        drawArrow(500, 250, 500 + Constant, 250);
+        drawInfoScalar(Constant);
+    }
+
+    drawSumVectorsSelectionBox();
+    drawConceitoVectorsSelectionBox();
+    drawScalarProductSelectionBox();
+    drawAnguloVectorsSelectionBox();
     drawInactiveArea();
-
-    drawFonts();
+    drawVectorProductSelectionBox();
     glutSwapBuffers();
 }
 
-
 // Function to pick primitive if click is in left selection area.
 void pickPrimitive(int y) {
-    if ( y < (1 - NUMBER_PRIMITIVES*0.1)*height) primitive = INACTIVE;
-    else if ( y < (1 - 5*0.1)*height ) primitive = HEXAGON;
-    else if ( y < (1 - 4*0.1)*height ) primitive = CIRCLE;
-    else if ( y < (1 - 3*0.1)*height ) primitive = POLY_LINE;
-    else if ( y < (1 - 2*0.1)*height ) primitive = RECTANGLE;
-    else if ( y < (1 - 1*0.1)*height ) primitive = LINE;
+    cout << y << endl;
 
-    else primitive = POINT;
+    if(y > 400 && y < 500) primitive = CONCEITO_VECTOR;
+    else if(y > 300 && y < 400) primitive = ANGULO_VECTOR;
+    else if(y > 200 && y < 400) primitive = SUM_VECTOR;
+    else if(y > 100 && y < 200) primitive = SCALAR_PRODUCT;
+    else if(y > 0 && y < 100) primitive = VECTOR_PRODUCT;
+    cout << primitive << endl;
 }
 
 void resetAndSetCoordinates(float x, float y) {
@@ -770,82 +930,96 @@ void resetAndSetCoordinates(float x, float y) {
     pointCount = 1;
 }
 
-void mouseControl(int button, int state, int x, int y) {
 
+void drawPVetorial(void) {
+
+    if(vectorOne.x2 < 500) vectorOne.x2 = -vectorOne.x2;
+    if(vectorOne.y2 < 250) vectorOne.y2 = -vectorOne.y2;
+
+    if(vectorTwo.x2 < 500) vectorTwo.x2 = -vectorTwo.x2;
+    if(vectorTwo.y2 < 250) vectorTwo.y2 = -vectorTwo.y2;
+
+    float
+        x1 = (abs(vectorOne.x2) - 500),
+        x2 = (abs(vectorTwo.x2) - 500),
+        y1 = (abs(vectorOne.y2) - 250),
+        y2 = (abs(vectorTwo.y2) - 250);
+
+    scalar =  (x1 * x2) + (y1 * y2);
+}
+
+
+void mouseControl(int button, int state, int x, int y) {
     if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN) {
         y = height - y;  // Correct from mouse to OpenGL co-ordinates.
 
         // Click outside canvas - do nothing.
-        if (x < 0 || x > width || y < 0 || y > height) ;
+        if (x < 0 || x > width || y < 0 || y > height);
 
             // Click in left selection area.
-        else if ( x < 0.1*width ) {
+        else if (x < 0.25 * width) {
             pickPrimitive(y);
             pointCount = 0;
         }
 
-            // Click in canvas.
-        else {
-
-            if (primitive == POINT) {
-                points.push_back(Point(x,y));
-            }
-
-            else if (primitive == LINE) {
-                if (pointCount == 0) {
-                    resetAndSetCoordinates(x, y);
-                } else {
-                    lines.push_back( Line(center.x, center.y, x, y) );
+        if(primitive == SUM_VECTOR) {
+            if(pointCount > 2) {
+                if(pointCount == 3) {
+                    drawPVetorial();
                     pointCount = 0;
-                }
-
-            }
-
-            else if (primitive == RECTANGLE) {
-                if (pointCount == 0) {
-                    resetAndSetCoordinates(x, y);
-                } else {
-                    rectangles.push_back( Rectangle(center.x, center.y, x, y) );
-                    pointCount = 0;
+                    circles.clear();
                 }
             }
 
-
-            else if(primitive == POLY_LINE) {
-                if (pointCount == 0) {
-                    resetAndSetCoordinates(x, y);
-                } else {
-
-                    polylines.push_back( PolyLine(center.x, center.y, x, y));
-                    resetAndSetCoordinates(x, y);
-
+            if(pointCount != 0) {
+                if(pointCount == 1) {
+                    vectorOne.x2 = x;
+                    vectorOne.y2 = y;
                 }
-            }
 
-            else if(primitive == CIRCLE) {
-                if (pointCount == 0){
-                    resetAndSetCoordinates(x, y);
-                } else {
-                    circles.push_back( Circle(center.x, center.y, x, y) );
-                    pointCount = 0;
+                if(pointCount == 2) {
+                    vectorTwo.x2 = x;
+                    vectorTwo.y2 = y;
                 }
-            }
 
-            else if(primitive == HEXAGON) {
-                if (pointCount  == 0) {
-                    resetAndSetCoordinates(x, y);
 
-                } else {
-                    hexagons.push_back( Hexagon(center.x, center.y, x, y) );
-                    pointCount = 0;
-                }
-            }
-
+                drawArrow(500, 250, x, y);
+                circles.push_back( Circle(500, 250, x, y) );
+                pointCount++;
+            } else pointCount++;
         }
 
+
+        if (primitive == VECTOR_PRODUCT) {
+            if(pointCount > 2) {
+                if(pointCount == 4) {
+                    clearAll();
+                } else {
+                    drawCalc();
+
+                    pointCount = 4;
+                }
+
+            } else if(pointCount != 0) {
+                if(pointCount == 1) {
+                    vectorOne.x2 = x;
+                    vectorOne.y2 = y;
+                }
+
+                if(pointCount == 2) {
+                    vectorTwo.x2 = x;
+                    vectorTwo.y2 = y;
+                }
+
+                drawArrow(500, 250, x, y);
+                circles.push_back( Circle(500, 250, x, y) );
+                pointCount++;
+            } else pointCount++;
+
+        }
     }
 
-    if((button == GLUT_MIDDLE_BUTTON && state == GLUT_DOWN)) pointCount = 0;
+    if ((button == GLUT_MIDDLE_BUTTON && state == GLUT_DOWN)) pointCount = 0;
     glutPostRedisplay();
 }
 
@@ -879,22 +1053,51 @@ void keyInput(unsigned char key, int x, int y) {
             exit(0);
             break;
 
+        case 49:
+            posQuadrant = 0;
+            break;
+
+        case 50:
+            posQuadrant = 45;
+            break;
+
+        case 51:
+            posQuadrant = 90;
+            break;
+
+        case 52:
+            posQuadrant = 135;
+            break;
+
+        case 53:
+            posQuadrant = 180;
+            break;
+
+        case 54:
+            posQuadrant = 225;
+            break;
+
+        case 55:
+            posQuadrant = 270;
+            break;
+
+        case 56:
+            posQuadrant = 315;
+            break;
+
+        case 57:
+            posQuadrant = 360;
+            break;
+
+        case '-': /// Seta para esquerda
+            Constant -= 10;
+            break;
+        case '+': /// Seta para direita
+            Constant += 10;
+            break;
         default:
             break;
     }
-}
-
-// Clear the canvas and reset for fresh drawing.
-void clearAll(void) {
-    points.clear();
-    lines.clear();
-    rectangles.clear();
-    polylines.clear();
-    circles.clear();
-    hexagons.clear();
-
-    primitive = INACTIVE;
-    pointCount = 0;
 }
 
 // The right button menu callback function.
@@ -921,122 +1124,65 @@ void grid_menu(int id) {
     glutPostRedisplay();
 }
 // Controla o line stipple
-void keyStrippers(int key) {
+void keyGraus(int key) {
     switch(key) {
         case 1:
-            stippleID = 1;
+            posQuadrant = 0;
             break;
 
         case 2:
-            stippleID = 2;
+            posQuadrant = 45;
             break;
 
         case 3:
-            stippleID = 3;
+            posQuadrant = 90;
             break;
 
         case 4:
-            stippleID = 0;
+            posQuadrant = 135;
             break;
+
+        case 5:
+            posQuadrant = 180;
+            break;
+
+        case 6:
+            posQuadrant = 225;
+            break;
+
+        case 7:
+            posQuadrant = 270;
+            break;
+
+        case 8:
+            posQuadrant = 315;
+            break;
+
+        case 9:
+            posQuadrant = 360;
+            break;
+
 
         default:
             break;
     }
 }
 
-// Controla as cores das figuras
-void add_colors(int id) {
 
-    switch (id) {
-        case 1:
-            colorVector[0] = 255.0;
-            colorVector[1] = 0.00;
-            colorVector[2] = 0.00;
-            break;
-
-        case 2:
-            colorVector[0] = 0.0;
-            colorVector[1] = 0.0;
-            colorVector[2] = 204.0;
-            break;
-
-        case 3:
-            colorVector[0] = 255.0;
-            colorVector[1] = 0.0;
-            colorVector[2] = 255.0;
-            break;
-
-        case 4:
-            colorVector[0] = 0.0;
-            colorVector[1] = 51.0;
-            colorVector[2] = 0.0;
-            break;
-
-        case 5:
-            colorVector[0] = 0.0;
-            colorVector[1] = 0.0;
-            colorVector[2] = 0.0;
-            break;
-    }
-
-    glutPostRedisplay();
-};
-
-// Controla o modo das figuras, filled ou outline
-void mode_figures(int id) {
-    if(id == 1)
-        TYPE = GL_LINE;
-
-    if(id == 2)
-        TYPE = GL_FILL;
-
-    glutPostRedisplay();
-}
-
-// Altera o  tamanho do grid
-void sizeGrid(int id) {
-    if(id == 1) {
-        drawingSize = 3;
-    }
-
-    if(id == 2) {
-        drawingSize = 9;
-    }
-
-    if(id == 3) {
-        drawingSize = 6;
-    }
-
-    glutPostRedisplay();
-}
-
-// Function to create menu.
 void makeMenu(void) {
-    int sub_menu, options_add_colors, options_mode, options_size_grid, options_strippers_line;
+    int sub_menu, options_graus;
 
-    options_strippers_line = glutCreateMenu(keyStrippers);
-    glutAddMenuEntry("Stripper -  0x0001", 1);
-    glutAddMenuEntry("Stripper -  0x5555", 2);
-    glutAddMenuEntry("Stripper -  0x00FF", 3);
-    glutAddMenuEntry("Stripper -  Off", 4);
+    options_graus = glutCreateMenu(keyGraus);
+    glutAddMenuEntry("0  Graus",  1);
+    glutAddMenuEntry("45  Graus", 2);
+    glutAddMenuEntry("90  Graus", 3);
+    glutAddMenuEntry("135 Graus", 4);
+    glutAddMenuEntry("180 Graus", 5);
+    glutAddMenuEntry("225 Graus", 6);
+    glutAddMenuEntry("270 Graus", 7);
+    glutAddMenuEntry("315 Graus", 8);
+    glutAddMenuEntry("360 Graus", 9);
 
-
-    options_size_grid = glutCreateMenu(sizeGrid);
-    glutAddMenuEntry("Size 1", 1);
-    glutAddMenuEntry("Size 2", 2);
-    glutAddMenuEntry("Size 2", 3);
-
-
-    options_mode = glutCreateMenu(mode_figures);
-    glutAddMenuEntry("outLine", 1);
-    glutAddMenuEntry("Filled", 2);
-
-    options_add_colors = glutCreateMenu(add_colors);
-    glutAddMenuEntry("Red",   1);
-    glutAddMenuEntry("Blue",  2);
-    glutAddMenuEntry("Pink",  3);
-    glutAddMenuEntry("Green", 4);
-    glutAddMenuEntry("Black", 5);
 
 
     sub_menu = glutCreateMenu(grid_menu);
@@ -1045,10 +1191,7 @@ void makeMenu(void) {
 
     glutCreateMenu(rightMenu);
     glutAddSubMenu("Grid", sub_menu);
-    glutAddSubMenu("Colors", options_add_colors);
-    glutAddSubMenu("Mode", options_mode);
-    glutAddSubMenu("Size Grid", options_size_grid);
-    glutAddSubMenu("Line Stripper", options_strippers_line);
+    glutAddSubMenu("Alterar Graus", options_graus);
     glutAddMenuEntry("Clear", 1);
     glutAddMenuEntry("Quit", 2);
     glutAttachMenu(GLUT_RIGHT_BUTTON);
@@ -1069,7 +1212,7 @@ int main(int argc, char **argv)
     printInteraction();
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE);
-    glutInitWindowSize(500, 500);
+    glutInitWindowSize(800, 500);
 
     glutInitWindowPosition(100, 100);
     glutCreateWindow("canvas.cpp");
