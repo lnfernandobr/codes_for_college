@@ -1,0 +1,9 @@
+addi $t0,$zero,5
+addi $t1,$zero,3
+sll $t2,$t0,2
+srl $t3,$t0,2
+and $t4,$t0,$t1
+andi $t5,$t0,3
+or $t6,$t0,$t1
+ori $t7,$t0,3
+nor $s0,$t0,$t1

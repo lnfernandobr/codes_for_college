@@ -1,0 +1,9 @@
+# x=v[0]+v[1]*v[2]
+lw $s2,4($zero)
+lw $t0,0($s2)
+lw $t1,4($s2)
+lw $t2,8($s2)
+mult $t1,$t2
+mflo $t3
+add $s1,$t0,$t3  
+sw $s1,0($zero) 
