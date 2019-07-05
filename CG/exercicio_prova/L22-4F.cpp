@@ -43,63 +43,54 @@ void drawScene(void) {
     glRotatef(Yangle, 0.0, 1.0, 0.0);
     glRotatef(Xangle, 1.0, 0.0, 0.0);
 
-    // Desenhando o sol com cor amarela
+    /* Desenhando o sol com cor amarela */
     glColor3f(1.0, 1.0, 0.0);
-    glTranslatef(0.0, 0.0, -10.0);
-
+    glTranslatef(0.0, 0.0, -14.0);
     glutWireSphere(10.0, 50.0, 50.0);
 
 
-    static float x = 2 * cos (latAngle), z = 2 * sin (latAngle);
+    glColor3f(0.5f, 0.35f, 0.05f); // Seta Planeta cinza
+    glRotatef(-latAngle, 0, 1, 0); // Rotaciona em volta do eixo y no sentido anti horario por causa do -latAngle
+    /* Caso queira deixa o planeta fixo, mover o glTranslatef para cima do rotate, assim o rotare vai rotacionar no
+     no proprio eixo do objeto */
 
-    // Begin revolving ball.
-//    glRotatef(longAngle, 0.0, 0.0, 1.0);
+    glTranslatef(20, 0, 0);
+    /* Translada o planeta em 20 do eixo do x, ou seja, move a esfera originaria no centro do Sol para o lado */
 
-    glTranslatef(x, 0, z);
-    glRotatef(latAngle, 0.0, 0.0, 1.0);
-    glTranslatef(x, 0, z);
+    glutWireSphere(2.0, 10, 10); //// Desenha platena cinza
 
-    glTranslatef(20.0, 0.0, 0.0);
+    /* Acelera em 25 vezes a velocidade de rotacao da lua menor em orbita do planeta */
 
-    glColor3f(0.5f, 0.35f, 0.05f);
-    glutWireSphere(2.0, 20, 20);
-    // End revolving ball.
+    glPushMatrix();
+        glColor3f(0, 1, 100); /* Lua com cor azul, anã azul*/
+        glRotatef(latAngle * 5, 0, 1, 0); // Lua vai rotacionar em volta do planeta no sentido horario
+        glTranslatef(3, 0, 0); //// Transalada a esfera em 2 para deixa o centro do planeta
+        glutWireSphere(0.5, 5, 5);
+    glPopMatrix();
 
-    // glRotatef(10*latAngle, 0.0, 1.0, 0.0);
-//    glTranslatef(4.0, 0.0, 0.0);
 
-//    // Satellite
-//    glColor3f(1.0, 0.0, 0.0);
-//    glutWireSphere(0.5, 5, 5);
+    glColor3f(0, 0, 0); /* Lua com cor azul, anã azul*/
+    glRotatef(latAngle, 1, 0, 0); // Lua vai rotacionar em volta do planeta no sentido horario
+    glTranslatef(0, 3, 0); //// Transalada a esfera em 2 para deixa o centro do planeta
+    glutWireSphere(0.5, 10, 10);
 
     glutSwapBuffers();
-}
 
+}
 
 void animate(int value) { // Timer function.
 
-    if (isAnimate) {
+    if (isAnimate)
         latAngle += 1;
-
-//        if(latAngle > 360.0)
-//            latAngle -= 360.0;
-//
-//        longAngle += 1.0;
-//
-//        if(longAngle > 360.0)
-//            longAngle -= 360.0;
-    }
 
     glutTimerFunc(animationPeriod, animate, 1);
     glutPostRedisplay();
 }
 
-
 void setup(void) { // Initialization routine.
     glClearColor(1.0, 1.0, 1.0, 0.0);
     glEnable(GL_DEPTH_TEST); // Enable depth testing.
 }
-
 
 void resize(int w, int h) { // OpenGL window reshape routine.
     glViewport(0, 0, (GLsizei)w, (GLsizei)h);
@@ -109,8 +100,6 @@ void resize(int w, int h) { // OpenGL window reshape routine.
 
     glMatrixMode(GL_MODELVIEW);
 }
-
-
 
 void keyInput(unsigned char key, int x, int y) { // Keyboard input processing routine.
     switch(key) {
@@ -190,7 +179,6 @@ void specialKeyInput(int key, int x, int y) {
 
     glutPostRedisplay();
 }
-
 
 // Routine to output interaction instructions to the C++ window.
 void printInteraction(void) {
