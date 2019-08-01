@@ -12,13 +12,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e72ade50-218c-42bd-9762-87852023732e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CG/exercicio_prova/4e.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/exercicio_prova/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CG/canvas/canvas" beforeDir="false" afterPath="$PROJECT_DIR$/CG/canvas/canvas" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CG/canvas/canvas.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/CG/canvas/canvas.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="e72ade50-218c-42bd-9762-87852023732e" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/CG/canvas/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +28,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CG/Trabalho2/trabalho2.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
+            <state relative-caret-position="16500">
               <caret line="1100" column="1" selection-start-line="1100" selection-start-column="1" selection-end-line="1100" selection-end-column="1" />
               <folding>
                 <element signature="e#3202#3844#0" />
@@ -64,8 +58,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CG/canvas/canvas.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="100" column="1" lean-forward="true" selection-start-line="100" selection-start-column="1" selection-end-line="100" selection-end-column="1" />
+            <state relative-caret-position="60">
+              <caret line="88" column="31" selection-start-line="88" selection-start-column="31" selection-end-line="88" selection-end-column="31" />
               <folding>
                 <element signature="e#549#573#0" expanded="true" />
                 <element signature="e#2276#2415#0" />
@@ -73,23 +67,6 @@
                 <element signature="e#2668#3977#0" />
                 <element signature="e#3979#4232#0" />
                 <element signature="e#4235#4601#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CG/exercicio_prova/4e.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="67" column="32" lean-forward="true" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="32" />
-              <folding>
-                <element signature="e#540#564#0" expanded="true" />
-                <element signature="e#2127#2265#0" />
-                <element signature="e#2267#2513#0" />
-                <element signature="e#2517#3702#0" />
-                <element signature="e#3840#4084#0" />
-                <element signature="e#4088#4454#0" />
               </folding>
             </state>
           </provider>
@@ -139,6 +116,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -185,19 +167,8 @@
         <subPane>
           <expand>
             <path>
-              <item name="codes_for_college" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codes_for_college" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codes_for_college" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codes_for_college" type="462c0819:PsiDirectoryNode" />
-              <item name="CG" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codes_for_college" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codes_for_college" type="462c0819:PsiDirectoryNode" />
-              <item name="CG" type="462c0819:PsiDirectoryNode" />
-              <item name="exercicio_prova" type="462c0819:PsiDirectoryNode" />
+              <item name="college" type="b2602c69:ProjectViewProjectNode" />
+              <item name="college" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -272,20 +243,21 @@
       <workItem from="1558490770969" duration="1230000" />
       <workItem from="1558524776291" duration="1002000" />
       <workItem from="1562106504586" duration="10207000" />
+      <workItem from="1564697631724" duration="230000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="151794000" />
+    <option name="totallyTimeSpent" value="152050000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1366" y="-1" width="1366" height="744" extended-state="6" />
+    <frame x="0" y="-1" width="1366" height="744" extended-state="6" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" weight="0.25757575" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.25757575" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" order="0" weight="0.20512821" />
-      <window_info anchor="bottom" x="-228" y="108" width="1364" height="381" id="Terminal" order="1" weight="0.22903226" />
+      <window_info anchor="bottom" id="Version Control" order="0" weight="0.5370968" />
+      <window_info active="true" anchor="bottom" x="-228" y="108" width="1364" height="381" id="Terminal" order="1" visible="true" weight="0.38548386" />
       <window_info anchor="bottom" id="Messages" order="2" weight="0.3279483" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="bottom" id="CMake" order="4" weight="0.32419354" />
@@ -297,6 +269,7 @@
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="right" id="make" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -305,6 +278,32 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/main.c">
@@ -518,6 +517,27 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SO/socket_multiply_matrix.c" />
+    <entry file="file://$PROJECT_DIR$/CG/canvas/methods.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CG/exercicio_prova/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="50" lean-forward="true" selection-start-line="1" selection-start-column="50" selection-end-line="1" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CG/exercicio_prova/4e.cpp" />
+    <entry file="file://$PROJECT_DIR$/CG/Trabalho2/trabalho2.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16500">
+          <caret line="1100" column="1" selection-start-line="1100" selection-start-column="1" selection-end-line="1100" selection-end-column="1" />
+          <folding>
+            <element signature="e#3202#3844#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Redes/Sockets/servidor.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
@@ -532,45 +552,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CG/canvas/methods.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CG/Trabalho2/trabalho2.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="1100" column="1" selection-start-line="1100" selection-start-column="1" selection-end-line="1100" selection-end-column="1" />
-          <folding>
-            <element signature="e#3202#3844#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CG/exercicio_prova/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="50" lean-forward="true" selection-start-line="1" selection-start-column="50" selection-end-line="1" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CG/exercicio_prova/4e.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="67" column="32" lean-forward="true" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="32" />
-          <folding>
-            <element signature="e#540#564#0" expanded="true" />
-            <element signature="e#2127#2265#0" />
-            <element signature="e#2267#2513#0" />
-            <element signature="e#2517#3702#0" />
-            <element signature="e#3840#4084#0" />
-            <element signature="e#4088#4454#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CG/canvas/canvas.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="100" column="1" lean-forward="true" selection-start-line="100" selection-start-column="1" selection-end-line="100" selection-end-column="1" />
+        <state relative-caret-position="60">
+          <caret line="88" column="31" selection-start-line="88" selection-start-column="31" selection-end-line="88" selection-end-column="31" />
           <folding>
             <element signature="e#549#573#0" expanded="true" />
             <element signature="e#2276#2415#0" />
