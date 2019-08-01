@@ -1,3 +1,0 @@
-/home/fernando/Documentos/DevFaculdade/AED/inverterStringRecursivo/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/fernando/Documentos/DevFaculdade/AED/inverterStringRecursivo/cmake-build-debug/CMakeFiles/inverterStringRecursivo.dir
-/home/fernando/Documentos/DevFaculdade/AED/inverterStringRecursivo/cmake-build-debug/CMakeFiles/edit_cache.dir

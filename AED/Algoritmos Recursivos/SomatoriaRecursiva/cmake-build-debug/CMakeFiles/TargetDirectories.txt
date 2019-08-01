@@ -1,3 +1,0 @@
-/home/fernando/Documentos/DevFaculdade/AED/somarNelementosRecursivo/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/fernando/Documentos/DevFaculdade/AED/somarNelementosRecursivo/cmake-build-debug/CMakeFiles/somarNelementosRecursivo.dir
-/home/fernando/Documentos/DevFaculdade/AED/somarNelementosRecursivo/cmake-build-debug/CMakeFiles/edit_cache.dir
