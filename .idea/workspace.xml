@@ -34,7 +34,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CG/Trabalho2/trabalho2.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
+            <state relative-caret-position="16500">
               <caret line="1100" column="1" selection-start-line="1100" selection-start-column="1" selection-end-line="1100" selection-end-column="1" />
               <folding>
                 <element signature="e#3202#3844#0" />
@@ -64,8 +64,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CG/canvas/canvas.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="100" column="1" lean-forward="true" selection-start-line="100" selection-start-column="1" selection-end-line="100" selection-end-column="1" />
+            <state relative-caret-position="105">
+              <caret line="91" selection-start-line="91" selection-end-line="91" />
               <folding>
                 <element signature="e#549#573#0" expanded="true" />
                 <element signature="e#2276#2415#0" />
@@ -73,23 +73,6 @@
                 <element signature="e#2668#3977#0" />
                 <element signature="e#3979#4232#0" />
                 <element signature="e#4235#4601#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CG/exercicio_prova/4e.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="67" column="32" lean-forward="true" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="32" />
-              <folding>
-                <element signature="e#540#564#0" expanded="true" />
-                <element signature="e#2127#2265#0" />
-                <element signature="e#2267#2513#0" />
-                <element signature="e#2517#3702#0" />
-                <element signature="e#3840#4084#0" />
-                <element signature="e#4088#4454#0" />
               </folding>
             </state>
           </provider>
@@ -163,8 +146,8 @@
         <option value="$PROJECT_DIR$/SO/socket_multiply_matrix.c" />
         <option value="$PROJECT_DIR$/exercicio_prova/4e.cpp" />
         <option value="$PROJECT_DIR$/CG/exercicio_prova/Makefile" />
-        <option value="$PROJECT_DIR$/CG/canvas/canvas.cpp" />
         <option value="$PROJECT_DIR$/CG/exercicio_prova/4e.cpp" />
+        <option value="$PROJECT_DIR$/CG/canvas/canvas.cpp" />
       </list>
     </option>
   </component>
@@ -279,7 +262,7 @@
     <option name="totallyTimeSpent" value="151794000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1366" y="-1" width="1366" height="744" extended-state="6" />
+    <frame x="0" y="-1" width="1366" height="744" extended-state="6" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="1" weight="0.25757575" />
@@ -537,7 +520,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CG/Trabalho2/trabalho2.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
+        <state relative-caret-position="16500">
           <caret line="1100" column="1" selection-start-line="1100" selection-start-column="1" selection-end-line="1100" selection-end-column="1" />
           <folding>
             <element signature="e#3202#3844#0" />
@@ -552,25 +535,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CG/exercicio_prova/4e.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="67" column="32" lean-forward="true" selection-start-line="67" selection-start-column="32" selection-end-line="67" selection-end-column="32" />
-          <folding>
-            <element signature="e#540#564#0" expanded="true" />
-            <element signature="e#2127#2265#0" />
-            <element signature="e#2267#2513#0" />
-            <element signature="e#2517#3702#0" />
-            <element signature="e#3840#4084#0" />
-            <element signature="e#4088#4454#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/CG/exercicio_prova/4e.cpp" />
     <entry file="file://$PROJECT_DIR$/CG/canvas/canvas.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="100" column="1" lean-forward="true" selection-start-line="100" selection-start-column="1" selection-end-line="100" selection-end-column="1" />
+        <state relative-caret-position="105">
+          <caret line="91" selection-start-line="91" selection-end-line="91" />
           <folding>
             <element signature="e#549#573#0" expanded="true" />
             <element signature="e#2276#2415#0" />

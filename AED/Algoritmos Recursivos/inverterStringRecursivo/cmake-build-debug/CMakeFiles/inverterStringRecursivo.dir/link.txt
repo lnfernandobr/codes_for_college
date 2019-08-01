@@ -1,1 +1,0 @@
-/usr/bin/cc -g   CMakeFiles/inverterStringRecursivo.dir/main.c.o  -o inverterStringRecursivo 
