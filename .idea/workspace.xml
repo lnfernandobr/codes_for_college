@@ -13,11 +13,84 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e72ade50-218c-42bd-9762-87852023732e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CG/exercicio_prova/4e.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CG/exercicio_prova/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CG/canvas/canvas" beforeDir="false" afterPath="$PROJECT_DIR$/CG/canvas/canvas" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CG/canvas/canvas.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/CG/canvas/canvas.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/.idea/CG.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/Trabalho1/trabalho1" beforeDir="false" afterPath="$PROJECT_DIR$/Trabalhos/Trabalho1/trabalho1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/Trabalho1/trabalho1.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Trabalhos/Trabalho1/trabalho1.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/Trabalho2/trabalho2" beforeDir="false" afterPath="$PROJECT_DIR$/Trabalhos/Trabalho2/trabalho2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/Trabalho2/trabalho2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Trabalhos/Trabalho2/trabalho2.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/ballAndTorus/ballAndTorus" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/ballAndTorus/ballAndTorus" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/ballAndTorus/ballAndTorus.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/ballAndTorus/ballAndTorus.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/canvas/IMG_6307.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/canvas/IMG_6307.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/canvas/IMG_6308.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/canvas/IMG_6308.JPG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/canvas/canvas" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/canvas/canvas" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/canvas/canvas.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/canvas/canvas.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/canvas/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/canvas/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/canvas/methods.h" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/canvas/methods.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/cilindro/clindro" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/cilindro/clindro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/cilindro/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/cilindro/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/circle/circle" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/circle/circle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/circle/circle.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/circle/circle.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/circleWithList/circleWithList" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/circleWithList/circleWithList" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/circleWithList/circleWithList.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/circleWithList/circleWithList.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/circuloInterativo/circuloInterativo" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/circuloInterativo/circuloInterativo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/circuloInterativo/circuloInterativo.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/circuloInterativo/circuloInterativo.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/ex/eex.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/ex/eex.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/ex/ex" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/ex/ex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/ex/square.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/ex/square.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/exercicio1/ex" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/exercicio1/ex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/exercicio1/exercicio1.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/exercicio1/exercicio1.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/exercicio_prova/1-L21.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/exercicio_prova/1-L21.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/exercicio_prova/4e" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/exercicio_prova/4e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/exercicio_prova/L22-2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/exercicio_prova/L22-2.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/exercicio_prova/L22-4F.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/exercicio_prova/L22-4F.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/exercicio_prova/L22-4e.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/exercicio_prova/L22-4e.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/exercicio_prova/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/exercicio_prova/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/exercicio_prova/a" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/exercicio_prova/a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/exercicio_prova/exe4_a.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/exercicio_prova/exe4_a.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/fonts/fonts" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/fonts/fonts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/fonts/fonts.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/fonts/fonts.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/helix/experimentHelixPerspective" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/helix/experimentHelixPerspective" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/helix/experimentHelixPerspective.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/helix/experimentHelixPerspective.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/helix/helix" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/helix/helix" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/helix/helix.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/helix/helix.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/helixList/helixList" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/helixList/helixList" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/helixList/helixList.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/helixList/helixList.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/hemisphere/hemis" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/hemisphere/hemis" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/hemisphere/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/hemisphere/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/lineStipple/lineStipple" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/lineStipple/lineStipple" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/lineStipple/lineStipple.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/lineStipple/lineStipple.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/menus/menus" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/menus/menus" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/menus/menus.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/menus/menus.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/mouse/mouse" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/mouse/mouse" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/mouse/mouse.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/mouse/mouse.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/mouseMotion/mouseMotion" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/mouseMotion/mouseMotion" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/mouseMotion/mouseMotion.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/mouseMotion/mouseMotion.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/movieSphere/movieSphere" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/movieSphere/movieSphere" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/movieSphere/movieSphere.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/movieSphere/movieSphere.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/multipleLists/multipleLists" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/multipleLists/multipleLists" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/multipleLists/multipleLists.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/multipleLists/multipleLists.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/paraboloide/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/paraboloide/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/paraboloide/paraboloide" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/paraboloide/paraboloide" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/paraboloide/test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/paraboloide/test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/torus/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/torus/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CG/torus/torus" beforeDir="false" afterPath="$PROJECT_DIR$/Exercicios-CG/torus/torus" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trabalhos/Prova/4.55/spaceTravel.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trabalhos/Prova/4.56/spaceTravel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trabalhos/Prova/4.56/spaceTravel.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trabalhos/Prova/4.58/animateMan" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trabalhos/Prova/4.58/animateMan.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trabalhos/Prova/4.58/animateManDataOut.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trabalhos/Prova/4.59/4.59" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trabalhos/Prova/4.59/4.59.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trabalhos/Prova/4.60/4.60" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trabalhos/Prova/4.60/4.60.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trabalhos/Prova/test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trabalhos/Prova/test.cpp" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/CG/canvas/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,7 +105,7 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CG/Trabalho2/trabalho2.cpp">
+        <entry file="file://$PROJECT_DIR$/Trabalhos/Trabalho2/trabalho2.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="16500">
               <caret line="1100" column="1" selection-start-line="1100" selection-start-column="1" selection-end-line="1100" selection-end-column="1" />
@@ -44,16 +117,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Redes/Sockets/servidor.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="49" column="40" selection-end-line="88" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CG/fonts/fonts.cpp">
+        <entry file="file://$PROJECT_DIR$/Exercicios-CG/fonts/fonts.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1800">
               <caret line="120" column="24" selection-start-line="120" selection-start-column="20" selection-end-line="120" selection-end-column="24" />
@@ -62,10 +126,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CG/canvas/canvas.cpp">
+        <entry file="file://$PROJECT_DIR$/Exercicios-CG/canvas/canvas.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="91" selection-start-line="91" selection-end-line="91" />
+            <state relative-caret-position="165">
+              <caret line="86" column="22" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
               <folding>
                 <element signature="e#549#573#0" expanded="true" />
                 <element signature="e#2276#2415#0" />
@@ -168,19 +232,8 @@
         <subPane>
           <expand>
             <path>
-              <item name="codes_for_college" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codes_for_college" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codes_for_college" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codes_for_college" type="462c0819:PsiDirectoryNode" />
-              <item name="CG" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="codes_for_college" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codes_for_college" type="462c0819:PsiDirectoryNode" />
-              <item name="CG" type="462c0819:PsiDirectoryNode" />
-              <item name="exercicio_prova" type="462c0819:PsiDirectoryNode" />
+              <item name="college" type="b2602c69:ProjectViewProjectNode" />
+              <item name="college" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -259,7 +312,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="151794000" />
+    <option name="totallyTimeSpent" value="152067000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1366" height="744" extended-state="6" />
@@ -267,8 +320,8 @@
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="1" weight="0.25757575" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" order="0" weight="0.20512821" />
-      <window_info anchor="bottom" x="-228" y="108" width="1364" height="381" id="Terminal" order="1" weight="0.22903226" />
+      <window_info anchor="bottom" id="Version Control" order="0" weight="0.20483871" />
+      <window_info active="true" anchor="bottom" x="-228" y="108" width="1364" height="381" id="Terminal" order="1" visible="true" weight="0.29193547" />
       <window_info anchor="bottom" id="Messages" order="2" weight="0.3279483" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="bottom" id="CMake" order="4" weight="0.32419354" />
@@ -288,6 +341,22 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/AED/Algoritmos Recursivos/verificarPalindromoRecursivo/main.c">
@@ -321,7 +390,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CG/canvas/CMakeLists.txt" />
     <entry file="file://$PROJECT_DIR$/CG/canvas/compile_database.json" />
-    <entry file="file://$PROJECT_DIR$/CG/circle/circle.cpp">
+    <entry file="file://$PROJECT_DIR$/Exercicios-CG/circle/circle.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="59">
           <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
@@ -349,14 +418,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CG/mouseMotion/mouseMotion.cpp">
+    <entry file="file://$PROJECT_DIR$/Exercicios-CG/mouseMotion/mouseMotion.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="70" lean-forward="true" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="70" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CG/circuloInterativo/circuloInterativo.cpp">
+    <entry file="file://$PROJECT_DIR$/Exercicios-CG/circuloInterativo/circuloInterativo.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="29" column="2" selection-start-line="29" selection-start-column="2" selection-end-line="30" selection-end-column="22" />
@@ -368,54 +437,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CG/canvas/IMG_6307.jpg">
+    <entry file="file://$PROJECT_DIR$/Exercicios-CG/canvas/IMG_6307.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/CG/canvas/IMG_6308.JPG">
+    <entry file="file://$PROJECT_DIR$/Exercicios-CG/canvas/IMG_6308.JPG">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/CG/movieSphere/movieSphere.cpp">
+    <entry file="file://$PROJECT_DIR$/Exercicios-CG/movieSphere/movieSphere.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="70" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="70" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CG/circleWithList/circleWithList.cpp">
+    <entry file="file://$PROJECT_DIR$/Exercicios-CG/circleWithList/circleWithList.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="76" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="76" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CG/helixList/helixList.cpp">
+    <entry file="file://$PROJECT_DIR$/Exercicios-CG/helixList/helixList.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="87">
           <caret line="116" column="6" selection-start-line="116" selection-start-column="6" selection-end-line="119" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CG/multipleLists/multipleLists.cpp">
+    <entry file="file://$PROJECT_DIR$/Exercicios-CG/multipleLists/multipleLists.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CG/ex/eex.cpp">
+    <entry file="file://$PROJECT_DIR$/Exercicios-CG/ex/eex.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1202" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CG/exercicio1/exercicio1.cpp">
+    <entry file="file://$PROJECT_DIR$/Exercicios-CG/exercicio1/exercicio1.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1607" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CG/ex/square.cpp">
+    <entry file="file://$PROJECT_DIR$/Exercicios-CG/ex/square.cpp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/CG/menus/menus.cpp">
+    <entry file="file://$PROJECT_DIR$/Exercicios-CG/menus/menus.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-525">
           <caret line="85" column="5" selection-start-line="85" selection-start-column="5" selection-end-line="85" selection-end-column="5" />
@@ -425,14 +494,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CG/lineStipple/lineStipple.cpp">
+    <entry file="file://$PROJECT_DIR$/Exercicios-CG/lineStipple/lineStipple.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
           <caret line="57" column="35" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CG/Trabalho1/trabalho1.cpp">
+    <entry file="file://$PROJECT_DIR$/Trabalhos/Trabalho1/trabalho1.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" lean-forward="true" selection-end-line="1090" selection-end-column="1" />
@@ -508,17 +577,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CG/fonts/fonts.cpp">
+    <entry file="file://$PROJECT_DIR$/Exercicios-CG/fonts/fonts.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1800">
           <caret line="120" column="24" selection-start-line="120" selection-start-column="20" selection-end-line="120" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CG/canvas/methods.h">
+    <entry file="file://$PROJECT_DIR$/Exercicios-CG/canvas/methods.h">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/CG/Trabalho2/trabalho2.cpp">
+    <entry file="file://$PROJECT_DIR$/Trabalhos/Trabalho2/trabalho2.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16500">
           <caret line="1100" column="1" selection-start-line="1100" selection-start-column="1" selection-end-line="1100" selection-end-column="1" />
@@ -528,7 +597,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CG/exercicio_prova/Makefile">
+    <entry file="file://$PROJECT_DIR$/Exercicios-CG/exercicio_prova/Makefile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="50" lean-forward="true" selection-start-line="1" selection-start-column="50" selection-end-line="1" selection-end-column="50" />
@@ -536,10 +605,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CG/exercicio_prova/4e.cpp" />
-    <entry file="file://$PROJECT_DIR$/CG/canvas/canvas.cpp">
+    <entry file="file://$PROJECT_DIR$/Exercicios-CG/canvas/canvas.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="91" selection-start-line="91" selection-end-line="91" />
+        <state relative-caret-position="165">
+          <caret line="86" column="22" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
           <folding>
             <element signature="e#549#573#0" expanded="true" />
             <element signature="e#2276#2415#0" />
