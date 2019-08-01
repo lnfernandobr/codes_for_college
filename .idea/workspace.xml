@@ -9,11 +9,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b2c8248-906e-4961-8111-2ae5636ed06a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/college.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/college.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="1b2c8248-906e-4961-8111-2ae5636ed06a" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,13 +17,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Trabalhos/Trabalho2/trabalho2.cpp">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -39,6 +40,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/Trabalhos/Trabalho2/trabalho2.cpp" />
       </list>
     </option>
   </component>
@@ -61,6 +63,17 @@
             <path>
               <item name="college" type="b2602c69:ProjectViewProjectNode" />
               <item name="college" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="college" type="b2602c69:ProjectViewProjectNode" />
+              <item name="college" type="462c0819:PsiDirectoryNode" />
+              <item name="Trabalhos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="college" type="b2602c69:ProjectViewProjectNode" />
+              <item name="college" type="462c0819:PsiDirectoryNode" />
+              <item name="Trabalhos" type="462c0819:PsiDirectoryNode" />
+              <item name="Trabalho2" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -93,7 +106,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37000" />
+    <option name="totallyTimeSpent" value="115000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -154,6 +167,9 @@
           <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Trabalhos/Trabalho2/trabalho2.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
