@@ -252,7 +252,7 @@ void Man::draw() {
 
         // Left upper arm begin.
         if (highlight && !animateMode) {
-            if (selectedPart)
+            if (selectedPart == 1)
                 glColor3fv(partSelectColor);
         }
 
@@ -286,6 +286,7 @@ void Man::draw() {
 
 
         glPushMatrix();
+            glTranslated(-1, 0, -2);
             glScalef(1.0, 1.5, 2.0);
             draw_cylinder();
         glPopMatrix();
@@ -333,6 +334,7 @@ void Man::draw() {
 
 
         glPushMatrix();
+            glTranslated(-0.4, 0, -2);
             glScalef(1.0, 1.5, 2.0);
             draw_cylinder();
         glPopMatrix();
@@ -386,7 +388,7 @@ void Man::draw() {
         glPopMatrix();
 
 
-        glTranslatef(0.0, -5.0, 0.5); // Foot.
+        glTranslatef(0.0, -1.0, 0.5); // Foot.
 
         glPushMatrix();
             glScalef(2.0, 1.0, 3.0);
@@ -439,13 +441,13 @@ void Man::draw() {
 
         // Lower leg.
         glPushMatrix();
-            glScalef(2.0, 8.0, 2.0);
-            glutWireCube(1.0);
+            glScalef(1.0, 1.5, 2.0);
+            draw_cylinder();
         glPopMatrix();
 
 
         // Foot.
-        glTranslatef(0.0, -5.0, 0.5);
+        glTranslatef(0.0, -1.0, 0.5);
 
         glPushMatrix();
             glScalef(2.0, 1.0, 3.0);
