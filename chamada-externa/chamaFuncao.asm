@@ -17,13 +17,6 @@ section .text
       ; Passa os parametros e chama as funções no C
       mov rdi, formato  ; 1 Parametro
       mov rsi, msg      ; 2 Parametro
-
-
-
-      ; mov rax, 0        ;      PRECISA ?
-
       call printf       ; Chama função printf do C
       pop rbp           ; Pega rbp da pilha
       mov rax, 1        ; exit code 0
-
-      ; ret               ; Retorna           PRECISA ?
