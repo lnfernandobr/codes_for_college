@@ -420,6 +420,9 @@ void printInteraction(void)
     cout << "Interaction:" << endl;
     cout << "Press the left/right arrow keys to turn the craft." << endl
          << "Press the up/down arrow keys to move the craft." << endl;
+
+    cout << "F1 ==== DIREITA:" << endl;
+    cout << "F2 ==== ESQUERDA:" << endl;
 }
 
 // Main routine.
