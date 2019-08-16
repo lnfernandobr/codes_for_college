@@ -1,0 +1,6 @@
+#!/bin/bash
+# ./comp arquivo
+
+ARQUIVO=$1
+
+cd ${ARQUIVO} && g++ -o ${ARQUIVO}  ${ARQUIVO}.cpp -lglut -lGL -lGLU -lm && ./${ARQUIVO} && cd ..
