@@ -10,26 +10,27 @@
 #include <string.h>
 
 static GLsizei WIDTH, HEIGHT; /* OpenGL window size. */
+using namespace std;
 
-typedef struct {
+struct ptr {
     float x;
     float y;
     float z;
-}Ptr;
+};
 
-Ptr currentPoint;
+struct ptr  currentPoint;
 
-using namespace std;
-
-int count = 0;
+int
+    keyBoarEventX = 0,
+    keyBoarEventY = 0,
+    click = 0,
+    count = 0;
 
 float
     V1[3] = { 0 },
     V2[3] = { 0 },
     VectorAux2[3] = { 0 },
     VectorAux1[3] = { 0 };
-
-int keyBoarEventX = 0, keyBoarEventY = 0, click = 0;
 
 double 
     angleX = 0,
@@ -59,7 +60,6 @@ class Line {
         }
 
     void drawVector();
-    void updateVector(float moveX, float moveY, float moveZ);
 
     private:
         float Va[3], Vb[3];
