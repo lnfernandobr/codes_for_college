@@ -21,6 +21,7 @@ struct ptr {
 struct ptr  currentPoint;
 
 int
+    idOperation = 0,
     keyBoarEventX = 0,
     keyBoarEventY = 0,
     click = 0,
@@ -64,7 +65,6 @@ class Line {
     private:
         float Va[3], Vb[3];
 };
-
 
 void getCoordinatesReal(int x, int y, double *objectX, double *objectY, double *objectZ) {
 
@@ -112,10 +112,8 @@ static void mousePassiveMotion(int x, int y) {
     glutPostRedisplay();
 }
 
-
 vector<Line>::iterator LineIterator;
 vector<Line> linesVector; /* Vector of lines */
-
 
 void Line::drawVector() {
     glPushMatrix();
@@ -126,8 +124,6 @@ void Line::drawVector() {
         glEnd();
     glPopMatrix();
 }
-
-
 
 /* Função desenha linha em tempo real, a função é chamada a cada movimento do mouse,
  * no vetor Tmp fica as coordenadas atuais do mouse, no vetor VectorAux1 fica o primeiro
@@ -153,7 +149,6 @@ void drawVectors(void) {
     }
 }
 
-
 void drawPointer(float *V, int type) {
     glColor3f(0.8, 0.8, 0.8);
 
@@ -175,7 +170,6 @@ void drawPointer(float *V, int type) {
         glEnd();
     glPopMatrix();
 }
-
 
 void drawScenario() {
 
@@ -206,6 +200,38 @@ void drawScenario() {
         glEnd();
     }
 }
+
+void PickOperation(int id) {
+
+
+        if(id == 1)
+            idOperation = 1;
+
+        if(id == 2)
+            idOperation = 2;
+
+        if(id == 3)
+            idOperation = 3;
+
+        if(id == 4)
+            idOperation = 4;
+
+        if(id == 5)
+            exit(0);
+
+    glutPostRedisplay();
+
+}
+void makeMenu(void) {
+    glutCreateMenu(PickOperation);
+    glutAddMenuEntry("Conceito Vetor ", 1);
+    glutAddMenuEntry("Soma de Vetores ", 2);
+    glutAddMenuEntry("Produto de Vetores ", 3);
+    glutAddMenuEntry("Produto Escalar entre Vetores", 4);
+    glutAddMenuEntry("Sair", 5);
+    glutAttachMenu(GLUT_RIGHT_BUTTON);
+}
+
 
 void display() {
     glClear( GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT );
@@ -278,8 +304,6 @@ void mouse(int button, int state, int x, int y) {
 
     glutPostRedisplay();
 }
-
-
 
 void keyboard( int key, int x, int y) {
 
@@ -387,5 +411,7 @@ int main( int argc, char **argv ) {
 
     glutKeyboardFunc(keyInput);
     glutSpecialFunc(keyboard);
+
+    makeMenu(); // Create menu.
     glutMainLoop();
 }
