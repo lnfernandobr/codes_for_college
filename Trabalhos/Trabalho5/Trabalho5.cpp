@@ -91,8 +91,6 @@ void getCoordinatesReal(int x, int y, double *objectX, double *objectY, double *
         objectZ
     );
 
-
-
 }
 
 static void mousePassiveMotion(int x, int y) {
