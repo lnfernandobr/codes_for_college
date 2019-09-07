@@ -9,59 +9,118 @@
 #include <sstream>
 #include <string.h>
 
-int click = 0;
+static GLsizei WIDTH, HEIGHT; /* OpenGL window size. */
+
+typedef struct {
+    float x;
+    float y;
+    float z;
+}Ptr;
+
+Ptr currentPoint;
+
 using namespace std;
 
-#define HEIGHT 480
-#define WIDTH 640
-            int count = 0;
+int count = 0;
 
-float V1[3] = {0};
-float V2[3] = {0};
-float V3[3] = {0};
+float
+    V1[3] = { 0 },
+    V2[3] = { 0 },
+    VectorAux2[3] = { 0 },
+    VectorAux1[3] = { 0 };
+
+int keyBoarEventX = 0, keyBoarEventY = 0, click = 0;
+
+double 
+    angleX = 0,
+    angleY = 0,
+    moveX = 0,
+    moveY = 0,
+    moveZ = 0;
 
 
-int keyboard_event_x = 0;
-int keyboard_event_y = 0;
-double objx = 0, objy=0, objz=0;
-double angle_x = 0, angle_y = 0;
-double move_x = 0;
-double move_y = 0;
-double move_z = 0;
-int move_cube = 0;
-
-
-void setVector(float *V1, float *V2, unsigned int len) {
-    for (unsigned int i = 0; i < len; ++i) 
+static void setVector(float *V1, float *V2, unsigned int len) {
+    for (unsigned int i = 0; i < len; ++i)
         V1[i] = V2[i];
 }
 
-class Vetor {
+static void setVectorCoordinates(float *V, float x, float y, float z) {
+    V[0] = x;
+    V[1] = y;
+    V[2] = z;
+}
+
+class Line {
 
     public:
-        Vetor(float *V1, float *V2) {
+        Line(float *V1, float *V2) {
             setVector(Va, V1, 3);
             setVector(Vb, V2, 3);
         }
 
-    void drawVetor();
-    void updateVetor(float move_x, float move_y, float move_z);
+    void drawVector();
+    void updateVector(float moveX, float moveY, float moveZ);
 
     private:
         float Va[3], Vb[3];
 };
-vector<Vetor>::iterator vetorIterator; // Iterator to traverse a Line array.
-vector<Vetor> vetores;// Vector of lines.
 
-void Vetor::updateVetor(float move_x, float move_y, float move_z) {
-    
+
+void getCoordinatesReal(int x, int y, double *objectX, double *objectY, double *objectZ) {
+
+    int viewport[4];
+
+    double
+        modelView[16],
+        projection[16],
+        z = 1 - 0.0001;
+
+    glGetDoublev(GL_PROJECTION_MATRIX, projection);
+    glGetDoublev(GL_MODELVIEW_MATRIX, modelView);
+    glGetIntegerv(GL_VIEWPORT, viewport);
+
+    gluUnProject(
+        x,
+        viewport[3] - y,
+        z,
+        modelView,
+        projection,
+        viewport,
+        objectX,
+        objectY,
+        objectZ
+    );
+
+
 
 }
 
-void Vetor::drawVetor() {
-    
+static void mousePassiveMotion(int x, int y) {
+
+    double objectX = 0, objectY = 0, objectZ = 0;
+
+    getCoordinatesReal(x, y, &objectX, &objectY, &objectZ);
+
+    currentPoint.x = objectX;
+    currentPoint.y = objectY;
+    currentPoint.z = objectZ;
+
+    /* Se o usuario tiver transladado o canario, o flag keyboard é setado para 1, então
+     * se o mesmo não for setado para 0 aqui, o canario translada a cada movimento
+     * do mouse.*/
+    keyBoarEventY = 0;
+    keyBoarEventX = 0;
+
+    glutPostRedisplay();
+}
+
+
+vector<Line>::iterator LineIterator;
+vector<Line> linesVector; /* Vector of lines */
+
+
+void Line::drawVector() {
     glPushMatrix();
-        glTranslatef(move_x, move_y, move_z);
         glBegin(GL_LINES);
         glColor3f(0, 51, 0);
             glVertex3f(Va[0], Va[1], Va[2]);
@@ -72,172 +131,185 @@ void Vetor::drawVetor() {
 
 
 
-void drawVetores(void) {
-    // Loop through the lines array drawing each line.
-    vetorIterator = vetores.begin();
+/* Função desenha linha em tempo real, a função é chamada a cada movimento do mouse,
+ * no vetor Tmp fica as coordenadas atuais do mouse, no vetor VectorAux1 fica o primeiro
+ * ponto clicado.
+*/
+void drawLineDynamic(void) {
 
-    while(vetorIterator  != vetores.end()) {
-        vetorIterator->drawVetor();
-        vetorIterator++;
+    float Tmp[3];
+
+    setVectorCoordinates(Tmp, currentPoint.x, currentPoint.y, currentPoint.z);
+    Line *dynamicVector = new Line(VectorAux1, Tmp);
+
+    dynamicVector->drawVector();
+
+
+}
+
+void drawVectors(void) {
+    LineIterator = linesVector.begin();
+    while(LineIterator  != linesVector.end()) {
+        LineIterator->drawVector();
+        LineIterator++;
     }
 }
 
 
-/*THE FUNCTION TO DRAW THE STUFF ON THE SCREEN*/
-void display( ) {
-    
-    printf("OPA MAN:\n");
-    printf("Vetor 1: (%f %f %f)\n", V1[0], V1[1],  V1[2]);
-    printf("Vetor 2: (%f %f %f)\n", V2[0], V2[1],  V2[2]);
+void drawPointer(float *V, int type) {
+    glColor3f(0.8, 0.8, 0.8);
 
-   
 
+    glPushMatrix();
+
+        glTranslatef(moveX, moveY, moveZ);
+        glColor3f(1, 0, 0);
+        glPointSize(8);
+
+        glBegin(GL_POINTS);
+            glVertex3f(V[0], V[1], V[2]);
+            setVectorCoordinates(
+                type == 1 ? VectorAux1 : VectorAux2,
+                V[0] + moveX,
+                V[1] + moveY,
+                V[2] + moveZ
+            );
+        glEnd();
+    glPopMatrix();
+}
+
+
+void drawScenario() {
+
+    glBegin(GL_LINES);
+    glColor3f(0, 0, 1);
+    glVertex3f(0, 0, 100);
+    glVertex3f(0, 0, -100);
+    glEnd();
+
+    glBegin(GL_LINES);
+    glColor3f(1, 0, 0);
+    glVertex3f(-80, 0, 0);
+    glVertex3f(80, 0, 0);
+    glEnd();
+
+    glColor3f(0.8, 0.8, 0.8);
+    for (int i = 0; i < 170 ; i += 10) {
+        glBegin(GL_LINES);
+        glVertex3f(-80 + i, 0, 100);
+        glVertex3f(-80 + i, 0, -100);
+        glEnd();
+    }
+
+    for (int i = 0; i < 220 ; i += 20) {
+        glBegin(GL_LINES);
+        glVertex3f(-80, 0, 100 - i);
+        glVertex3f(80, 0, 100 - i);
+        glEnd();
+    }
+}
+
+void display() {
     glClear( GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT );
     int offset = 10;
-    //The big green floor like polygon
-    //The big green floor like polygon
-    //The big green floor like polygon
-    if (keyboard_event_x == 1){
-        glRotatef(angle_x, 0.0, 1.0, 0.0);
 
-    }
-    else if (keyboard_event_y == 1){
-        //glRotatef(angle_x, 0.0, 1.0, 0.0);
-        glRotatef(angle_y, 1.0, 0.0, 0.0);
-    }
-    //glRotatef(angle_y, 1.0, 0.0, 0.0);
+    if(keyBoarEventX == 1)
+        glRotatef(angleX, 0.0, 1.0, 0.0);
+
+    if(keyBoarEventY == 1)
+        glRotatef(angleY, 1.0, 0.0, 0.0);
+
     glPushMatrix();
-        glBegin( GL_LINES );
-            glColor3f(0, 0, 1);
-            glVertex3f( 0, 0,  100  );
-            glVertex3f( 0, 0, -100  );
-        glEnd( );
-        glBegin( GL_LINES );
-            glColor3f(1, 0, 0);
-            glVertex3f( -80, 0,  0  );
-            glVertex3f( 80, 0,  0  );
-        glEnd( );
-        glColor3f(0.8, 0.8, 0.8);
-        for (int i = 0; i < 170 ; i+=10){
-            glBegin( GL_LINES );
-            glVertex3f( -80+i, 0,  100  );
-            glVertex3f( -80+i, 0, -100  );
-            glEnd( );
-        }
-        //glColor3f(0, 1, 0);
-        for (int i = 0; i < 220 ; i+= 20){
-            glBegin( GL_LINES );
-            glVertex3f( -80, 0,  100-i  );
-            glVertex3f(  80, 0,  100-i  );
-            glEnd( );
-        }
-        if(click == 1) {
+        drawScenario();
 
-            glColor3f(0.8, 0.8, 0.8);
-            glPushMatrix( );
-                glColor3f( 1, 0, 0 );
-                glPointSize(8);
-                    glBegin(GL_POINTS);
-                    glVertex3f(V1[0], V1[1], V1[2]);
-                glEnd();
-            glPopMatrix( );
-        }
-        drawVetores();
+        if(click == 1)
+            drawPointer(V1, 1);
 
+        if(click == 1)
+            drawLineDynamic();
+
+        if(click == 2)
+            drawPointer(V2, 2);
+
+        drawVectors();
     glPopMatrix();
+
 
     glFlush( );
     glutSwapBuffers( );
 }
 
-void mouse( int button, int state, int x, int y) {
-    double modelview[16], projection[16];
-    int viewport[4];
-    float z = 1 - 0.0001;
-    //float z = 1 - 0.001;
+
+
+
+void mouse(int button, int state, int x, int y) {
+
+    double objX = 0, objY = 0, objZ = 0;
 
     if (button == GLUT_LEFT_BUTTON) {
-        if (state == GLUT_DOWN) {
+        if(state == GLUT_DOWN) {
 
-            /*Read the projection, modelview and viewport matrices
-            using the glGet functions.*/
-            glGetDoublev( GL_PROJECTION_MATRIX, projection );
-            glGetDoublev( GL_MODELVIEW_MATRIX, modelview );
-            glGetIntegerv( GL_VIEWPORT, viewport );
+            getCoordinatesReal(x, y, &objX, &objY, &objZ);
 
-            keyboard_event_y = 0;
-            keyboard_event_x = 0;
-
-            move_x = 0;
-            move_y = 0;
-            move_z = 0;
-
-            //Read the window z value from the z-buffer
-            //glReadPixels( x, viewport[3]-y, 1, 1, GL_DEPTH_COMPONENT, GL_FLOAT, &z );
-            //if (z == 1) z -= 0.00001;
-            //Use the gluUnProject to get the world co-ordinates of
-            //the point the user clicked and save in objx, objy, objz.
-            gluUnProject( x, viewport[3]-y, z, modelview, projection, viewport, &objx, &objy, &objz );
-            cout << objx <<"," << objy <<"," << objz <<"," << z << endl;
-
-            if(count == 4) {
-               vetores.clear();
-               count = 0;
-            }
+            if(count == 6)
+                count = 0, linesVector.clear();
 
             if(click == 0) {
-                V1[0] = objx;
-                V1[1] = objy;
-                V1[2] = objz;
-                click++;
-                count++;
-            } else {
-                V2[0] = objx;
-                V2[1] = objy;
-                V2[2] = objz;
-                
-                vetores.push_back(Vetor(V1, V2));
-                click = 0;
-                count++;
+                setVectorCoordinates(V1, objX, objY, objZ);
+                click++, count++;
             }
-            
-            // gluUnProject( x, viewport[3]-y, 0, modelview, projection, viewport, &objx, &objy, &objz );
-            // cout << objx <<"," << objy <<"," << objz <<"," << z << endl;
 
-            
-         
-            
+            else if(click == 1) {
+                setVectorCoordinates(V2, objX, objY, objZ);
+                click++, count++;
+            }
+
+            else if(click == 2) {
+                linesVector.push_back(Line(VectorAux1, VectorAux2));
+                click = 0, count++;
+            }
+
+            keyBoarEventY = 0;
+            keyBoarEventX = 0;
+
+            moveX = 0;
+            moveY = 0;
+            moveZ = 0;
         }
     }
+
     glutPostRedisplay();
 }
-void keyboard( int key, int x, int y ) {
 
-    if (key == GLUT_KEY_RIGHT){
-        keyboard_event_x = 1;
-        keyboard_event_y = 0;
-        angle_x = 2.0;
+
+
+void keyboard( int key, int x, int y) {
+
+    if (key == GLUT_KEY_RIGHT) {
+        keyBoarEventX = 1;
+        keyBoarEventY = 0;
+        angleX = 2.0;
         glutPostRedisplay();
     }
 
-    else if(key == GLUT_KEY_LEFT){
-        keyboard_event_x = 1;
-        keyboard_event_y = 0;
-        angle_x = -2.0;
+    else if(key == GLUT_KEY_LEFT) {
+        keyBoarEventX = 1;
+        keyBoarEventY = 0;
+        angleX = -2.0;
         glutPostRedisplay();
     }
 
-    else if(key == GLUT_KEY_UP){
-        keyboard_event_y = 1;
-        keyboard_event_x = 0;
-        angle_y = 2.0;
+    else if(key == GLUT_KEY_UP) {
+        keyBoarEventY = 1;
+        keyBoarEventX = 0;
+        angleY = 2.0;
         glutPostRedisplay();
     }
 
     else if (key ==  GLUT_KEY_DOWN) {
-        keyboard_event_y = 1;
-        keyboard_event_x = 0;
-        angle_y = -2.0;
+        keyBoarEventY = 1;
+        keyBoarEventX = 0;
+        angleY = -2.0;
         glutPostRedisplay();
     }
 
@@ -245,67 +317,77 @@ void keyboard( int key, int x, int y ) {
 
 void keyInput(unsigned char key, int x, int y) {
     
-    keyboard_event_y = keyboard_event_x = 0;
+    keyBoarEventY = keyBoarEventX = 0;
     
     switch (key) {
         case 'x':
-            move_x += 1;
+            moveX += 1;
             cout << "dentro" << endl;
             break;
 
         case 'X':
-            move_x -= 1;
+            moveX -= 1;
             break;
 
         case 'y':
-            move_y += 1;
+            moveY += 1;
             break;
 
         case 'Y':
-            move_y -= 1;
+            moveY -= 1;
             break;
 
         case 'z':
-            move_z += 1;
+            moveZ += 1;
             break;
 
         case 'Z':
-            move_z -= 1;
+            moveZ -= 1;
+            break;
+
+        default:
             break;
 
   }
+
   glutPostRedisplay();
 }
 
 void init( int width, int height ) {
+    WIDTH = width;
+    HEIGHT = height;
+
     glClearColor( 0.3, 0.3, 0.3, 1 );
     glViewport( 0, 0, width, height );
-    glMatrixMode( GL_PROJECTION );
-    glLoadIdentity( );
-    gluPerspective( 45, 1.33, 0.1, 400 );
-    glMatrixMode( GL_MODELVIEW );
-    glLoadIdentity( );
-    gluLookAt( -50, 100, 250, 0, 0, 0, 0, 1, 0 );
+
+    glMatrixMode(GL_PROJECTION);
+        glLoadIdentity();
+        gluPerspective(45, 1.33, 0.1, 400);
+    glMatrixMode(GL_MODELVIEW);
+
+    glLoadIdentity();
+    gluLookAt(-50, 100, 250, 0, 0, 0, 0, 1, 0);
 }
 
 int main( int argc, char **argv ) {
-        glutInit( &argc, argv );
-        //The most important part specify the things your
-        //glut window should provide
-        glutInitDisplayMode( GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH );
-        glutInitWindowSize( 1920, 1200 );
-        glutCreateWindow("Teste usando gluUnProject");
 
-        //enable z buffer
-        glEnable( GL_DEPTH_TEST );
-        //set the value in z-buffer as 1.0
-        glClearDepth( 1.0 );
-        init( 1920, 1200 );
-        glutDisplayFunc( display );
-        glutReshapeFunc( init );
-        //glutIdleFunc( display );
-        glutMouseFunc( mouse );
-        glutKeyboardFunc(keyInput);
-        glutSpecialFunc( keyboard );
-        glutMainLoop( );
+    glutInit( &argc, argv );
+
+    glutInitDisplayMode( GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH );
+    glutInitWindowSize(1920, 1200);
+    glutCreateWindow("Trabalho 5");
+
+    glEnable( GL_DEPTH_TEST );
+    glClearDepth(1.0);
+    init(1920, 1200);
+
+    glutDisplayFunc(display);
+    glutReshapeFunc(init);
+
+    glutMouseFunc(mouse);
+    glutPassiveMotionFunc(mousePassiveMotion);
+
+    glutKeyboardFunc(keyInput);
+    glutSpecialFunc(keyboard);
+    glutMainLoop();
 }
