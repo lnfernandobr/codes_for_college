@@ -25,14 +25,16 @@ int
     keyBoarEventY = 0,
     click = 0,
     count = 0,
-    calculate = 0;
+    calculate = 0,
+    viewCalc = 0;
 
 
 float
     V1[3] = { 0 },
     V2[3] = { 0 },
     VectorAux2[3] = { 0 },
-    VectorAux1[3] = { 0 };
+    VectorAux1[3] = { 0 },
+    R[3]           = { 0 };
 
 double 
     angleX = 0,
@@ -66,15 +68,16 @@ void display();
 class Line {
 
 public:
-    Line(float *V1, float *V2) {
+    Line(float *V1, float *V2, float *cors) {
         setVector(Va, V1, 3);
         setVector(Vb, V2, 3);
+        setVector(colors, cors, 3);
     }
 
     void drawVector();
 
 public:
-    float Va[3], Vb[3];
+    float Va[3], Vb[3], colors[3];
 };
 
 vector<Line>::iterator LineIterator;
@@ -82,8 +85,12 @@ vector<Line> linesVector; /* Vector of lines */
 
 void Line::drawVector() {
     glPushMatrix();
+
     glBegin(GL_LINES);
-    glColor3f(0, 51, 0);
+    printf("%f %f %f\n", colors[0], colors[1], colors[2]);
+//    glColor3f(1, 1, 1);
+    glColor3f( 0, 54, 0);
+
     glVertex3f(Va[0], Va[1], Va[2]);
     glVertex3f(Vb[0], Vb[1], Vb[2]);
     glEnd();
@@ -144,9 +151,10 @@ static void mousePassiveMotion(int x, int y) {
     glutPostRedisplay();
 }
 
+
 void crossProduct(float vect_A[], float vect_B[], float cross_P[]) {
     cross_P[0] = vect_A[1] * vect_B[2] - vect_A[2] * vect_B[1];
-    cross_P[1] = vect_A[0] * vect_B[2] - vect_A[2] * vect_B[0];
+    cross_P[1] = vect_A[2] * vect_B[0] - vect_A[0] * vect_B[2];
     cross_P[2] = vect_A[0] * vect_B[1] - vect_A[1] * vect_B[0];
 }
 void drawPointer(float *V, int type) {
@@ -159,7 +167,6 @@ void drawPointer(float *V, int type) {
     glColor3f(1, 0, 0);
     glPointSize(8);
 
-    printf("Vai setar em %s o vetor: (%f %f %f)\n", type == 1 ? "VectorAux1" : "VectorAux2", V[0]+moveX, V[1]+moveY, V[2]+moveZ);
     glBegin(GL_POINTS);
     glVertex3f(V[0], V[1], V[2]);
     setVectorCoordinates(
@@ -202,9 +209,9 @@ void drawLineDynamic(void) {
      * ponto clicado.
     */
     float Tmp[3];
-
+    float cors[3] = {0, 51, 0};
     setVectorCoordinates(Tmp, currentPoint.x, currentPoint.y, currentPoint.z);
-    Line *dynamicVector = new Line(VectorAux1, Tmp);
+    Line *dynamicVector = new Line(VectorAux1, Tmp, cors);
 
     dynamicVector->drawVector();
 
@@ -232,64 +239,107 @@ void makeMenu(void) {
 void drawScenario() {
 
     glBegin(GL_LINES);
-    glColor3f(0, 0, 1);
-    glVertex3f(0, 0, 100);
-    glVertex3f(0, 0, -100);
+        glColor3f(0, 0, 1);
+        glVertex3f(0, 0, 100);
+        glVertex3f(0, 0, -100);
     glEnd();
 
     glBegin(GL_LINES);
-    glColor3f(1, 0, 0);
-    glVertex3f(-80, 0, 0);
-    glVertex3f(80, 0, 0);
+        glColor3f(1, 0, 0);
+        glVertex3f(-80, 0, 0);
+        glVertex3f(80, 0, 0);
     glEnd();
 
     glColor3f(0.8, 0.8, 0.8);
     for (int i = 0; i < 170 ; i += 10) {
         glBegin(GL_LINES);
-        glVertex3f(-80 + i, 0, 100);
-        glVertex3f(-80 + i, 0, -100);
+            glVertex3f(-80 + i, 0, 100);
+            glVertex3f(-80 + i, 0, -100);
         glEnd();
     }
 
     for (int i = 0; i < 220 ; i += 20) {
         glBegin(GL_LINES);
-        glVertex3f(-80, 0, 100 - i);
-        glVertex3f(80, 0, 100 - i);
+            glVertex3f(-80, 0, 100 - i);
+            glVertex3f(80, 0, 100 - i);
         glEnd();
     }
 }
+
 void calcule(void) {
 
     LineIterator = linesVector.begin();
-//    LineIterator->Va[0];
+
     float
-            R[3]    = { 0 },
-            A1[3]   = { 0 },
-            A2[3]   = { 0 };
+        A1[3]   = { 0 },
+        A2[3]   = { 0 },
+        AUX[3]  = { 0 };
 
-    if(idOperation == 2) {
-        printf("TESTE\n");
-
-        printf("V1 na classe: (%f %f %f)\n", linesVector[0].Va[0], linesVector[0].Va[1], linesVector[0].Va[2]);
-        printf("--- V1 na classe: (%f %f %f)\n", LineIterator->Va[0], LineIterator->Va[0], LineIterator->Va[0]);
-
-        printf("V2 na classe: (%f %f %f)\n", linesVector[0].Vb[0], linesVector[0].Vb[1], linesVector[0].Vb[2]);
-
-        printf("V1 Global: (%f %f %f)\n", VectorAux1[0], VectorAux1[1], VectorAux1[2]);
-        printf("V2 Global: (%f %f %f)\n", V2[0], V2[1], V2[2]);
+    if(idOperation == 3) {
 
         A1[0] = linesVector[0].Vb[0] - linesVector[0].Va[0];
         A1[1] = linesVector[0].Vb[1] - linesVector[0].Va[1];
         A1[2] = linesVector[0].Vb[2] - linesVector[0].Va[2];
 
-        A2[0] = linesVector[1].Vb[0] - linesVector[1].Va[0];
-        A2[1] = linesVector[1].Vb[1] - linesVector[1].Va[1];
-        A2[2] = linesVector[1].Vb[2] - linesVector[1].Va[2];
+        AUX[0] = linesVector[1].Va[0] - linesVector[0].Va[0];
+        AUX[1] = linesVector[1].Va[1] - linesVector[0].Va[1];
+        AUX[2] = linesVector[1].Va[2] - linesVector[0].Va[2];
+
+        A2[0] =  linesVector[1].Vb[0] - AUX[0];
+        A2[1] =  linesVector[1].Vb[1] - AUX[1];
+        A2[2] =  linesVector[1].Vb[2] - AUX[2];
+
+        linesVector[1].Va[0] = linesVector[0].Va[0];
+        linesVector[1].Va[1] = linesVector[0].Va[1];
+        linesVector[1].Va[2] = linesVector[0].Va[2];
+
+        linesVector[1].Vb[0] = AUX[0];
+        linesVector[1].Vb[1] = AUX[1];
+        linesVector[1].Vb[2] = AUX[2];
 
         crossProduct(A1, A2, R);
-        printf("R: %f %f %f\n", R[0], R[1], R[2]);
     }
 
+    viewCalc = 1;
+    glutPostRedisplay();
+
+}
+
+void operationsWithVectors(void) {
+
+    if(keyBoarEventX == 1)
+        glRotatef(angleX, 0.0, 1.0, 0.0);
+
+    if(keyBoarEventY == 1)
+        glRotatef(angleY, 1.0, 0.0, 0.0);
+
+    glPushMatrix();
+    drawScenario();
+
+    if(viewCalc == 1) {
+        glPushMatrix();
+        glBegin(GL_LINES);
+        glColor3f(255, 0, 0);
+        glVertex3f(linesVector[0].Va[0], linesVector[0].Va[1], linesVector[0].Va[2]);
+        glVertex3f(R[0], R[1], R[2]);
+        glEnd();
+        glPopMatrix();
+    }
+
+    if(calculate == 1)
+        calculate = 0, calcule();
+
+    if(click == 1)
+        drawPointer(V1, 1);
+
+    if(click == 1)
+        drawLineDynamic();
+
+    if(click == 2)
+        drawPointer(V2, 2);
+
+    drawVectors();
+    glPopMatrix();
 }
 void display() {
     glClear( GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT );
@@ -300,31 +350,9 @@ void display() {
 
     }
 
-    if(idOperation == 2 || idOperation == 3 | idOperation == 4) {
-        if(keyBoarEventX == 1)
-            glRotatef(angleX, 0.0, 1.0, 0.0);
+    if(idOperation == 2 || idOperation == 3 | idOperation == 4)
+        operationsWithVectors();
 
-        if(keyBoarEventY == 1)
-            glRotatef(angleY, 1.0, 0.0, 0.0);
-
-        glPushMatrix();
-        drawScenario();
-
-        if(calculate == 1)
-            calculate = 0, calcule();
-
-        if(click == 1)
-            drawPointer(V1, 1);
-
-        if(click == 1)
-            drawLineDynamic();
-
-        if(click == 2)
-            drawPointer(V2, 2);
-
-        drawVectors();
-        glPopMatrix();
-    }
 
     glFlush();
     glutSwapBuffers();
@@ -339,9 +367,11 @@ void mouse(int button, int state, int x, int y) {
 
             getCoordinatesReal(x, y, &objX, &objY, &objZ);
 
-            if(count == 6)
-                count = 0, linesVector.clear();
-
+            if(count == 6) {
+                count = 0;
+                viewCalc = 0;
+                linesVector.clear();
+            }
             if(click == 0) {
                 setVectorCoordinates(V1, objX, objY, objZ);
                 click++, count++;
@@ -352,8 +382,14 @@ void mouse(int button, int state, int x, int y) {
                 click++, count++;
             }
 
+
             else if(click == 2) {
-                linesVector.push_back(Line(VectorAux1, VectorAux2));
+                float cors[3];
+                cors[0] = rand() % 256;
+                cors[1] = rand() % 256;
+                cors[2] = rand() % 256;
+
+                linesVector.push_back(Line(VectorAux1, VectorAux2, cors));
                 click = 0, count++;
             }
 
@@ -452,6 +488,7 @@ void init( int width, int height ) {
     gluLookAt(-50, 100, 250, 0, 0, 0, 0, 1, 0);
 }
 int main( int argc, char **argv ) {
+    srand(time(NULL));
 
     glutInit( &argc, argv );
 
