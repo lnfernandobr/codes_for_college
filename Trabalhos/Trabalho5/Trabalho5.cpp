@@ -8,6 +8,20 @@
 #include <sstream>
 #include <string.h>
 
+/*
+ * 1 - Ao entrar no programa, clique com botão direito do mouse para abrir o menu.
+ * 2 - Escolha uma das opções.
+ * 3 - O cenario mudara, de um clique na tela para adicionar um ponto. Você podera deslocar esse ponto na tela com as teclas
+ * do teclado.
+ * TECLAS: x, y, z = desloca x, y e z positvo
+ * TECLAS: X, Y, Z = desloca no X, Y e Z negativo
+ * 4 - Você pode rotacionar o cenario com as setas do teclado
+ * 5 - Apos o 1 clique o ponto sera adicionado, já no segundo clique, sera mostrado um novo ponto, desloque-o para onde desejar e de mais
+ * um clique para confirmar, o vetor será formado. faça isso e crie dois vetores na tela
+ * 6 - Apos os 2 vetores estarem na tela, pressione botao direito do mouse e selecione calcular, a tela será redesenhada com o valor
+ * da operação.
+ *
+ * */
 static GLsizei WIDTH, HEIGHT; /* OpenGL window size. */
 using namespace std;
 
@@ -20,21 +34,25 @@ struct ptr {
 struct ptr  currentPoint;
 
 int
-    idOperation = 0,
+    idOperation = 1,
     keyBoarEventX = 0,
     keyBoarEventY = 0,
     click = 0,
     count = 0,
     calculate = 0,
-    viewCalc = 0;
+    viewCalc = 0,
+    withOutScenario = 0;
 
 
 float
-    V1[3] = { 0 },
-    V2[3] = { 0 },
+    V1[3]         = { 0 },
+    V2[3]         = { 0 },
     VectorAux2[3] = { 0 },
     VectorAux1[3] = { 0 },
-    R[3]           = { 0 };
+    R[3]          = { 0 },
+    A1[3]         = { 0 },
+    A2[3]         = { 0 },
+    scalar = 0;
 
 double 
     angleX = 0,
@@ -87,7 +105,6 @@ void Line::drawVector() {
     glPushMatrix();
 
     glBegin(GL_LINES);
-    printf("%f %f %f\n", colors[0], colors[1], colors[2]);
 //    glColor3f(1, 1, 1);
     glColor3f( 0, 54, 0);
 
@@ -150,12 +167,25 @@ static void mousePassiveMotion(int x, int y) {
 
     glutPostRedisplay();
 }
-
-
 void crossProduct(float vect_A[], float vect_B[], float cross_P[]) {
     cross_P[0] = vect_A[1] * vect_B[2] - vect_A[2] * vect_B[1];
     cross_P[1] = vect_A[2] * vect_B[0] - vect_A[0] * vect_B[2];
     cross_P[2] = vect_A[0] * vect_B[1] - vect_A[1] * vect_B[0];
+}
+void sumVector(float vect_A[], float vect_B[], float sum_P[]) {
+    sum_P[0] = vect_A[0] + vect_B[0];
+    sum_P[1] = vect_A[1] + vect_B[1];
+    sum_P[2] = vect_A[2] + vect_B[2];
+}
+float dotProduct(float vect_A[], float vect_B[]) {
+
+    float product = 0;
+
+    // Loop for calculate cot product
+    for (int i = 0; i < 3; i++)
+        product = product + vect_A[i] * vect_B[i];
+
+    return product;
 }
 void drawPointer(float *V, int type) {
     glColor3f(0.8, 0.8, 0.8);
@@ -197,6 +227,12 @@ void PickOperation(int id) {
         calculate = 1;
 
     if(id == 6)
+        withOutScenario = 1;
+
+    if(id == 7)
+        withOutScenario = 0;
+
+    if(id == 8)
         exit(0);
 
     glutPostRedisplay();
@@ -233,77 +269,147 @@ void makeMenu(void) {
     glutAddMenuEntry("Produto de Vetores ", 3);
     glutAddMenuEntry("Produto Escalar entre Vetores", 4);
     glutAddMenuEntry("CALCULAR", 5);
-    glutAddMenuEntry("Sair", 6);
+    glutAddMenuEntry("Esconder cenario", 6);
+    glutAddMenuEntry("Ativar cenario", 7);
+    glutAddMenuEntry("Sair", 8);
     glutAttachMenu(GLUT_RIGHT_BUTTON);
 }
 void drawScenario() {
 
+    if(withOutScenario)
+        return;
+
+    glLineWidth(2.0);
+
     glBegin(GL_LINES);
-        glColor3f(0, 0, 1);
-        glVertex3f(0, 0, 100);
-        glVertex3f(0, 0, -100);
+    glColor3f(0, 0, 1);
+    glVertex3f(0, 0, 100);
+    glVertex3f(0, 0, -100);
     glEnd();
 
     glBegin(GL_LINES);
-        glColor3f(1, 0, 0);
-        glVertex3f(-80, 0, 0);
-        glVertex3f(80, 0, 0);
+    glColor3f(1, 41, 0);
+    glVertex3f(-80, 0, 0);
+    glVertex3f(80, 0, 0);
     glEnd();
 
     glColor3f(0.8, 0.8, 0.8);
     for (int i = 0; i < 170 ; i += 10) {
         glBegin(GL_LINES);
-            glVertex3f(-80 + i, 0, 100);
-            glVertex3f(-80 + i, 0, -100);
+        glVertex3f(-80 + i, 0, 100);
+        glVertex3f(-80 + i, 0, -100);
         glEnd();
     }
 
     for (int i = 0; i < 220 ; i += 20) {
         glBegin(GL_LINES);
-            glVertex3f(-80, 0, 100 - i);
-            glVertex3f(80, 0, 100 - i);
+        glVertex3f(-80, 0, 100 - i);
+        glVertex3f(80, 0, 100 - i);
         glEnd();
     }
+
+
+    // Draw the co-ordinate axes.
+
+
 }
+
+void writeBitmapString(void *font, char *string) {
+    char *c;
+    for(c = string; *c != '\0'; c++)
+        glutBitmapCharacter(font, *c);
+}
+char *itoa(int value, char *result, int base) {
+    // check that the base if valid
+    if (base < 2 || base > 36) { *result = '\0'; return result; }
+
+    char* ptr = result, *ptr1 = result, tmp_char;
+    int tmp_value;
+
+    do {
+        tmp_value = value;
+        value /= base;
+        *ptr++ = "zyxwvutsrqponmlkjihgfedcba9876543210123456789abcdefghijklmnopqrstuvwxyz" [35 + (tmp_value - value * base)];
+    } while ( value );
+
+    // Apply negative sign
+    if (tmp_value < 0) *ptr++ = '-';
+    *ptr-- = '\0';
+    while (ptr1 < ptr) {
+        tmp_char = *ptr;
+        *ptr--= *ptr1;
+        *ptr1++ = tmp_char;
+    }
+    return result;
+}
+void drawTextScala() {
+    char msg[30];
+    char message[60];
+
+    itoa(abs(scalar), msg, 10);
+
+    snprintf(message, 60, "(%.2f, %.2f, %.2f) * (%.2f, %.2f, %.2f)", A1[0], A1[1], A1[2], A2[0], A2[1], A2[2]);
+
+    glColor3f(0.0, 255.0, 255.0);
+    glRasterPos3f(-80.0, 80.0, 0.0);
+    writeBitmapString(GLUT_BITMAP_HELVETICA_18, (char *)message);
+
+
+    glColor3f(255.0, 255.0, 255.0);
+    glRasterPos3f(0.0, 79.0, 0.0);
+    writeBitmapString(GLUT_BITMAP_HELVETICA_18, (char *)"Modulo do produto Escalar: ");
+
+    glColor3f(255.0, 255.0, 255.0);
+    glRasterPos3f(50.0, 78.0, 0.0);
+    writeBitmapString(GLUT_BITMAP_HELVETICA_18, msg);
+
+}
+
+
 
 void calcule(void) {
 
     LineIterator = linesVector.begin();
 
     float
-        A1[3]   = { 0 },
-        A2[3]   = { 0 },
         AUX[3]  = { 0 };
 
-    if(idOperation == 3) {
+    A1[0] = linesVector[0].Vb[0] - linesVector[0].Va[0];
+    A1[1] = linesVector[0].Vb[1] - linesVector[0].Va[1];
+    A1[2] = linesVector[0].Vb[2] - linesVector[0].Va[2];
 
-        A1[0] = linesVector[0].Vb[0] - linesVector[0].Va[0];
-        A1[1] = linesVector[0].Vb[1] - linesVector[0].Va[1];
-        A1[2] = linesVector[0].Vb[2] - linesVector[0].Va[2];
+    AUX[0] = linesVector[1].Va[0] - linesVector[0].Va[0];
+    AUX[1] = linesVector[1].Va[1] - linesVector[0].Va[1];
+    AUX[2] = linesVector[1].Va[2] - linesVector[0].Va[2];
 
-        AUX[0] = linesVector[1].Va[0] - linesVector[0].Va[0];
-        AUX[1] = linesVector[1].Va[1] - linesVector[0].Va[1];
-        AUX[2] = linesVector[1].Va[2] - linesVector[0].Va[2];
+    A2[0] =  linesVector[1].Vb[0] - AUX[0];
+    A2[1] =  linesVector[1].Vb[1] - AUX[1];
+    A2[2] =  linesVector[1].Vb[2] - AUX[2];
 
-        A2[0] =  linesVector[1].Vb[0] - AUX[0];
-        A2[1] =  linesVector[1].Vb[1] - AUX[1];
-        A2[2] =  linesVector[1].Vb[2] - AUX[2];
+    linesVector[1].Va[0] = linesVector[0].Va[0];
+    linesVector[1].Va[1] = linesVector[0].Va[1];
+    linesVector[1].Va[2] = linesVector[0].Va[2];
 
-        linesVector[1].Va[0] = linesVector[0].Va[0];
-        linesVector[1].Va[1] = linesVector[0].Va[1];
-        linesVector[1].Va[2] = linesVector[0].Va[2];
+    linesVector[1].Vb[0] = AUX[0];
+    linesVector[1].Vb[1] = AUX[1];
+    linesVector[1].Vb[2] = AUX[2];
 
-        linesVector[1].Vb[0] = AUX[0];
-        linesVector[1].Vb[1] = AUX[1];
-        linesVector[1].Vb[2] = AUX[2];
 
+    if(idOperation == 2)
+        sumVector(A1, A2, R);
+
+    if(idOperation == 3)
         crossProduct(A1, A2, R);
-    }
+
+    if(idOperation == 4)
+        scalar = dotProduct(A1, A2);
 
     viewCalc = 1;
     glutPostRedisplay();
 
 }
+
+
 
 void operationsWithVectors(void) {
 
@@ -314,16 +420,78 @@ void operationsWithVectors(void) {
         glRotatef(angleY, 1.0, 0.0, 0.0);
 
     glPushMatrix();
+
     drawScenario();
+
+    if(idOperation == 1) {
+
+        glRasterPos3f(-50.0, 80.0, 0.0);
+        writeBitmapString(GLUT_BITMAP_HELVETICA_18, (char*) "Ambos os vetores se encontram na origem (0,0,0)");
+
+        glRasterPos3f(-47.0, 70.0, 0.0);
+        writeBitmapString(GLUT_BITMAP_HELVETICA_18, (char*) "Ler instrucoes de uso no terminal ou no codigo");
+
+        glPushMatrix();
+        glLineWidth(10.0);
+            glColor3f(0.0, 0.0, 0.0);
+            glBegin(GL_LINES);
+            glVertex3f(0, 0, 0.0);
+            glVertex3f(100, 60.0, -80.0);
+            glColor3f(0.0, 12.0, 0.0);
+            glutWireSphere(5, 10, 10);
+        glEnd();
+
+
+        glLineWidth(10.0);
+            glColor3f(1.0, 0.0, 0.0);
+            glBegin(GL_LINES);
+            glVertex3f(0, 0, 0.0);
+            glVertex3f(-100, 60.0, 80.0);
+        glEnd();
+
+        glColor3f(255.0, 255.0, 255.0);
+        glRasterPos3f(-100.0, 20.0, 80.0);
+        writeBitmapString(GLUT_BITMAP_HELVETICA_18, (char*) "Vetor A  - vermelho");
+
+        glRasterPos3f(100.0, 20.0, -80.0);
+        writeBitmapString(GLUT_BITMAP_HELVETICA_18, (char*) "Vetor B  - preto");
+
+        glPopMatrix();
+
+        return;
+    }
+
+    if(viewCalc == 1 && idOperation == 4) {
+        drawTextScala();
+        return;
+    }
+
 
     if(viewCalc == 1) {
         glPushMatrix();
+
         glBegin(GL_LINES);
-        glColor3f(255, 0, 0);
-        glVertex3f(linesVector[0].Va[0], linesVector[0].Va[1], linesVector[0].Va[2]);
-        glVertex3f(R[0], R[1], R[2]);
+            glColor3f(255, 0, 0);
+            glVertex3f(linesVector[0].Va[0], linesVector[0].Va[1], linesVector[0].Va[2]);
+            glVertex3f(R[0], R[1], R[2]);
         glEnd();
-        glPopMatrix();
+
+        if(idOperation == 2) {
+
+            glPushAttrib(GL_ENABLE_BIT);
+            glLineStipple(5, 0x5555);
+            glEnable(GL_LINE_STIPPLE);
+            glBegin(GL_LINES);
+            glColor3f(255, 255, 255);
+                glVertex3f(linesVector[1].Vb[0], linesVector[1].Vb[1], linesVector[1].Vb[2]);
+                glVertex3f(R[0], R[1], R[2]);
+
+                glVertex3f(linesVector[0].Vb[0], linesVector[0].Vb[1], linesVector[0].Vb[2]);
+                glVertex3f(R[0], R[1], R[2]);
+            glEnd();
+            glPopAttrib();
+            glPopMatrix();
+        }
     }
 
     if(calculate == 1)
@@ -346,12 +514,7 @@ void display() {
     int offset = 10;
 
 
-    if(idOperation == 1) {
-
-    }
-
-    if(idOperation == 2 || idOperation == 3 | idOperation == 4)
-        operationsWithVectors();
+    operationsWithVectors();
 
 
     glFlush();
@@ -411,7 +574,6 @@ void keyInput(unsigned char key, int x, int y) {
     switch (key) {
         case 'x':
             moveX += 1;
-            cout << "dentro" << endl;
             break;
 
         case 'X':
@@ -487,6 +649,20 @@ void init( int width, int height ) {
     glLoadIdentity();
     gluLookAt(-50, 100, 250, 0, 0, 0, 0, 1, 0);
 }
+
+void showMessage(void) {
+    puts("1 - Ao entrar no programa, clique com botão direito do mouse para abrir o menu.\n"
+         "2 - Escolha uma das opções.\n"
+         "3 - O cenario mudara, de um clique na tela para adicionar um ponto. Você podera deslocar esse ponto na tela com as teclas\n"
+         "do teclado.\n"
+         "--- TECLAS: x, y, z = desloca x, y e z positvo\n"
+         "--- TECLAS: X, Y, Z = desloca no X, Y e Z negativo\n"
+         "4 - Você pode rotacionar o cenario com as setas do teclado\n"
+         "5 - Apos o 1 clique o ponto sera adicionado, já no segundo clique, sera mostrado um novo ponto, desloque-o para onde desejar e de mais\n"
+         "um clique para confirmar, o vetor será formado. faça isso e crie dois vetores na tela\n"
+         "6 - Apos os 2 vetores estarem na tela, pressione botao direito do mouse e selecione calcular, a tela será redesenhada com o valor\n"
+         "da operação.");
+}
 int main( int argc, char **argv ) {
     srand(time(NULL));
 
@@ -496,6 +672,7 @@ int main( int argc, char **argv ) {
     glutInitWindowSize(1920, 1200);
     glutCreateWindow("Trabalho 5");
 
+    showMessage();
     glEnable( GL_DEPTH_TEST );
     glClearDepth(1.0);
     init(1920, 1200);
