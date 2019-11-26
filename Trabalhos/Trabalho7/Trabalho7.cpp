@@ -175,14 +175,13 @@ void renderCylinder_convenient(
 
     glColor3f(R, G, B);
 
-
     GLUquadricObj *quadric=gluNewQuadric();
     gluQuadricNormals(quadric, GLU_SMOOTH);
 
     renderCylinder(x1,y1,z1,x2,y2,z2,radius,subdivisions,quadric);
     glTranslatef( x2,y2,z2 );
     glRotatef(ax, rx, ry, 0.0);
-    glutWireCone(5, 10, 20, 20);
+    glutWireCone(3, 7, 20, 20);
 
     gluDeleteQuadric(quadric);
 }
@@ -218,11 +217,11 @@ vector<Line> linesVector; /* Vector of lines */
 
 void Line::drawVector() {
     glPushMatrix();
-        if(click == 1) {
-            renderCylinder_convenient(Va[0], Va[1], Va[2], Vb[0], Vb[1], Vb[2], 2, 20, 0,10,30);
-        } else {
-            renderCylinder_convenient(Va[0], Va[1], Va[2], Vb[0], Vb[1], Vb[2], 2, 20, 42.0, 6.0, -19.0);
-        }
+    if(click == 1) {
+        renderCylinder_convenient(Va[0], Va[1], Va[2], Vb[0], Vb[1], Vb[2], 1.5, 20, 0,10,30);
+    } else {
+        renderCylinder_convenient(Va[0], Va[1], Va[2], Vb[0], Vb[1], Vb[2], 1.5, 20, 42.0, 6.0, -19.0);
+    }
     glPopMatrix();
 }
 void getCoordinatesReal(int x, int y, double *objectX, double *objectY, double *objectZ) {
@@ -230,24 +229,24 @@ void getCoordinatesReal(int x, int y, double *objectX, double *objectY, double *
     int viewport[4];
 
     double
-        modelView[16],
-        projection[16],
-        z = 1 - 0.0001;
+            modelView[16],
+            projection[16],
+            z = 1 - 0.0001;
 
     glGetDoublev(GL_PROJECTION_MATRIX, projection);
     glGetDoublev(GL_MODELVIEW_MATRIX, modelView);
     glGetIntegerv(GL_VIEWPORT, viewport);
 
     gluUnProject(
-        x,
-        viewport[3] - y,
-        z,
-        modelView,
-        projection,
-        viewport,
-        objectX,
-        objectY,
-        objectZ
+            x,
+            viewport[3] - y,
+            z,
+            modelView,
+            projection,
+            viewport,
+            objectX,
+            objectY,
+            objectZ
     );
 
 }
@@ -287,10 +286,10 @@ void crossProduct(double vect_A[], double vect_B[], double cross_P[]) {
     }
     printf("\n\n");
 
-    cross_P[0] = (vect_A[1] * vect_B[2]) - (vect_A[2]*vect_B[0]);
-    cross_P[1] = (vect_A[2] * vect_B[0]) - (vect_A[0] * vect_B[2]);
-    cross_P[2] = (vect_A[0] * vect_B[1]) - (vect_A[1] * vect_B[0]);
 
+    cross_P[0] = vect_A[1] * vect_B[2] - vect_A[2] * vect_B[1];
+    cross_P[1] = vect_A[0] * vect_B[2] - vect_A[2] * vect_B[0];
+    cross_P[2] = vect_A[0] * vect_B[1] - vect_A[1] * vect_B[0];
 
     for (int i = 0; i <3; ++i) {
         printf("%lf ", cross_P[i]);
@@ -298,29 +297,20 @@ void crossProduct(double vect_A[], double vect_B[], double cross_P[]) {
     printf("\n\n");
 }
 
-//void crossProduct(double vect_A[], double vect_B[], double cross_P[]) {
-//    printf("\n\n");
-//    for (int i = 0; i <3; ++i) {
-//        printf("%f ", vect_A[i]);
-//        printf("%f ", vect_B[i]);
-//    }
-//    printf("\n\n");
-//
-//    cross_P[0] = vect_A[1] * vect_B[2] - vect_A[2] * vect_B[1];
-//    cross_P[1] = vect_A[2] * vect_B[0] - vect_A[0] * vect_B[2];
-//    cross_P[2] = vect_A[0] * vect_B[1] - vect_A[1] * vect_B[0];
-//    printf("\n\n");
-//
-//    for (int i = 0; i <3; ++i) {
-//        printf("%f ", cross_P[i]);
-//    }
-//    printf("\n\n");
-//
-//}
 void sumVector(double vect_A[], double vect_B[], double sum_P[]) {
+
+    printf("Soma de vetores: \n");
+    printf("\n\n");
+    for (int i = 0; i <3; ++i) {
+        printf("%lf ", vect_A[i]);
+        printf("%lf ", vect_B[i]);
+    }
+    printf("\n\n");
+
     sum_P[0] = vect_A[0] + vect_B[0];
     sum_P[1] = vect_A[1] + vect_B[1];
     sum_P[2] = vect_A[2] + vect_B[2];
+
 }
 double dotProduct(double vect_A[], double vect_B[]) {
 
@@ -442,6 +432,9 @@ void drawScenario() {
     glVertex3f(80, 0, 0);
     glEnd();
 
+
+
+
     glColor3f(0.8, 0.8, 0.8);
     for (int i = 0; i < 170 ; i += 10) {
         glBegin(GL_LINES);
@@ -506,7 +499,7 @@ void drawTextScala() {
 
     glColor3f(255.0, 255.0, 255.0);
     glRasterPos3f(0.0, 79.0, 0.0);
-    writeBitmapString(GLUT_BITMAP_HELVETICA_18, (char *)"Modulo do produto Escalar: ");
+    writeBitmapString(GLUT_BITMAP_HELVETICA_18, (char *)"Produto Escalar: ");
 
     glColor3f(255.0, 255.0, 255.0);
     glRasterPos3f(50.0, 78.0, 0.0);
@@ -515,26 +508,36 @@ void drawTextScala() {
 }
 
 
+double distance(double x1, double y1,   double z1, double x2,   double y2, double z2)  {
+    return sqrt(pow(x2 - x1, 2) +   pow(y2 - y1, 2) + pow(z2 - z1, 2) * 1.0);
+}
 
 void calcule(void) {
-    printf("idOperation = %d", idOperation);
+    // printf("idOperation = %d", idOperation);
 
     LineIterator = linesVector.begin();
 
-    double
-            AUX[3]  = { 0 };
+    double AUX[3]  = { 0 };
 
-    A1[0] = linesVector[0].Vb[0] - linesVector[0].Va[0];
-    A1[1] = linesVector[0].Vb[1] - linesVector[0].Va[1];
-    A1[2] = linesVector[0].Vb[2] - linesVector[0].Va[2];
+    // c - a
+    A1[0] = linesVector[1].Va[0] - linesVector[0].Va[0];
+    A1[1] = linesVector[1].Va[1] - linesVector[0].Va[1];
+    A1[2] = linesVector[1].Va[2] - linesVector[0].Va[2];
 
-    AUX[0] = linesVector[1].Va[0] - linesVector[0].Va[0];
-    AUX[1] = linesVector[1].Va[1] - linesVector[0].Va[1];
-    AUX[2] = linesVector[1].Va[2] - linesVector[0].Va[2];
+    double d = distance(
+            linesVector[0].Va[0], linesVector[0].Va[1], linesVector[0].Va[2],
+            linesVector[1].Va[0], linesVector[1].Va[1], linesVector[1].Va[2]
+    );
 
-    A2[0] =  linesVector[1].Vb[0] - AUX[0];
-    A2[1] =  linesVector[1].Vb[1] - AUX[1];
-    A2[2] =  linesVector[1].Vb[2] - AUX[2];
+    double d1 = distance(
+            A1[0], A1[1], A1[2],
+            0,0,0
+    );
+
+    AUX[0] = (linesVector[1].Vb[0] - (d * A1[0]/d1));
+    AUX[1] = (linesVector[1].Vb[1] - (d * A1[1]/d1));
+    AUX[2] = (linesVector[1].Vb[2] - (d * A1[2]/d1));
+
 
     linesVector[1].Va[0] = linesVector[0].Va[0];
     linesVector[1].Va[1] = linesVector[0].Va[1];
@@ -544,9 +547,18 @@ void calcule(void) {
     linesVector[1].Vb[1] = AUX[1];
     linesVector[1].Vb[2] = AUX[2];
 
+    A1[0] = linesVector[0].Vb[0] - linesVector[0].Va[0];
+    A1[1] = linesVector[0].Vb[1] - linesVector[0].Va[1];
+    A1[2] = linesVector[0].Vb[2] - linesVector[0].Va[2];
 
-    if(idOperation == 2)
+    A2[0] = AUX[0];
+    A2[1] = AUX[1];
+    A2[2] = AUX[2];
+
+
+    if(idOperation == 2) {
         sumVector(A1, A2, R);
+    }
 
     if(idOperation == 3)
         crossProduct(A1, A2, R);
@@ -597,7 +609,6 @@ void operationsWithVectors(void) {
         glutWireSphere(5, 10, 10);
         glEnd();
 
-
         glLineWidth(10.0);
         glColor3f(1.0, 0.0, 0.0);
         glBegin(GL_LINES);
@@ -614,6 +625,7 @@ void operationsWithVectors(void) {
 
         glPopMatrix();
 
+
         return;
     }
 
@@ -622,19 +634,18 @@ void operationsWithVectors(void) {
         return;
     }
 
-
     if(viewCalc == 1) {
         glPushMatrix();
         renderCylinder_convenient(
                 linesVector[0].Va[0], linesVector[0].Va[1], linesVector[0].Va[2],
-                R[0], R[1], R[2], 2, 20,
-                0.0, 12.0, 0.0);
+                R[0], R[1], R[2], 1.5, 20,0.0, 12.0, 0.0);
+
+
         glPopMatrix();
     }
 
 
 
-//    printf("antes id %d - calculate = %d\n", idOperation, calculate);
 
     if(calculate == 1)
         calculate = 0, calcule();
@@ -660,9 +671,25 @@ void display() {
 //    glClear(GL_COLOR_BUFFER_BIT);
 
     int offset = 10;
-
+//    glPushMatrix();
+//
+//
+//    glRotatef(0, 0.0, 0.0, 0.0);
+//
+//    glRotatef(0, 0.0, 0.0, 0.0);
+//
+//    glBegin(GL_LINES);
+//        glVertex3f(10, 60.0, 80.0);
+//        glVertex3f(20, 60.0, 80.0);
+//        glVertex3f(30, 60.0, 80.0);
+//        glVertex3f(40, 60.0, 80.0);
+//
+//    glEnd();
+////
+//    glPopMatrix();
 
     operationsWithVectors();
+
 
 
     glFlush();
@@ -783,67 +810,84 @@ void keyboard( int key, int x, int y) {
 
 }
 
+
+
+//
+
 void init( int w, int h ) {
 
-    GLfloat ambient[]   = { 0.0, 0.0, 0.0, 1.0 };
-    GLfloat diffuse[]  = { 1.0, 1.0, 1.0, 1.0 };
-
-    GLfloat light_diffuse[]  = { 1.0, 255.0, 255.0, 1.0 };
-
-    GLfloat light_position[] = { 1.0, 3.0, 1.0, 1.0 };
-
-    GLfloat spot_direction[] = { 1.0, 1.0, -1.0 };
-    GLfloat mat_shininess[]  = { 100.0 };
-    GLfloat mat_specular[]   = { 1.0, 0.0, 0.0, 1.0 };
-    GLfloat white_light[]    = {1.0, 1.0, 1.0, 1.0};
-
-    glMaterialfv(GL_FRONT, GL_SPECULAR, mat_specular);
-    glMaterialfv(GL_FRONT, GL_SHININESS, mat_shininess);
-    glMaterialfv(GL_FRONT, GL_AMBIENT, ambient);
-    glLightfv(GL_LIGHT0, GL_DIFFUSE, white_light);
-    glLightfv(GL_LIGHT0, GL_DIFFUSE, light_diffuse);
-    glLightfv(GL_LIGHT0, GL_POSITION, light_position);
-
-    glLightf (GL_LIGHT0, GL_CONSTANT_ATTENUATION, 0.8);
-    glLightf (GL_LIGHT0, GL_LINEAR, 0.8);
-    glLightf (GL_LIGHT0, GL_QUADRATIC_ATTENUATION, 0.8);
+    GLfloat luzAmbiente[4]={0.2,0.2,0.2,1.0};
+    GLfloat luzDifusa[4]={0.7,0.7,0.7,1.0};	   // "cor"
+    GLfloat luzEspecular[4]={1.0, 1.0, 1.0, 1.0};// "brilho"
+    GLfloat posicaoLuz[4]={0.0, 50.0, 50.0, 1.0};
 
 
+    // Capacidade de brilho do material
+    GLfloat especularidade[4]={1.0,1.0,1.0,1.0};
+    GLint especMaterial = 60;
+
+    // Habilita o modelo de colorização de Gouraud
+    glShadeModel(GL_SMOOTH);
+
+    // Define a refletância do material
+    glMaterialfv(GL_FRONT,GL_SPECULAR, especularidade);
+    // Define a concentração do brilho
+    glMateriali(GL_FRONT,GL_SHININESS,especMaterial);
+
+    // Ativa o uso da luz ambiente
+    glLightModelfv(GL_LIGHT_MODEL_AMBIENT, luzAmbiente);
+
+    // Define os parâmetros da luz de número 0
+    glLightfv(GL_LIGHT0, GL_AMBIENT, luzAmbiente);
+    glLightfv(GL_LIGHT0, GL_DIFFUSE, luzDifusa );
+    glLightfv(GL_LIGHT0, GL_SPECULAR, luzEspecular );
+    glLightfv(GL_LIGHT0, GL_POSITION, posicaoLuz );
+
+    // Habilita a definição da cor do material a partir da cor corrente
+    glEnable(GL_COLOR_MATERIAL);
+    //Habilita o uso de iluminação
     glEnable(GL_LIGHTING);
+    // Habilita a luz de número 0
     glEnable(GL_LIGHT0);
+    // Habilita o depth-buffering
     glEnable(GL_DEPTH_TEST);
 
-    WIDTH = w;
 
+
+    WIDTH = w;
     width = w;
     height = h;
-
     HEIGHT = h;
 
     glClearColor( 0.3, 0.3, 0.3, 1 );
+    glMatrixMode(GL_PROJECTION);
     glViewport( 0, 0, width, height );
 
-    glMatrixMode(GL_PROJECTION);
+
     glLoadIdentity();
     gluPerspective(45, 1.33, 0.1, 400);
     glMatrixMode(GL_MODELVIEW);
 
     glLoadIdentity();
     gluLookAt(-50, 100, 250, 0, 0, 0, 0, 1, 0);
+
+
+
+
 }
 
 void showMessage(void) {
-    puts("1 - Ao entrar no programa, clique com botão direito do mouse para abrir o menu.\n"
-         "2 - Escolha uma das opções.\n"
-         "3 - O cenario mudara, de um clique na tela para adicionar um ponto. Você podera deslocar esse ponto na tela com as teclas\n"
-         "do teclado.\n"
-         "--- TECLAS: x, y, z = desloca x, y e z positvo\n"
-         "--- TECLAS: X, Y, Z = desloca no X, Y e Z negativo\n"
-         "4 - Você pode rotacionar o cenario com as setas do teclado\n"
-         "5 - Apos o 1 clique o ponto sera adicionado, já no segundo clique, sera mostrado um novo ponto, desloque-o para onde desejar e de mais\n"
-         "um clique para confirmar, o vetor será formado. faça isso e crie dois vetores na tela\n"
-         "6 - Apos os 2 vetores estarem na tela, pressione botao direito do mouse e selecione calcular, a tela será redesenhada com o valor\n"
-         "da operação.");
+    // puts("1 - Ao entrar no programa, clique com botão direito do mouse para abrir o menu.\n"
+    //      "2 - Escolha uma das opções.\n"
+    //      "3 - O cenario mudara, de um clique na tela para adicionar um ponto. Você podera deslocar esse ponto na tela com as teclas\n"
+    //      "do teclado.\n"
+    //      "--- TECLAS: x, y, z = desloca x, y e z positvo\n"
+    //      "--- TECLAS: X, Y, Z = desloca no X, Y e Z negativo\n"
+    //      "4 - Você pode rotacionar o cenario com as setas do teclado\n"
+    //      "5 - Apos o 1 clique o ponto sera adicionado, já no segundo clique, sera mostrado um novo ponto, desloque-o para onde desejar e de mais\n"
+    //      "um clique para confirmar, o vetor será formado. faça isso e crie dois vetores na tela\n"
+    //      "6 - Apos os 2 vetores estarem na tela, pressione botao direito do mouse e selecione calcular, a tela será redesenhada com o valor\n"
+    //      "da operação.");
 }
 int main( int argc, char **argv ) {
     srand(time(NULL));
@@ -871,4 +915,3 @@ int main( int argc, char **argv ) {
     makeMenu(); // Create menu.
     glutMainLoop();
 }
-
